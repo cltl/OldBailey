@@ -1,0 +1,175 @@
+@prefix nwrdata: <http://www.newsreader-project.eu/data/> .
+@prefix eso:   <http://www.newsreader-project.eu/domain-ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ili:   <http://globalwordnet.org/ili/> .
+@prefix fn:    <http://www.newsreader-project.eu/ontologies/framenet/> .
+@prefix nwr:   <http://www.newsreader-project.eu/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix nwrontology: <http://www.newsreader-project.eu/ontologies/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nwrmagazine: <http://www.newsreader-project.eu/provenance/magazine/> .
+@prefix gaf:   <http://groundedannotationframework.org/gaf#> .
+@prefix nwrpublisher: <http://www.newsreader-project.eu/provenance/publisher/> .
+@prefix pb:    <http://www.newsreader-project.eu/ontologies/propbank/> .
+@prefix nwrauthor: <http://www.newsreader-project.eu/provenance/author/> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wn:    <http://www.newsreader-project.eu/ontologies/pwn3.0/> .
+@prefix graspAttribution: <http://groundedannotationframework.org/grasp/attribution#> .
+@prefix sem:   <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix time:  <http://www.w3.org/TR/owl-time#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix graspSentiment: <http://groundedannotationframework.org/grasp/sentiment#> .
+
+{ 
+}
+
+nwr:instances {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#ev5#0>
+            rdfs:label  "plead" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#tmx2>
+            a                time:Instant ;
+            rdfs:label       "the 8th of May , 2" ;
+            gaf:denotedBy    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=71,89> ;
+            time:inDateTime  <http://www.newsreader-project.eu/time/18390502> .
+    
+    <http://dbpedia.org/resource/Taylor,_Michigan#0>
+            rdfs:label  "TAYLOR" ;
+            <http://www.newsreader-project.eu//count>
+                    2 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#tmx0>
+            a                time:Instant ;
+            time:inDateTime  <http://www.newsreader-project.eu/time/18390513> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#ev5>
+            a                       ili:i26660 , nwrontology:sourceEvent , ili:i25493 , sem:Event , fn:Request , ili:i25498 ;
+            gaf:denotedBy           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=512,519&word=w124&term=t124&sentence=3&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#ev5#0> ;
+            nwr:offenceCategory     "theft" ;
+            nwr:offenceSubcategory  "stealingFromMaster" ;
+            nwr:punishmentCategory  "imprison" ;
+            nwr:verdictCategory     "guilty" ;
+            nwr:verdictSubcategory  "pleadedGuilty" ;
+            skos:prefLabel          "plead" ;
+            skos:relatedMatch       <http://eurovoc.europa.eu/5969> , <http://eurovoc.europa.eu/665> , <http://eurovoc.europa.eu/5455> , <http://eurovoc.europa.eu/3449> , <http://eurovoc.europa.eu/519> , <http://eurovoc.europa.eu/3156> .
+    
+    <http://www.newsreader-project.eu/time/18390513>
+            a              time:DateTimeDescription ;
+            time:day       "---13"^^<http://www.w3.org/2001/XMLSchema#gDay> ;
+            time:month     "--05"^^<http://www.w3.org/2001/XMLSchema#gMonth> ;
+            time:unitType  time:unitDay ;
+            time:year      "1839"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+    
+    <http://www.newsreader-project.eu/time/18390502>
+            a              time:DateTimeDescription ;
+            time:day       "---02"^^<http://www.w3.org/2001/XMLSchema#gDay> ;
+            time:month     "--05"^^<http://www.w3.org/2001/XMLSchema#gMonth> ;
+            time:unitType  time:unitDay ;
+            time:year      "1839"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+    
+    <http://dbpedia.org/resource/Taylor,_Michigan>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=26,39&word=w6,w7&term=t6,t7&sentence=2&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=505,511&word=w123&term=t123&sentence=3&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=33,39&word=w7&term=t7&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://dbpedia.org/resource/Taylor,_Michigan#1> , <http://dbpedia.org/resource/Taylor,_Michigan#0> ;
+            skos:prefLabel  "TAYLOR" .
+    
+    <http://dbpedia.org/resource/Taylor,_Michigan#1>
+            rdfs:label  "EDWARD TAYLOR" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#ev6#0>
+            rdfs:label  "confine" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#ev6>
+            a                       sem:Event , ili:i22888 , ili:i28429 , ili:i34195 , eso:IntentionalEvent , nwrontology:contextualEvent , fn:Inhibit_movement , ili:i22897 ;
+            gaf:denotedBy           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=539,547&word=w130&term=t130&sentence=4&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#ev6#0> ;
+            nwr:offenceCategory     "theft" ;
+            nwr:offenceSubcategory  "stealingFromMaster" ;
+            nwr:punishmentCategory  "imprison" ;
+            nwr:verdictCategory     "guilty" ;
+            nwr:verdictSubcategory  "pleadedGuilty" ;
+            skos:prefLabel          "confine" ;
+            skos:relatedMatch       <http://eurovoc.europa.eu/3156> , <http://eurovoc.europa.eu/519> , <http://eurovoc.europa.eu/665> , <http://eurovoc.europa.eu/5455> , <http://eurovoc.europa.eu/3449> , <http://eurovoc.europa.eu/5969> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#/non-entities/guilty>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=520,526&word=w125&term=t125&sentence=3&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#/non-entities/guilty#0> ;
+            skos:prefLabel  "GUILTY" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#/non-entities/guilty#0>
+            rdfs:label  "GUILTY" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#/non-entities/confine+month#0>
+            rdfs:label  "confine two month ." ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#/non-entities/confine+month>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=539,560&word=w130,w131,w132,w133&term=t130,t131,t132,t133&sentence=4&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#/non-entities/confine+month#0> ;
+            skos:prefLabel     "confine two month ." ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Month> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#pr1,rl2> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#ev5>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#/non-entities/guilty> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#/non-entities/guilty> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#pr2,rl4> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#ev6>
+            sem:hasActor               <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#/non-entities/confine+month> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Inhibit_movement@Theme>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#/non-entities/confine+month> ;
+            pb:A1                      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#/non-entities/confine+month> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#pr1,rl1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#ev5>
+            sem:hasActor        <http://dbpedia.org/resource/Taylor,_Michigan> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Request@Speaker>
+                    <http://dbpedia.org/resource/Taylor,_Michigan> ;
+            pb:A0               <http://dbpedia.org/resource/Taylor,_Michigan> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#tr1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#ev5>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#tmx2> .
+}
+
+nwr:provenance {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#pr1,rl1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=505,519> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#pr2,rl4>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=539,560> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#tr1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=71,519> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#pr1,rl2>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#char=512,526> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#tr2> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#ev6>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1585#tmx0> .
+}

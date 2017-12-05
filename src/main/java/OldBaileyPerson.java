@@ -1,20 +1,66 @@
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.Statement;
+
 /**
  * Created by piek on 05/12/2017.
  */
 public class OldBaileyPerson {
 
     private String givenname;
-    private String surename;
+    private String surname;
     private String age;
     private String gender;
     private String role;
 
     public OldBaileyPerson() {
         this.givenname = "";
-        this.surename = "";
+        this.surname = "";
         this.age = "";
         this.gender = "";
         this.role = "";
+    }
+
+    public void addToModel (Model namedModel) {
+        Resource subject = namedModel.createResource(getUri());
+        if (!gender.isEmpty()) {
+            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "gender");
+            Statement meta = namedModel.createStatement(subject, metaProperty, gender);
+            namedModel.add(meta);
+        }
+        if (!age.isEmpty()) {
+            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "age");
+            Statement meta = namedModel.createStatement(subject, metaProperty, age);
+            namedModel.add(meta);
+        }
+        if (!role.isEmpty()) {
+            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "role");
+            Statement meta = namedModel.createStatement(subject, metaProperty, role);
+            namedModel.add(meta);
+        }
+        if (!givenname.isEmpty()) {
+            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "givenname");
+            Statement meta = namedModel.createStatement(subject, metaProperty, givenname);
+            namedModel.add(meta);
+        }
+        if (!surname.isEmpty()) {
+            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "surname");
+            Statement meta = namedModel.createStatement(subject, metaProperty, surname);
+            namedModel.add(meta);
+        }
+
+    }
+
+    public String getUri () {
+        String uri = ResourcesUri.oldbaily+ surname +"_"+givenname;
+        return uri;
+    }
+    public void setValue (String type, String value) {
+        if (type.equals("age")) age=value;
+        if (type.equals("gender")) gender=value;
+        if (type.equals("surname")) surname =value;
+        if (type.equals("given")) givenname=value;
     }
 
     public String getGivenname() {
@@ -25,12 +71,12 @@ public class OldBaileyPerson {
         this.givenname = givenname;
     }
 
-    public String getSurename() {
-        return surename;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSurename(String surename) {
-        this.surename = surename;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getAge() {

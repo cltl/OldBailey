@@ -22,6 +22,8 @@ import java.util.HashMap;
  */
 public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
     static String value = "";
+    static boolean PERSON = false;
+    static String caseId = "";
     static HashMap<String, OldBaileyData> fileData = new HashMap<String, OldBaileyData>();
     static OldBaileyData data = new OldBaileyData();
     static OldBaileyPerson person = new OldBaileyPerson();
@@ -122,6 +124,8 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
         fileData = new HashMap<String, OldBaileyData>();
         data = new OldBaileyData();
         person = new OldBaileyPerson();
+        PERSON = false;
+        caseId = "";
     }
 
     public boolean parseFile(File file) {
@@ -208,39 +212,62 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             throws SAXException {
         value = "";
         if (qName.equalsIgnoreCase("interp")) {
-            String caseId = attributes.getValue("inst");
-            String[] fields = caseId.split("-");
-            if (fields.length>=2) {
-                caseId = fields[0] + "-" + fields[1];
-                String type = attributes.getValue("type");
-                String value = attributes.getValue("value");
-                if (caseId != null && type != null && value != null) {
-                    if (fileData.containsKey(caseId)) {
-                        OldBaileyData data = fileData.get(caseId);
-                        data.setValue(type, value);
-                        fileData.put(caseId, data);
-                    } else {
-                        OldBaileyData data = new OldBaileyData();
-                        data.setValue(type, value);
-                        fileData.put(caseId, data);
+            caseId = attributes.getValue("inst");
+            if (caseId!=null && caseId.startsWith("t")) {
+                String[] fields = caseId.split("-");
+                if (fields.length >= 2) {
+                    caseId = fields[0] + "-" + fields[1];
+                    //System.out.println("caseId = " + caseId);
+                    String type = attributes.getValue("type");
+                    String value = attributes.getValue("value");
+                    if (type != null && value != null) {
+                        if (!PERSON) {
+                            if (fileData.containsKey(caseId)) {
+                                OldBaileyData data = fileData.get(caseId);
+                                data.setValue(type, value);
+                                fileData.put(caseId, data);
+                            } else {
+                                OldBaileyData data = new OldBaileyData();
+                                data.setValue(type, value);
+                                fileData.put(caseId, data);
+                            }
+                        }
+                        else {
+                             person.setValue(type, value);
+                        }
                     }
                 }
             }
+            else {
+                caseId = "";
+            }
         }
         else if (qName.equalsIgnoreCase("persName")) {
-            
+            PERSON = true;
+            person = new OldBaileyPerson();
             String type = attributes.getValue("type");
-            String value = attributes.getValue("value");
-            if (type!=null && value!=null) {
-               data.setValue(type, value);
+            if (type!=null) {
+                person.setRole(type);
             }
-        } else {
-
+        }
+        else {
+           ////
         }
     }
+
     public void endElement(String uri, String localName, String qName)
             throws SAXException {
-        if (qName.equalsIgnoreCase("chunk")) {
+        if (qName.equalsIgnoreCase("persName")) {
+            PERSON = false;
+            if (fileData.containsKey(caseId)) {
+                OldBaileyData data = fileData.get(caseId);
+                data.addPersons(person);
+                fileData.put(caseId, data);
+            } else {
+                OldBaileyData data = new OldBaileyData();
+                data.addPersons(person);
+                fileData.put(caseId, data);
+            }
         }
     }
 

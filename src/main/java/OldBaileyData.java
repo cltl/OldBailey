@@ -64,6 +64,14 @@ public class OldBaileyData {
             Statement meta = namedModel.createStatement(subject, metaProperty, punishmentCategory);
             statements.add(meta);
         }
+        for (int i = 0; i < persons.size(); i++) {
+            OldBaileyPerson oldBaileyPerson = persons.get(i);
+            System.out.println("oldBaileyPerson.getUri() = " + oldBaileyPerson.getUri());
+            oldBaileyPerson.addToModel(namedModel);
+            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, oldBaileyPerson.getRole());
+            Statement meta = namedModel.createStatement(subject, metaProperty, oldBaileyPerson.getUri());
+            statements.add(meta);
+        }
         return statements;
     }
     public ArrayList<OldBaileyPerson> getPersons() {

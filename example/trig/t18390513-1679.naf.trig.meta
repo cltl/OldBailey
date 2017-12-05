@@ -1,0 +1,243 @@
+@prefix nwrdata: <http://www.newsreader-project.eu/data/> .
+@prefix eso:   <http://www.newsreader-project.eu/domain-ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ili:   <http://globalwordnet.org/ili/> .
+@prefix fn:    <http://www.newsreader-project.eu/ontologies/framenet/> .
+@prefix nwr:   <http://www.newsreader-project.eu/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix nwrontology: <http://www.newsreader-project.eu/ontologies/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nwrmagazine: <http://www.newsreader-project.eu/provenance/magazine/> .
+@prefix gaf:   <http://groundedannotationframework.org/gaf#> .
+@prefix nwrpublisher: <http://www.newsreader-project.eu/provenance/publisher/> .
+@prefix pb:    <http://www.newsreader-project.eu/ontologies/propbank/> .
+@prefix nwrauthor: <http://www.newsreader-project.eu/provenance/author/> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wn:    <http://www.newsreader-project.eu/ontologies/pwn3.0/> .
+@prefix graspAttribution: <http://groundedannotationframework.org/grasp/attribution#> .
+@prefix sem:   <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix time:  <http://www.w3.org/TR/owl-time#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix graspSentiment: <http://groundedannotationframework.org/grasp/sentiment#> .
+
+{ 
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tr3> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev3>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tmx0> .
+}
+
+nwr:instances {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#/non-entities/month>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=144,155&word=w33,w34&term=t33,t34&sentence=3&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#/non-entities/month#0> ;
+            skos:prefLabel     "nine month" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Nine_Months> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tmx0>
+            a                time:Instant ;
+            time:inDateTime  <http://www.newsreader-project.eu/time/18390513> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev2>
+            a                       ili:i40501 , nwrontology:contextualEvent , fn:Attack , sem:Event , eso:Attacking , ili:i27197 ;
+            gaf:denotedBy           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=51,58&word=w10&term=t10&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev2#0> ;
+            nwr:offenceCategory     "breakingPeace" ;
+            nwr:offenceSubcategory  "wounding" ;
+            nwr:punishmentCategory  "imprison" ;
+            nwr:verdictCategory     "guilty" ;
+            nwr:verdictSubcategory  "lesserOffence" ;
+            skos:prefLabel          "assault" ;
+            skos:relatedMatch       <http://eurovoc.europa.eu/3774> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/13> , <http://eurovoc.europa.eu/1085> , <http://eurovoc.europa.eu/3559> , <http://eurovoc.europa.eu/5508> .
+    
+    <http://dbpedia.org/resource/James_II_of_England>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=8,13&word=w3&term=t3&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://dbpedia.org/resource/James_II_of_England#0> ;
+            skos:prefLabel  "JAMES" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#CommonAssault#0>
+            rdfs:label  "Common Assault" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://www.newsreader-project.eu/time/1679>
+            a              time:DateTimeDescription ;
+            time:unitType  time:unitDay ;
+            time:year      "1679"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev1>
+            a                       nwrontology:sourceEvent , fn:Notification_of_charges , sem:Event , ili:i34318 ;
+            gaf:denotedBy           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=35,43&word=w7&term=t7&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev1#0> ;
+            nwr:offenceCategory     "breakingPeace" ;
+            nwr:offenceSubcategory  "wounding" ;
+            nwr:punishmentCategory  "imprison" ;
+            nwr:verdictCategory     "guilty" ;
+            nwr:verdictSubcategory  "lesserOffence" ;
+            skos:prefLabel          "indict" ;
+            skos:relatedMatch       <http://eurovoc.europa.eu/13> , <http://eurovoc.europa.eu/3559> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/1085> , <http://eurovoc.europa.eu/5508> , <http://eurovoc.europa.eu/3774> .
+    
+    <http://dbpedia.org/resource/John_Smith_(explorer)#0>
+            rdfs:label  "John Smith" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#/non-entities/month#0>
+            rdfs:label  "nine month" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://dbpedia.org/resource/John_Smith_(explorer)>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=62,72&word=w12,w13&term=t12,t13&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://dbpedia.org/resource/John_Smith_(explorer)#0> ;
+            skos:prefLabel  "John Smith" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev3#0>
+            rdfs:label  "confine" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://dbpedia.org/resource/James_II_of_England#0>
+            rdfs:label  "JAMES" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://dbpedia.org/resource/Sir_William_Williams,_1st_Baronet,_of_Gray's_Inn#0>
+            rdfs:label  "WILLIAM WILLIAMS" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev2#0>
+            rdfs:label  "assault" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://dbpedia.org/resource/Sir_William_Williams,_1st_Baronet,_of_Gray's_Inn>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=14,30&word=w4,w5&term=t4,t5&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://dbpedia.org/resource/Sir_William_Williams,_1st_Baronet,_of_Gray's_Inn#0> ;
+            skos:prefLabel  "WILLIAM WILLIAMS" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev1#0>
+            rdfs:label  "indict" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tmx1>
+            a                time:Instant ;
+            rdfs:label       "1679" ;
+            gaf:denotedBy    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=2,6> ;
+            time:inDateTime  <http://www.newsreader-project.eu/time/1679> .
+    
+    <http://www.newsreader-project.eu/time/18390513>
+            a              time:DateTimeDescription ;
+            time:day       "---13"^^<http://www.w3.org/2001/XMLSchema#gDay> ;
+            time:month     "--05"^^<http://www.w3.org/2001/XMLSchema#gMonth> ;
+            time:unitType  time:unitDay ;
+            time:year      "1839"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev3>
+            a                       nwrontology:contextualEvent , ili:i22897 , eso:IntentionalEvent , sem:Event , ili:i28429 , ili:i34195 , ili:i22888 , fn:Inhibit_movement ;
+            gaf:denotedBy           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=135,143&word=w32&term=t32&sentence=3&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev3#0> ;
+            nwr:offenceCategory     "breakingPeace" ;
+            nwr:offenceSubcategory  "wounding" ;
+            nwr:punishmentCategory  "imprison" ;
+            nwr:verdictCategory     "guilty" ;
+            nwr:verdictSubcategory  "lesserOffence" ;
+            skos:prefLabel          "confine" ;
+            skos:relatedMatch       <http://eurovoc.europa.eu/3774> , <http://eurovoc.europa.eu/1085> , <http://eurovoc.europa.eu/5508> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/13> , <http://eurovoc.europa.eu/3559> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#CommonAssault>
+            a               nwrontology:LOC ;
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=117,131&word=w28,w29&term=t28,t29&sentence=3&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#CommonAssault#0> ;
+            skos:prefLabel  "Common Assault" .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tr2> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev2>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tmx1> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tmx1> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#pr2,rl4> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev2>
+            sem:hasActor            <http://dbpedia.org/resource/John_Smith_(explorer)> ;
+            eso:damaging-undergoer  <http://dbpedia.org/resource/John_Smith_(explorer)> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Attack@Victim>
+                    <http://dbpedia.org/resource/John_Smith_(explorer)> ;
+            pb:A1                   <http://dbpedia.org/resource/John_Smith_(explorer)> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tr1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev1>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tmx1> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tmx1> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#pr3,rl6> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev3>
+            sem:hasActor               <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#/non-entities/month> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Inhibit_movement@Theme>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#/non-entities/month> ;
+            pb:A1                      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#/non-entities/month> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#pr3,rl5> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev3>
+            sem:hasActor               <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#CommonAssault> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Inhibit_movement@Agent>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#CommonAssault> ;
+            pb:A0                      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#CommonAssault> .
+}
+
+nwr:provenance {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#pr1,rl1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=8,43> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#pr2,rl4>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=51,72> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#pr3,rl6>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=135,155> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tr2>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=2,58> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#pr1,rl2>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=35,72> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#pr3,rl5>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=94,143> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#tr1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#char=2,43> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#pr1,rl1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev1>
+            sem:hasActor  <http://dbpedia.org/resource/Sir_William_Williams,_1st_Baronet,_of_Gray's_Inn> , <http://dbpedia.org/resource/James_II_of_England> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Notification_of_charges@Accused>
+                    <http://dbpedia.org/resource/Sir_William_Williams,_1st_Baronet,_of_Gray's_Inn> , <http://dbpedia.org/resource/James_II_of_England> ;
+            pb:A1         <http://dbpedia.org/resource/Sir_William_Williams,_1st_Baronet,_of_Gray's_Inn> , <http://dbpedia.org/resource/James_II_of_England> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#pr1,rl2> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1679#ev1>
+            sem:hasActor  <http://dbpedia.org/resource/John_Smith_(explorer)> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Notification_of_charges@Charges>
+                    <http://dbpedia.org/resource/John_Smith_(explorer)> ;
+            pb:A2         <http://dbpedia.org/resource/John_Smith_(explorer)> .
+}

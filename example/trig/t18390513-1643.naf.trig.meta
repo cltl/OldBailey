@@ -1,0 +1,359 @@
+@prefix nwrdata: <http://www.newsreader-project.eu/data/> .
+@prefix eso:   <http://www.newsreader-project.eu/domain-ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ili:   <http://globalwordnet.org/ili/> .
+@prefix fn:    <http://www.newsreader-project.eu/ontologies/framenet/> .
+@prefix nwr:   <http://www.newsreader-project.eu/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix nwrontology: <http://www.newsreader-project.eu/ontologies/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nwrmagazine: <http://www.newsreader-project.eu/provenance/magazine/> .
+@prefix gaf:   <http://groundedannotationframework.org/gaf#> .
+@prefix nwrpublisher: <http://www.newsreader-project.eu/provenance/publisher/> .
+@prefix pb:    <http://www.newsreader-project.eu/ontologies/propbank/> .
+@prefix nwrauthor: <http://www.newsreader-project.eu/provenance/author/> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wn:    <http://www.newsreader-project.eu/ontologies/pwn3.0/> .
+@prefix graspAttribution: <http://groundedannotationframework.org/grasp/attribution#> .
+@prefix sem:   <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix time:  <http://www.w3.org/TR/owl-time#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix graspSentiment: <http://groundedannotationframework.org/grasp/sentiment#> .
+
+{ 
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr6,rl15> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev7>
+            sem:hasActor  <http://dbpedia.org/resource/Seven_Years'_War> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Notification_of_charges@Accused>
+                    <http://dbpedia.org/resource/Seven_Years'_War> ;
+            pb:A1         <http://dbpedia.org/resource/Seven_Years'_War> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr4,rl8> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev5>
+            sem:hasActor        <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/transported> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/guilty> , <http://dbpedia.org/resource/Seven_Years'_War> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Request@Speaker>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/transported> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/guilty> , <http://dbpedia.org/resource/Seven_Years'_War> ;
+            pb:A0               <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/transported> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/guilty> , <http://dbpedia.org/resource/Seven_Years'_War> .
+}
+
+nwr:provenance {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=16,174> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr6>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=45,174> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr2,rl4>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=26,96> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr3,rl6>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=8,71> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr6,rl15>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=45,174> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr4>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=117,174> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr2,rl2>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=8,33> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr2>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=26,174> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr3,rl7>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=62,96> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr5>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=87,174> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr1,rl1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=8,21> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr2,rl3>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=26,174> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr4,rl8>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=39,174> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr3>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=62,174> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr2,rl3> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev3>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/transported> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/guilty> , <http://dbpedia.org/resource/Seven_Years'_War> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Notification_of_charges@Charges>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/transported> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/guilty> , <http://dbpedia.org/resource/Seven_Years'_War> ;
+            pb:A2         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/transported> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/guilty> , <http://dbpedia.org/resource/Seven_Years'_War> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr2,rl4> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev3>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/obtain+money+false+pretence> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Notification_of_charges@Charges>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/obtain+money+false+pretence> ;
+            pb:A2         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/obtain+money+false+pretence> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr5> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev6>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> .
+}
+
+nwr:instances {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev6#0>
+            rdfs:label  "pretence" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/obtain+money+false+pretence#0>
+            rdfs:label  "with obtain money by false pretence" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev4>
+            a                       sem:Event , eso:Getting , ili:i32931 , nwrontology:contextualEvent , fn:Getting ;
+            gaf:denotedBy           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=62,71&word=w11&term=t11&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev4#0> ;
+            nwr:offenceCategory     "deception" ;
+            nwr:offenceSubcategory  "fraud" ;
+            nwr:punishmentCategory  "transport" ;
+            nwr:verdictCategory     "guilty" ;
+            nwr:verdictSubcategory  "pleadedGuilty" ;
+            skos:prefLabel          "obtain" ;
+            skos:relatedMatch       <http://eurovoc.europa.eu/192> , <http://eurovoc.europa.eu/1445> , <http://eurovoc.europa.eu/5367> , <http://eurovoc.europa.eu/3774> , <http://eurovoc.europa.eu/616> , <http://eurovoc.europa.eu/5369> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/guilty>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=127,135&word=w23,w24&term=t23,t24&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/guilty#0> ;
+            skos:prefLabel  "GUILTY ." .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev5#0>
+            rdfs:label  "plead" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/transported>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=147,158&word=w29&term=t29&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/transported#0> ;
+            skos:prefLabel  "Transported" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2>
+            a                  time:Interval ;
+            rdfs:label         "seven year" ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=163,174> ;
+            time:hasBeginning  <http://www.newsreader-project.eu/time/18320513> ;
+            time:hasEnd        <http://www.newsreader-project.eu/time/18390513> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev3>
+            a                       ili:i25858 , ili:i34100 , sem:Event , fn:Notification_of_charges , nwrontology:sourceEvent , ili:i25976 ;
+            gaf:denotedBy           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=26,33&word=w6&term=t6&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev3#0> ;
+            nwr:offenceCategory     "deception" ;
+            nwr:offenceSubcategory  "fraud" ;
+            nwr:punishmentCategory  "transport" ;
+            nwr:verdictCategory     "guilty" ;
+            nwr:verdictSubcategory  "pleadedGuilty" ;
+            skos:prefLabel          "charge" ;
+            skos:relatedMatch       <http://eurovoc.europa.eu/192> , <http://eurovoc.europa.eu/616> , <http://eurovoc.europa.eu/1445> , <http://eurovoc.europa.eu/5369> , <http://eurovoc.europa.eu/3774> , <http://eurovoc.europa.eu/5367> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile#0>
+            rdfs:label  "WILLIAM mile" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://www.newsreader-project.eu/time/18320513>
+            a              time:DateTimeDescription ;
+            time:day       "---13"^^<http://www.w3.org/2001/XMLSchema#gDay> ;
+            time:month     "--05"^^<http://www.w3.org/2001/XMLSchema#gMonth> ;
+            time:unitType  time:unitDay ;
+            time:year      "1832"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev4#0>
+            rdfs:label  "obtain" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev2>
+            a                       sem:Event , ili:i108501 , nwrontology:contextualEvent , ili:i108444 ;
+            gaf:denotedBy           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=16,21&word=w4&term=t4&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev2#0> ;
+            nwr:offenceCategory     "deception" ;
+            nwr:offenceSubcategory  "fraud" ;
+            nwr:punishmentCategory  "transport" ;
+            nwr:verdictCategory     "guilty" ;
+            nwr:verdictSubcategory  "pleadedGuilty" ;
+            skos:prefLabel          "mile" ;
+            skos:relatedMatch       <http://eurovoc.europa.eu/5369> , <http://eurovoc.europa.eu/3774> , <http://eurovoc.europa.eu/5367> , <http://eurovoc.europa.eu/616> , <http://eurovoc.europa.eu/192> , <http://eurovoc.europa.eu/1445> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev3#0>
+            rdfs:label  "charge" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/obtain+money+false+pretence>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=57,96&word=w10,w11,w12,w13,w14,w15&term=t10,t11,t12,t13,t14,t15&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/obtain+money+false+pretence#0> ;
+            skos:prefLabel     "with obtain money by false pretence" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Money> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/guilty#0>
+            rdfs:label  "GUILTY ." ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev2#0>
+            rdfs:label  "mile" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev7>
+            a                       ili:i74690 , fn:Notification_of_charges , sem:Event , ili:i74703 , nwrontology:sourceEvent , ili:i34318 ;
+            gaf:denotedBy           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=45,56&word=w9&term=t9&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev7#0> ;
+            nwr:offenceCategory     "deception" ;
+            nwr:offenceSubcategory  "fraud" ;
+            nwr:punishmentCategory  "transport" ;
+            nwr:verdictCategory     "guilty" ;
+            nwr:verdictSubcategory  "pleadedGuilty" ;
+            skos:prefLabel          "indictment" ;
+            skos:relatedMatch       <http://eurovoc.europa.eu/1445> , <http://eurovoc.europa.eu/192> , <http://eurovoc.europa.eu/616> , <http://eurovoc.europa.eu/5369> , <http://eurovoc.europa.eu/5367> , <http://eurovoc.europa.eu/3774> .
+    
+    <http://dbpedia.org/resource/Seven_Years'_War#0>
+            rdfs:label  "seven year" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev6>
+            a                       sem:Event , ili:i62171 , nwrontology:contextualEvent , ili:i61641 ;
+            gaf:denotedBy           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=87,96&word=w15&term=t15&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev6#0> ;
+            nwr:offenceCategory     "deception" ;
+            nwr:offenceSubcategory  "fraud" ;
+            nwr:punishmentCategory  "transport" ;
+            nwr:verdictCategory     "guilty" ;
+            nwr:verdictSubcategory  "pleadedGuilty" ;
+            skos:prefLabel          "pretence" ;
+            skos:relatedMatch       <http://eurovoc.europa.eu/5369> , <http://eurovoc.europa.eu/5367> , <http://eurovoc.europa.eu/3774> , <http://eurovoc.europa.eu/1445> , <http://eurovoc.europa.eu/616> , <http://eurovoc.europa.eu/192> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/transported#0>
+            rdfs:label  "Transported" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://dbpedia.org/resource/Seven_Years'_War>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=163,174&word=w31,w32&term=t31,t32&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://dbpedia.org/resource/Seven_Years'_War#0> ;
+            skos:prefLabel  "seven year" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=8,21&word=w3,w4&term=t3,t4&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile#0> ;
+            skos:prefLabel     "WILLIAM mile" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Sir_William_Miles,_1st_Baronet> .
+    
+    <http://www.newsreader-project.eu/time/18390513>
+            a              time:DateTimeDescription ;
+            time:day       "---13"^^<http://www.w3.org/2001/XMLSchema#gDay> ;
+            time:month     "--05"^^<http://www.w3.org/2001/XMLSchema#gMonth> ;
+            time:unitType  time:unitDay ;
+            time:year      "1839"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev7#0>
+            rdfs:label  "indictment" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev5>
+            a                       ili:i25493 , ili:i26089 , fn:Request , sem:Event , ili:i25498 , nwrontology:sourceEvent , ili:i26660 ;
+            gaf:denotedBy           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#char=117,124&word=w22&term=t22&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev5#0> ;
+            nwr:offenceCategory     "deception" ;
+            nwr:offenceSubcategory  "fraud" ;
+            nwr:punishmentCategory  "transport" ;
+            nwr:verdictCategory     "guilty" ;
+            nwr:verdictSubcategory  "pleadedGuilty" ;
+            skos:prefLabel          "plead" ;
+            skos:relatedMatch       <http://eurovoc.europa.eu/5369> , <http://eurovoc.europa.eu/192> , <http://eurovoc.europa.eu/1445> , <http://eurovoc.europa.eu/616> , <http://eurovoc.europa.eu/5367> , <http://eurovoc.europa.eu/3774> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr6> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev7>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr3> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev4>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr3,rl7> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev4>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/obtain+money+false+pretence> ;
+            eso:possession-theme  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/obtain+money+false+pretence> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Getting@Theme>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/obtain+money+false+pretence> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/obtain+money+false+pretence> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr2,rl2> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev3>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Notification_of_charges@Accused>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr3,rl6> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev4>
+            sem:hasActor            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile> ;
+            eso:possession-owner_2  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Getting@Recipient>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile> ;
+            pb:A0                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr4> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev5>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev2>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#pr1,rl1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev2>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile> ;
+            pb:A3         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#/non-entities/william+mile> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tr2> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#ev3>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1643#tmx2> .
+}
