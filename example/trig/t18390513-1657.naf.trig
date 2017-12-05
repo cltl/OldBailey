@@ -1,0 +1,2541 @@
+@prefix nwrdata: <http://www.newsreader-project.eu/data/> .
+@prefix eso:   <http://www.newsreader-project.eu/domain-ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ili:   <http://globalwordnet.org/ili/> .
+@prefix fn:    <http://www.newsreader-project.eu/ontologies/framenet/> .
+@prefix nwr:   <http://www.newsreader-project.eu/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix nwrontology: <http://www.newsreader-project.eu/ontologies/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nwrmagazine: <http://www.newsreader-project.eu/provenance/magazine/> .
+@prefix gaf:   <http://groundedannotationframework.org/gaf#> .
+@prefix nwrpublisher: <http://www.newsreader-project.eu/provenance/publisher/> .
+@prefix pb:    <http://www.newsreader-project.eu/ontologies/propbank/> .
+@prefix nwrauthor: <http://www.newsreader-project.eu/provenance/author/> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wn:    <http://www.newsreader-project.eu/ontologies/pwn3.0/> .
+@prefix graspAttribution: <http://groundedannotationframework.org/grasp/attribution#> .
+@prefix sem:   <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix time:  <http://www.w3.org/TR/owl-time#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix graspSentiment: <http://groundedannotationframework.org/grasp/sentiment#> .
+
+{ 
+}
+
+nwr:instances {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev56>
+            a                  sem:Event , nwrontology:sourceEvent , ili:i34318 , fn:Notification_of_charges ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=25,33&word=w6&term=t6&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev56#0> ;
+            skos:prefLabel     "indict" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev56#0>
+            rdfs:label  "indict" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/toole>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=8,20&word=w3,w4&term=t3,t4&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/toole#0> ;
+            skos:prefLabel     "THOMAS TOOLE" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Toole_County,_Montana> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/toole#0>
+            rdfs:label  "THOMAS TOOLE" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones>
+            a               nwrontology:PER ;
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=148,167&word=w35,w36,w37&term=t35,t36,t37&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones#0> ;
+            skos:prefLabel  "Ellen Gilston Jones" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones#0>
+            rdfs:label  "Ellen Gilston Jones" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=48,65&word=w10,w11,w12,w13,w14&term=t10,t11,t12,t13,t14&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may#0> ;
+            skos:prefLabel     "on the 2nd of May" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/List_of_Pokémon_anime_characters> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may#0>
+            rdfs:label  "on the 2nd of May" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=170,185&word=w39,w40,w41&term=t39,t40,t41&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person#0> ;
+            skos:prefLabel     "from her person" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Grammatical_person> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person#0>
+            rdfs:label  "from her person" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://www.newsreader-project.eu/time/183905>
+            a              time:DateTimeDescription ;
+            time:month     "--05"^^<http://www.w3.org/2001/XMLSchema#gMonth> ;
+            time:unitType  time:unitDay ;
+            time:year      "1839"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx2>
+            a                time:Instant ;
+            rdfs:label       "the 2nd of May" ;
+            gaf:denotedBy    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=51,65> ;
+            time:inDateTime  <http://www.newsreader-project.eu/time/183905> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev57>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i33345 , fn:Theft , eso:Stealing ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=38,46&word=w8&term=t8&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev57#0> ;
+            skos:prefLabel     "steal" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev57#0>
+            rdfs:label  "steal" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev58>
+            a                  sem:Event , nwrontology:contextualEvent ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=55,58&word=w12&term=t12&sentence=2&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=290,293&word=w66&term=t66&sentence=5&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5008,5011&word=w1148&term=t1148&sentence=37&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev58#0> ;
+            skos:prefLabel     "2nd" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev58#0>
+            rdfs:label  "2nd" ;
+            <http://www.newsreader-project.eu//count>
+                    3 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/may>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=294,300&word=w67,w68&term=t67,t68&sentence=5&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/may#0> ;
+            skos:prefLabel     "of May" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/List_of_Pokémon_anime_characters> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/may#0>
+            rdfs:label  "of May" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4948,5018&word=w1134,w1135,w1136,w1137,w1138,w1139,w1140,w1141,w1142,w1143,w1144,w1145,w1146,w1147,w1148,w1149,w1150&term=t1134,t1135,t1136,t1137,t1138,t1139,t1140,t1141,t1142,t1143,t1144,t1145,t1146,t1147,t1148,t1149,t1150&sentence=37&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may#0> ;
+            skos:prefLabel     "two pair of boot and a pair of shoe of his mother on the 2nd of May" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Boot> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may#0>
+            rdfs:label  "two pair of boot and a pair of shoe of his mother on the 2nd of May" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev59>
+            a                  sem:Event , nwrontology:contextualEvent ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=138,144&word=w33&term=t33&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev59#0> ;
+            skos:prefLabel     "mony" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev59#0>
+            rdfs:label  "mony" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev60>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i34919 , fn:Residence , eso:BeingAtAPlace , ili:i34765 , ili:i34758 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=230,234&word=w53&term=t53&sentence=4&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4864,4868&word=w1116&term=t1116&sentence=37&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5493,5498&word=w1264&term=t1264&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev60#0> ;
+            skos:prefLabel     "live" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev60#0>
+            rdfs:label  "live" ;
+            <http://www.newsreader-project.eu//count>
+                    3 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Cockspurstreet>
+            a               nwrontology:LOC ;
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=266,281&word=w62&term=t62&sentence=4&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Cockspurstreet#0> ;
+            skos:prefLabel  "Cockspur-street" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Cockspurstreet#0>
+            rdfs:label  "Cockspur-street" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrPayne>
+            a               nwrontology:PER ;
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=252,261&word=w58,w59&term=t58,t59&sentence=4&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4038,4047&word=w921,w922&term=t921,t922&sentence=31&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4177,4186&word=w952,w953&term=t952,t953&sentence=31&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrPayne#0> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrPayne#1> ;
+            skos:prefLabel  "Mr. Payne" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrPayne#0>
+            rdfs:label  "Mr. Newel" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrPayne#1>
+            rdfs:label  "Mr. Payne" ;
+            <http://www.newsreader-project.eu//count>
+                    2 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7>
+            a                time:Instant ;
+            rdfs:label       "May" ;
+            gaf:denotedBy    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5015,5018> ;
+            time:inDateTime  <http://www.newsreader-project.eu/time/183905> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev61>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i79671 , ili:i79199 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=242,248&word=w56&term=t56&sentence=4&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev61#0> ;
+            skos:prefLabel     "family" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev61#0>
+            rdfs:label  "family" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx3>
+            a                time:Instant ;
+            rdfs:label       "May" ;
+            gaf:denotedBy    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=297,300> ;
+            time:inDateTime  <http://www.newsreader-project.eu/time/183905> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev62>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i52438 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=314,319&word=w73&term=t73&sentence=5&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev62#0> ;
+            skos:prefLabel     "Court" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev62#0>
+            rdfs:label  "Court" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/request>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=320,331&word=w74,w75&term=t74,t75&sentence=5&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/request#0> ;
+            skos:prefLabel  "of request" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/request#0>
+            rdfs:label  "of request" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev63>
+            a                  sem:Event , nwrontology:contextualEvent , wn:eng-01445917-a , fn:Court_examination ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1067,1081&word=w245&term=t245&sentence=7&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev63#0> ;
+            skos:prefLabel     "cross-examine" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev63#0>
+            rdfs:label  "cross-examine" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://dbpedia.org/resource/Master_of_Laws>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1085,1088&word=w247&term=t247&sentence=7&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://dbpedia.org/resource/Master_of_Laws#0> ;
+            skos:prefLabel  "MR." .
+    
+    <http://dbpedia.org/resource/Master_of_Laws#0>
+            rdfs:label  "MR." ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://www.newsreader-project.eu/time/18390513>
+            a              time:DateTimeDescription ;
+            time:day       "---13"^^<http://www.w3.org/2001/XMLSchema#gDay> ;
+            time:month     "--05"^^<http://www.w3.org/2001/XMLSchema#gMonth> ;
+            time:unitType  time:unitDay ;
+            time:year      "1839"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0>
+            a                time:Instant ;
+            time:inDateTime  <http://www.newsreader-project.eu/time/18390513> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev64>
+            a                  sem:Event , nwrontology:sourceEvent , eso:BeingAtAPlace , ili:i29462 , fn:Statement , fn:Being_located , fn:Change_posture , fn:Placing , fn:Posture , ili:i25287 , ili:i29465 , ili:i35339 , eso:Placing ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1157,1162&word=w265&term=t265&sentence=10&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3138,3146&word=w706&term=t706&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3531,3539&word=w802&term=t802&sentence=23&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev64#0> ;
+            skos:prefLabel     "stand" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev64#0>
+            rdfs:label  "stand" ;
+            <http://www.newsreader-project.eu//count>
+                    3 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3147,3159&word=w707,w708,w709&term=t707,t708,t709&sentence=19&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back#0> ;
+            skos:prefLabel  "with my back" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back#0>
+            rdfs:label  "with my back" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3160,3179&word=w710,w711,w712,w713,w714&term=t710,t711,t712,t713,t714&sentence=19&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk#0> ;
+            skos:prefLabel     "to the clerk 's desk" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Clerk> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk#0>
+            rdfs:label  "to the clerk 's desk" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3540,3581&word=w803,w804,w805,w806,w807,w808,w809,w810&term=t803,t804,t805,t806,t807,t808,t809,t810&sentence=23&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix#0> ;
+            skos:prefLabel     "on the right hand side of the prosecutrix" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Obverse_and_reverse> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix#0>
+            rdfs:label  "on the right hand side of the prosecutrix" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev65>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i31244 , fn:Cotheme , fn:Self_motion , eso:Translocation , ili:i31250 , ili:i31277 , ili:i31249 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1307,1314&word=w299&term=t299&sentence=10&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev65#0> ;
+            skos:prefLabel     "walk" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev65#0>
+            rdfs:label  "walk" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev66>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i30898 , fn:Motion , ili:i30954 , eso:Motion ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1376,1381&word=w312&term=t312&sentence=10&paragraph=1> ;
+            skos:prefLabel     "go" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/only+business>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1354,1371&word=w308,w309,w310&term=t308,t309,t310&sentence=10&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/only+business#0> ;
+            skos:prefLabel  "only the business" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/only+business#0>
+            rdfs:label  "only the business" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev67>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i108079 , ili:i63904 , fn:Amounting_to , eso:HavingAValue , ili:i34893 , ili:i26340 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1400,1406&word=w318&term=t318&sentence=10&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev67#0> ;
+            skos:prefLabel     "number" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev67#0>
+            rdfs:label  "number" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person+talk>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1407,1425&word=w319,w320,w321&term=t319,t320,t321&sentence=10&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person+talk#0> ;
+            skos:prefLabel     "of person talk" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Person> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person+talk#0>
+            rdfs:label  "of person talk" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev68>
+            a                  sem:Event , nwrontology:sourceEvent , fn:Statement , ili:i26408 , ili:i26316 , fn:Chatting ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1418,1425&word=w321&term=t321&sentence=10&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev68#0> ;
+            skos:prefLabel     "talk" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev68#0>
+            rdfs:label  "talk" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev69>
+            a                  sem:Event , nwrontology:sourceEvent , ili:i24904 , ili:i25161 , fn:Awareness , fn:Opinion , ili:i24893 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1437,1442&word=w325&term=t325&sentence=10&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4693,4698&word=w1076&term=t1076&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev69#0> ;
+            skos:prefLabel     "think" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev69#0>
+            rdfs:label  "think" ;
+            <http://www.newsreader-project.eu//count>
+                    2 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+there+hour+much>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1443,1470&word=w326,w327,w328,w329,w330,w331,w332&term=t326,t327,t328,t329,t330,t331,t332&sentence=10&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+there+hour+much#0> ;
+            skos:prefLabel  "i be there a hour or much" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+there+hour+much#0>
+            rdfs:label  "i be there a hour or much" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+fourpenny-piece>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4699,4726&word=w1077,w1078,w1079,w1080&term=t1077,t1078,t1079,t1080&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+fourpenny-piece#0> ;
+            skos:prefLabel  "there be a fourpenny-piece" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+fourpenny-piece#0>
+            rdfs:label  "there be a fourpenny-piece" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev70>
+            a                  sem:Event , nwrontology:sourceEvent , ili:i29462 , ili:i110236 , ili:i34729 , fn:Occupy_rank , ili:i25026 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1493,1501&word=w338&term=t338&sentence=10&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1529,1537&word=w346&term=t346&sentence=10&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev70#0> ;
+            skos:prefLabel     "standing" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev70#0>
+            rdfs:label  "standing" ;
+            <http://www.newsreader-project.eu//count>
+                    2 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/woman>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1487,1492&word=w337&term=t337&sentence=10&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/woman#0> ;
+            skos:prefLabel     "woman" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Woman> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/woman#0>
+            rdfs:label  "woman" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/corner>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1502,1513&word=w339,w340,w341&term=t339,t340,t341&sentence=10&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/corner#0> ;
+            skos:prefLabel     "in a corner" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Boxing> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/corner#0>
+            rdfs:label  "in a corner" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/witness>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1521,1528&word=w345&term=t345&sentence=10&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/witness#0> ;
+            skos:prefLabel     "witness" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Witness> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/witness#0>
+            rdfs:label  "witness" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev71>
+            a                  sem:Event , nwrontology:sourceEvent , fn:Self_motion , eso:Translocation , fn:Motion , eso:Motion , ili:i32402 , ili:i29527 , fn:Categorization , fn:Grasp , fn:Intentionally_create , fn:Perception_experience , fn:Travel , fn:Come_together , eso:Creating , eso:Meeting , ili:i29923 , ili:i25165 , ili:i24866 , ili:i32509 , ili:i32401 , ili:i26213 , ili:i32531 , ili:i32409 , ili:i34186 , ili:i34163 , ili:i34164 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3206,3209&word=w722&term=t722&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4634,4637&word=w1061&term=t1061&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev71#0> ;
+            skos:prefLabel     "see" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev71#0>
+            rdfs:label  "see" ;
+            <http://www.newsreader-project.eu//count>
+                    2 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3210,3232&word=w723,w724,w725&term=t723,t724,t725&sentence=19&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop#0> ;
+            skos:prefLabel     "a fourpenny-piece drop" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Drop_zone> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop#0>
+            rdfs:label  "a fourpenny-piece drop" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4576,4661&word=w1050,w1051,w1052,w1053,w1054,w1055,w1056,w1057,w1058,w1059,w1060,w1061,w1062,w1063,w1064,w1065,w1066&term=t1050,t1051,t1052,t1053,t1054,t1055,t1056,t1057,t1058,t1059,t1060,t1061,t1062,t1063,t1064,t1065,t1066&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand#0> ;
+            skos:prefLabel     "he have , because halfpence and farthing be together -- i see the copper in his hand" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Halfpenny_(British_pre-decimal_coin)> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand#0>
+            rdfs:label  "he have , because halfpence and farthing be together -- i see the copper in his hand" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev72>
+            a                  sem:Event , nwrontology:contextualEvent , fn:Self_motion , ili:i66129 , ili:i33992 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3155,3159&word=w709&term=t709&sentence=19&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev72#0> ;
+            skos:prefLabel     "back" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev72#0>
+            rdfs:label  "back" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev73>
+            a                  sem:Event , nwrontology:sourceEvent , fn:Perception_experience , ili:i32603 , fn:Hear , ili:i24755 , ili:i32299 , ili:i32609 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3184,3189&word=w717&term=t717&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3362,3367&word=w765&term=t765&sentence=19&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev73#0> ;
+            skos:prefLabel     "hear" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev73#0>
+            rdfs:label  "hear" ;
+            <http://www.newsreader-project.eu//count>
+                    2 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/money>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3190,3200&word=w718,w719&term=t718,t719&sentence=19&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/money#0> ;
+            skos:prefLabel     "some money" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Money> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/money#0>
+            rdfs:label  "some money" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev74>
+            a                  sem:Event , nwrontology:sourceEvent , fn:Change_posture , eso:Translocation , fn:Travel , ili:i109995 , ili:i109275 , ili:i63859 , fn:Cause_change_of_position_on_a_scale , fn:Change_position_on_a_scale , fn:Body_movement , fn:Commerce_pay , fn:Motion_directional , fn:Path_shape , fn:Cause_motion , eso:Decreasing , ili:i23890 , ili:i33072 , ili:i31618 , ili:i31613 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3228,3232&word=w725&term=t725&sentence=19&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev74#0> ;
+            skos:prefLabel     "drop" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev74#0>
+            rdfs:label  "drop" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev75>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i33076 , ili:i24872 , ili:i27693 , ili:i32922 , ili:i34813 , ili:i31738 , ili:i25092 , fn:Taking , fn:Change_of_quantity_of_possession , fn:Earnings_and_losses , fn:Getting , fn:Removing , fn:Bringing , fn:Change_of_leadership , eso:Increasing , eso:Transportation , ili:i33178 , ili:i33181 , ili:i32134 , ili:i35249 , ili:i32785 , eso:Getting , eso:Taking ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3237,3241&word=w728&term=t728&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4482,4486&word=w1030&term=t1030&sentence=35&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5254,5258&word=w1209&term=t1209&sentence=39&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev75#0> ;
+            skos:prefLabel     "take" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev75#0>
+            rdfs:label  "take" ;
+            <http://www.newsreader-project.eu//count>
+                    3 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4448,4493&word=w1022,w1023,w1024,w1025,w1026,w1027,w1028,w1029,w1030,w1031&term=t1022,t1023,t1024,t1025,t1026,t1027,t1028,t1029,t1030,t1031&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice#0> ;
+            skos:prefLabel     "he have some farthing -- i do not take notice" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Farthing_(British_coin)> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice#0>
+            rdfs:label  "he have some farthing -- i do not take notice" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev76>
+            a                  sem:Event , nwrontology:sourceEvent , fn:Motion , eso:Motion , ili:i24445 , ili:i30956 , ili:i31766 , fn:Arriving , fn:Reveal_secret , eso:Arriving , ili:i23444 , ili:i35392 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3263,3267&word=w734&term=t734&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3759,3763&word=w855&term=t855&sentence=28&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5542,5546&word=w1274&term=t1274&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev76#0> ;
+            skos:prefLabel     "come" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev76#0>
+            rdfs:label  "come" ;
+            <http://www.newsreader-project.eu//count>
+                    3 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3250,3262&word=w732,w733&term=t732,t733&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3799,3813&word=w866,w867,w868&term=t866,t867,t868&sentence=30&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4919,4936&word=w1127,w1128,w1129,w1130&term=t1127,t1128,t1129,t1130&sentence=37&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5662,5674&word=w1300,w1301&term=t1300,t1301&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner#0> ;
+            skos:prefLabel     "the prisoner" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Prison> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner#0>
+            rdfs:label  "the prisoner" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/home>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3764,3773&word=w856,w857&term=t856,t857&sentence=28&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/home#0> ;
+            skos:prefLabel  "from home" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/home#0>
+            rdfs:label  "from home" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5539,5551&word=w1273,w1274,w1275&term=t1273,t1274,t1275&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here#0> ;
+            skos:prefLabel  "to come here" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here#0>
+            rdfs:label  "to come here" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev77>
+            a                  sem:Event , nwrontology:sourceEvent , fn:Statement , fn:Motion , eso:Motion , ili:i25092 , ili:i26632 , fn:Choosing , fn:Text_creation , ili:i25115 , ili:i26226 , ili:i25432 , ili:i26659 , ili:i26486 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3272,3276&word=w736&term=t736&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3292,3296&word=w742&term=t742&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3325,3329&word=w754&term=t754&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3427,3431&word=w779&term=t779&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5114,5118&word=w1172&term=t1172&sentence=37&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5193,5196&word=w1191&term=t1191&sentence=37&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5556,5559&word=w1277&term=t1277&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev77#0> ;
+            skos:prefLabel     "say" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev77#0>
+            rdfs:label  "say" ;
+            <http://www.newsreader-project.eu//count>
+                    7 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3277,3287&word=w737,w738,w739&term=t737,t738,t739&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5197,5207&word=w1192,w1193,w1194&term=t1192,t1193,t1194&sentence=37&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be#0> ;
+            skos:prefLabel  "it be his" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be#0>
+            rdfs:label  "it be his" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3432,3439&word=w780,w781&term=t780,t781&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4419,4438&word=w1015,w1016,w1017,w1018&term=t1015,t1016,t1017,t1018&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have#0> ;
+            skos:prefLabel  "she have" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have#0>
+            rdfs:label  "she have" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+silver+be+bent>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5119,5152&word=w1173,w1174,w1175,w1176,w1177,w1178,w1179,w1180&term=t1173,t1174,t1175,t1176,t1177,t1178,t1179,t1180&sentence=37&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+silver+be+bent#0> ;
+            skos:prefLabel     "it be silver , though it be bent" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Silver> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+silver+be+bent#0>
+            rdfs:label  "it be silver , though it be bent" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet>
+            a               nwrontology:LOC ;
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5632,5642&word=w1295&term=t1295&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet#0> ;
+            skos:prefLabel  "Ray-street" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet#0>
+            rdfs:label  "Ray-street" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://dbpedia.org/resource/Clerkenwell>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5644,5655&word=w1297&term=t1297&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://dbpedia.org/resource/Clerkenwell#0> ;
+            skos:prefLabel  "Clerkenwell" .
+    
+    <http://dbpedia.org/resource/Clerkenwell#0>
+            rdfs:label  "Clerkenwell" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev78>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i33436 , ili:i32755 , fn:Giving , ili:i27512 , ili:i32758 , ili:i32757 , ili:i33319 , ili:i32898 , ili:i33549 , ili:i33278 , eso:Giving ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3341,3345&word=w759&term=t759&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4390,4394&word=w1007&term=t1007&sentence=35&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4778,4782&word=w1094&term=t1094&sentence=35&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5023,5027&word=w1153&term=t1153&sentence=37&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5572,5576&word=w1281&term=t1281&sentence=41&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5657,5661&word=w1299&term=t1299&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev78#0> ;
+            skos:prefLabel     "give" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev78#0>
+            rdfs:label  "give" ;
+            <http://www.newsreader-project.eu//count>
+                    6 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/half-crown>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5032,5044&word=w1155,w1156&term=t1155,t1156&sentence=37&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5309,5326&word=w1222,w1223,w1224&term=t1222,t1223,t1224&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/half-crown#0> ;
+            skos:prefLabel     "a half-crown" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Half_crown_(British_coin)> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/half-crown#0>
+            rdfs:label  "a half-crown" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/shilling>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5046,5056&word=w1158,w1159&term=t1158,t1159&sentence=37&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/shilling#0> ;
+            skos:prefLabel     "a shilling" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Shilling> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/shilling#0>
+            rdfs:label  "a shilling" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#AquiliniLucioni>
+            a               nwrontology:PER ;
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5598,5614&word=w1288,w1289&term=t1288,t1289&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#AquiliniLucioni#0> ;
+            skos:prefLabel  "Aquilini Lucioni" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#AquiliniLucioni#0>
+            rdfs:label  "Aquilini Lucioni" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/good+character.>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5675,5692&word=w1302,w1303,w1304&term=t1302,t1303,t1304&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/good+character.#0> ;
+            skos:prefLabel  "a good character." .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/good+character.#0>
+            rdfs:label  "a good character." ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev79>
+            a                  sem:Event , nwrontology:sourceEvent , fn:Motion , eso:Motion , ili:i25607 , ili:i25462 , fn:Questioning , ili:i25608 , ili:i26103 , fn:Request , ili:i25475 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3382,3385&word=w768&term=t768&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5530,5535&word=w1271&term=t1271&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev79#0> ;
+            skos:prefLabel     "ask" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev79#0>
+            rdfs:label  "ask" ;
+            <http://www.newsreader-project.eu//count>
+                    2 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/lady>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3386,3394&word=w769,w770&term=t769,t770&sentence=19&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/lady#0> ;
+            skos:prefLabel     "the lady" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Lady_(word)> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/lady#0>
+            rdfs:label  "the lady" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+lose+thing>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3395,3420&word=w771,w772,w773,w774,w775,w776&term=t771,t772,t773,t774,t775,t776&sentence=19&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+lose+thing#0> ;
+            skos:prefLabel  "if she have lose any thing" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+lose+thing#0>
+            rdfs:label  "if she have lose any thing" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrsToole>
+            a               nwrontology:PER ;
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5519,5529&word=w1269,w1270&term=t1269,t1270&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrsToole#0> ;
+            skos:prefLabel  "Mrs. Toole" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrsToole#0>
+            rdfs:label  "Mrs. Toole" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev80>
+            a                  sem:Event , nwrontology:contextualEvent , fn:Earnings_and_losses , ili:i33171 , ili:i27089 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3406,3410&word=w774&term=t774&sentence=19&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev80#0> ;
+            skos:prefLabel     "lose" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev80#0>
+            rdfs:label  "lose" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev81>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i22103 , ili:i32770 , fn:Inclusion , fn:Possession , eso:HavingInPossession , ili:i32775 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3436,3439&word=w781&term=t781&sentence=19&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3738,3741&word=w850&term=t850&sentence=28&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4374,4377&word=w1000&term=t1000&sentence=33&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4427,4430&word=w1017&term=t1017&sentence=35&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4451,4454&word=w1023&term=t1023&sentence=35&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4579,4582&word=w1051&term=t1051&sentence=35&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4767,4770&word=w1090&term=t1090&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev81#0> ;
+            skos:prefLabel     "have" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev81#0>
+            rdfs:label  "have" ;
+            <http://www.newsreader-project.eu//count>
+                    7 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3731,3751&word=w848,w849,w850,w851,w852&term=t848,t849,t850,t851,t852&sentence=28&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money#0> ;
+            skos:prefLabel     "that i have the money" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Money> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money#0>
+            rdfs:label  "that i have the money" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+sixpence>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4355,4373&word=w997,w998,w999&term=t997,t998,t999&sentence=33&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+sixpence#0> ;
+            skos:prefLabel     "how many sixpence" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Sixpence_(British_coin)> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+sixpence#0>
+            rdfs:label  "how many sixpence" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4743,4770&word=w1086,w1087,w1088,w1089,w1090&term=t1086,t1087,t1088,t1089,t1090&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have#0> ;
+            skos:prefLabel     "how many half-crowns he have" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Half_crown_(British_coin)> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have#0>
+            rdfs:label  "how many half-crowns he have" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev82>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i63715 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3469,3477&word=w789&term=t789&sentence=22&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3602,3610&word=w816&term=t816&sentence=23&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev82#0> ;
+            skos:prefLabel     "distance" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev82#0>
+            rdfs:label  "distance" ;
+            <http://www.newsreader-project.eu//count>
+                    2 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev83>
+            a                  sem:Event , nwrontology:sourceEvent , ili:i82421 , fn:Taking_sides , ili:i27369 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3558,3562&word=w807&term=t807&sentence=23&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev83#0> ;
+            skos:prefLabel     "side" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev83#0>
+            rdfs:label  "side" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev84>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i25626 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3633,3644&word=w824&term=t824&sentence=25&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev84#0> ;
+            skos:prefLabel     "re-examine" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev84#0>
+            rdfs:label  "re-examine" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/jones>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3627,3632&word=w823&term=t823&sentence=25&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/jones#0> ;
+            skos:prefLabel     "JONES" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Geraint_Jones> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/jones#0>
+            rdfs:label  "JONES" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev85>
+            a                  sem:Event , nwrontology:sourceEvent , fn:Awareness , ili:i24736 , fn:Familiarity , fn:Personal_relationship , eso:BeingInAPersonalRelationship , ili:i24741 , ili:i24802 , ili:i28863 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3678,3682&word=w834&term=t834&sentence=26&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4414,4418&word=w1014&term=t1014&sentence=35&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4443,4447&word=w1021&term=t1021&sentence=35&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4514,4518&word=w1038&term=t1038&sentence=35&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4673,4677&word=w1071&term=t1071&sentence=35&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4738,4742&word=w1085&term=t1085&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev85#0> ;
+            skos:prefLabel     "know" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev85#0>
+            rdfs:label  "know" ;
+            <http://www.newsreader-project.eu//count>
+                    6 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+mine>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3683,3693&word=w835,w836,w837&term=t835,t836,t837&sentence=26&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+mine#0> ;
+            skos:prefLabel  "to be mine" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+mine#0>
+            rdfs:label  "to be mine" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+bent>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4519,4540&word=w1039,w1040,w1041,w1042&term=t1039,t1040,t1041,t1042&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+bent#0> ;
+            skos:prefLabel  "whether any be bent" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+bent#0>
+            rdfs:label  "whether any be bent" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev86>
+            a                  sem:Event , nwrontology:sourceEvent , ili:i26656 , ili:i34841 , ili:i25049 , ili:i25053 , fn:Evidence , fn:Reasoning ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3725,3730&word=w847&term=t847&sentence=28&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev86#0> ;
+            skos:prefLabel     "prove" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev86#0>
+            rdfs:label  "prove" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev87>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i91462 , fn:Using , eso:BeingInUse , eso:IntentionalEvent , ili:i34447 , ili:i27416 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3814,3820&word=w869&term=t869&sentence=30&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4994,5000&word=w1145&term=t1145&sentence=37&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5095,5101&word=w1168&term=t1168&sentence=37&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev87#0> ;
+            skos:prefLabel     "mother" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev87#0>
+            rdfs:label  "mother" ;
+            <http://www.newsreader-project.eu//count>
+                    3 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/sixpence+mother>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5062,5101&word=w1162,w1163,w1164,w1165,w1166,w1167,w1168&term=t1162,t1163,t1164,t1165,t1166,t1167,t1168&sentence=37&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/sixpence+mother#0> ;
+            skos:prefLabel     "two sixpence -- one sixpence his mother" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Sixpence_(British_coin)> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/sixpence+mother#0>
+            rdfs:label  "two sixpence -- one sixpence his mother" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev88>
+            a                  sem:Event , nwrontology:sourceEvent , fn:Motion , eso:Motion , ili:i26632 , ili:i25432 , fn:Request , ili:i26362 , fn:Reporting , fn:Telling , ili:i26365 , ili:i26675 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4552,4556&word=w1046&term=t1046&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev88#0> ;
+            skos:prefLabel     "tell" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev88#0>
+            rdfs:label  "tell" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/bow+many+farthing>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4557,4575&word=w1047,w1048,w1049&term=t1047,t1048,t1049&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/bow+many+farthing#0> ;
+            skos:prefLabel     "bow many farthing" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Farthing_(British_coin)> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/bow+many+farthing#0>
+            rdfs:label  "bow many farthing" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev89>
+            a                  sem:Event , nwrontology:contextualEvent , eso:IntentionalEvent , ili:i31944 , ili:i26108 , ili:i26011 , ili:i32058 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4557,4560&word=w1047&term=t1047&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev89#0> ;
+            skos:prefLabel     "bow" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev89#0>
+            rdfs:label  "bow" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev90>
+            a                  sem:Event , nwrontology:contextualEvent , fn:Giving , ili:i32898 , eso:Giving , ili:i66153 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4657,4661&word=w1066&term=t1066&sentence=35&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev90#0> ;
+            skos:prefLabel     "hand" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev90#0>
+            rdfs:label  "hand" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev91>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i35590 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4910,4918&word=w1126&term=t1126&sentence=37&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev91#0> ;
+            skos:prefLabel     "relation" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev91#0>
+            rdfs:label  "relation" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev92>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i32788 , fn:Commerce_buy , eso:Buying , ili:i34901 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4941,4947&word=w1133&term=t1133&sentence=37&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5342,5345&word=w1229&term=t1229&sentence=41&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5374,5380&word=w1237&term=t1237&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev92#0> ;
+            skos:prefLabel     "buy" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev92#0>
+            rdfs:label  "buy" ;
+            <http://www.newsreader-project.eu//count>
+                    3 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/boot+shoe>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5346,5369&word=w1230,w1231,w1232,w1233,w1234&term=t1230,t1231,t1232,t1233,t1234&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/boot+shoe#0> ;
+            skos:prefLabel     "boot and shoe of they" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Boot> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/boot+shoe#0>
+            rdfs:label  "boot and shoe of they" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5381,5421&word=w1238,w1239,w1240,w1241,w1242,w1243,w1244,w1245,w1246&term=t1238,t1239,t1240,t1241,t1242,t1243,t1244,t1245,t1246&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe#0> ;
+            skos:prefLabel     "two pair of boot and one pair of shoe" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Boot> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe#0>
+            rdfs:label  "two pair of boot and one pair of shoe" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev93>
+            a                  sem:Event , nwrontology:contextualEvent , fn:Placing , ili:i109099 , ili:i79228 , ili:i79244 , fn:Cause_to_amalgamate , fn:Adorning , eso:Merging , ili:i28874 , ili:i34175 , ili:i28138 , ili:i29045 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4952,4957&word=w1135&term=t1135&sentence=37&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4973,4977&word=w1140&term=t1140&sentence=37&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5385,5390&word=w1239&term=t1239&sentence=41&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5408,5412&word=w1244&term=t1244&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev93#0> ;
+            skos:prefLabel     "pair" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev93#0>
+            rdfs:label  "pair" ;
+            <http://www.newsreader-project.eu//count>
+                    4 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev94>
+            a                  sem:Event , nwrontology:contextualEvent , eso:Placing , ili:i110132 , ili:i58817 , ili:i22020 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4981,4986&word=w1142&term=t1142&sentence=37&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev94#0> ;
+            skos:prefLabel     "shoe" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev94#0>
+            rdfs:label  "shoe" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev95>
+            a                  sem:Event , nwrontology:sourceEvent , ili:i32809 , ili:i32927 , ili:i25664 , ili:i35199 , fn:Agree_or_refuse_to_act ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5102,5109&word=w1169&term=t1169&sentence=37&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev95#0> ;
+            skos:prefLabel     "refuse" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev95#0>
+            rdfs:label  "refuse" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev96>
+            a                  sem:Event , nwrontology:contextualEvent , eso:IntentionalEvent , ili:i66862 , ili:i34873 , ili:i34875 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5270,5280&word=w1212&term=t1212&sentence=39&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev96#0> ;
+            skos:prefLabel     "hesitation" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev96#0>
+            rdfs:label  "hesitation" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev97>
+            a                  sem:Event , nwrontology:sourceEvent , ili:i26069 , ili:i26638 , ili:i25954 , fn:Commitment ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5303,5308&word=w1221&term=t1221&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev97#0> ;
+            skos:prefLabel     "swear" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev97#0>
+            rdfs:label  "swear" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev98>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i50969 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5346,5351&word=w1230&term=t1230&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev98#0> ;
+            skos:prefLabel     "boot" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev98#0>
+            rdfs:label  "boot" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev99>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i23020 , ili:i23072 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5446,5450&word=w1253&term=t1253&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev99#0> ;
+            skos:prefLabel     "mend" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev99#0>
+            rdfs:label  "mend" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/old+one+mend+again>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5434,5459&word=w1250,w1251,w1252,w1253,w1254,w1255&term=t1250,t1251,t1252,t1253,t1254,t1255&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/old+one+mend+again#0> ;
+            skos:prefLabel  "old one to mend up again" .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/old+one+mend+again#0>
+            rdfs:label  "old one to mend up again" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev100>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i107098 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5581,5590&word=w1283&term=t1283&sentence=41&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev100#0> ;
+            skos:prefLabel     "six-pence" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/255> , <http://eurovoc.europa.eu/1368> , <http://eurovoc.europa.eu/2695> , <http://eurovoc.europa.eu/5328> , <http://eurovoc.europa.eu/3581> , <http://eurovoc.europa.eu/256> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev100#0>
+            rdfs:label  "six-pence" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev56>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx2> .
+}
+
+nwr:provenance {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=25,65> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr1,rl1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=8,33> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr1,rl2>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=25,185> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr2>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=38,65> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr2,rl3>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=8,46> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr2,rl4>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=38,65> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr2,rl5>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=38,185> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr3>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=51,65> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr3,rl6>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=55,65> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr7,rl12>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=290,300> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr69,rl136>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5008,5018> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr4>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=51,144> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr4,rl7>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=138,167> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr4,rl8>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=138,185> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr5>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4864,5018> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr5,rl10>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=230,281> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr6>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=242,300> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr6,rl11>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=242,281> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr7>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=297,319> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr8,rl13>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=314,331> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr9,rl14>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1067,1094> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr18,rl29>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3138,3159> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr18,rl30>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3138,3179> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr35,rl60>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3531,3581> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr12,rl18>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1354,1381> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr13,rl19>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1400,1425> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr14,rl20>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1410,1425> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr15,rl23>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1437,1470> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr58,rl115>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4693,4726> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr16,rl24>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1487,1501> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr16,rl25>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1493,1513> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr17,rl26>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=1521,1537> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr19,rl33>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3206,3232> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr55,rl108>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4634,4649> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr21,rl36>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3184,3200> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr22,rl37>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3212,3232> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr50,rl95>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4482,4493> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr24,rl40>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3250,3267> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr42,rl75>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3759,3773> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr86,rl176>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5542,5551> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr22>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5015,5196> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr25,rl41>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3272,3287> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr32,rl56>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3427,3439> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr73,rl145>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5114,5152> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr87,rl177>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5556,5656> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr23>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5015,5027> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr70,rl139>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5023,5044> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr70,rl140>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5023,5056> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr88,rl178>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5560,5656> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr89,rl182>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5598,5661> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr89,rl183>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5657,5674> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr89,rl184>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5657,5692> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr30,rl51>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3382,3394> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr30,rl52>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3382,3420> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr85,rl172>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5519,5535> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr85,rl174>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5530,5551> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr31,rl54>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3406,3420> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr41,rl73>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3738,3751> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr44,rl78>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4355,4377> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr49,rl92>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4451,4469> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr60,rl119>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4743,4770> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr36,rl61>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3558,3581> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr38,rl64>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3627,3644> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr39,rl67>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3678,3693> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr46,rl85>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4414,4438> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr48,rl90>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4443,4493> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr51,rl99>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4514,4540> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr59,rl118>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4738,4770> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr40,rl70>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3725,3751> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr32>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4994,5101> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr43,rl76>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=3799,3820> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr68,rl134>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4990,5018> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr72,rl143>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5091,5101> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr52,rl102>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4552,4575> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr52,rl103>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4552,4661> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr53,rl104>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4557,4575> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr36>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4910,5018> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr63,rl127>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4910,4936> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr37>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4941,5018> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr64,rl129>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4941,5018> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr78,rl162>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5342,5369> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr79,rl165>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5374,5421> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr38>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4952,5018> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr65,rl130>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4952,4966> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr81,rl167>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5385,5399> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr39>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4981,5018> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr67,rl132>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=4981,5018> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr40>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5015,5109> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr71,rl141>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5062,5109> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr77,rl157>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5303,5326> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr83,rl169>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5434,5459> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr90,rl185>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#char=5581,5656> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr1,rl1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev56>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/toole> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Notification_of_charges@Accused>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/toole> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/toole> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr1,rl2> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev56>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Notification_of_charges@Charges>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person> ;
+            pb:A2         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr2> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev57>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx2> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr2,rl3> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev57>
+            sem:hasActor            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/toole> ;
+            eso:possession-owner_2  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/toole> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Theft@Perpetrator>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/toole> ;
+            pb:A0                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/toole> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr2,rl4> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev57>
+            sem:hasActor            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may> ;
+            eso:possession-owner_1  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Theft@Source>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Theft@Victim>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may> ;
+            pb:A2                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr2,rl5> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev57>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person> ;
+            eso:possession-theme  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Theft@Goods>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr3> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev58>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx2> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr3,rl6> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev58>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/2nd+may> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr7,rl12> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev58>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/may> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/may> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr69,rl136> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev58>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr4> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev59>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx2> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr4,rl7> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev59>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#EllenGilstonJones> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr4,rl8> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev59>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person> ;
+            pb:A0         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr5> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev60>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr5,rl10> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev60>
+            sem:hasPlace  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Cockspurstreet> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrPayne> ;
+            pb:AM-LOC     <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Cockspurstreet> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrPayne> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr6> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev61>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx3> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx3> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr6,rl11> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev61>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Cockspurstreet> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrPayne> ;
+            pb:A2         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Cockspurstreet> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrPayne> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr7> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev62>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx3> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx3> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr8,rl13> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev62>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/request> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/request> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr8> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev63>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr9,rl14> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev63>
+            sem:hasActor  <http://dbpedia.org/resource/Master_of_Laws> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Court_examination@Questioner>
+                    <http://dbpedia.org/resource/Master_of_Laws> ;
+            pb:A0         <http://dbpedia.org/resource/Master_of_Laws> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr9> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev64>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr18,rl29> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev64>
+            sem:hasActor               <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back> ;
+            eso:atPlace-location       <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back> ;
+            eso:translocation-goal     <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Being_located@Location>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Change_posture@Goal>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Placing@Area>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Placing@Goal>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Posture@Location>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back> ;
+            pb:A2                      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/back> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr18,rl30> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev64>
+            sem:hasActor               <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk> ;
+            eso:atPlace-location       <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk> ;
+            eso:translocation-goal     <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Being_located@Location>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Change_posture@Goal>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Placing@Area>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Placing@Goal>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Posture@Location>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk> ;
+            pb:A2                      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/clerk+desk> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr35,rl60> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev64>
+            sem:hasActor               <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> ;
+            eso:atPlace-location       <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> ;
+            eso:translocation-goal     <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Being_located@Location>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Change_posture@Goal>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Placing@Area>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Placing@Goal>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Posture@Location>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> ;
+            pb:A2                      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr10> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev65>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr11> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev66>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr12,rl18> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev66>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/only+business> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/only+business> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr12> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev67>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr13,rl19> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev67>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person+talk> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person+talk> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr13> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev68>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr14,rl20> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev68>
+            sem:hasActor                <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person+talk> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Chatting@Interlocutor_1>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person+talk> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Chatting@Interlocutors>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person+talk> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Statement@Speaker>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person+talk> ;
+            pb:A0                       <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/person+talk> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr14> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev69>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr15,rl23> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev69>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+there+hour+much> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Awareness@Content>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+there+hour+much> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Awareness@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+there+hour+much> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Opinion@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+there+hour+much> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+there+hour+much> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr58,rl115> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev69>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+fourpenny-piece> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Awareness@Content>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+fourpenny-piece> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Awareness@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+fourpenny-piece> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Opinion@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+fourpenny-piece> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+fourpenny-piece> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr15> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev70>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr16,rl24> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev70>
+            sem:hasActor         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/woman> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Occupy_rank@Item>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/woman> ;
+            pb:A1                <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/woman> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr16,rl25> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev70>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/corner> ;
+            pb:A0         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/corner> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr17,rl26> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev70>
+            sem:hasActor         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/witness> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Occupy_rank@Item>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/witness> ;
+            pb:A1                <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/witness> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr16> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev71>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr19,rl33> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev71>
+            sem:hasActor            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Categorization@Item>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Grasp@Phenomenon>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Perception_experience@Phenomenon>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop> ;
+            pb:A1                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr55,rl108> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev71>
+            sem:hasActor            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Categorization@Item>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Grasp@Phenomenon>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Perception_experience@Phenomenon>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> ;
+            pb:A1                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr17> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev72>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr18> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev73>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr21,rl36> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev73>
+            sem:hasActor     <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/money> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Hear@Speaker>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/money> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Perception_experience@Phenomenon>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/money> ;
+            pb:A1            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/money> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr19> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev74>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr22,rl37> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev74>
+            sem:hasActor            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop> ;
+            eso:quantity-ratio      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Body_movement@Path>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Change_position_on_a_scale@Difference>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Change_posture@Goal>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop> ;
+            pb:A2                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/fourpenny-piece+drop> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr20> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev75>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr50,rl95> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev75>
+            sem:hasActor             <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            eso:possession-theme     <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            eso:translocation-theme  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Bringing@Theme>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Change_of_leadership@New_leader>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Earnings_and_losses@Earnings>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Removing@Theme>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Taking@Theme>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            pb:A1                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr21> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev76>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr24,rl40> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev76>
+            sem:hasActor             <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> ;
+            eso:translocation-theme  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Arriving@Theme>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Reveal_secret@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> ;
+            pb:A1                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr42,rl75> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev76>
+            sem:hasActor        <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/home> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Arriving@Source>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/home> ;
+            pb:A2               <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/home> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr86,rl176> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev76>
+            sem:hasActor            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here> ;
+            eso:translocation-goal  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Arriving@Goal>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here> ;
+            pb:A4                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr22> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev77>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr25,rl41> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev77>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Choosing@Chosen>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Statement@Message>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Statement@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Text_creation@Text>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr32,rl56> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev77>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Choosing@Chosen>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Statement@Message>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Statement@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Text_creation@Text>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr73,rl145> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev77>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+silver+be+bent> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Choosing@Chosen>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+silver+be+bent> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Statement@Message>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+silver+be+bent> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Statement@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+silver+be+bent> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Text_creation@Text>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+silver+be+bent> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+silver+be+bent> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr87,rl177> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev77>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Choosing@Chosen>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Statement@Message>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Statement@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Text_creation@Text>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr23> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev78>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr70,rl139> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev78>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/half-crown> ;
+            eso:possession-theme  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/half-crown> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Giving@Theme>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/half-crown> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/half-crown> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr70,rl140> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev78>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/shilling> ;
+            eso:possession-theme  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/shilling> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Giving@Theme>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/shilling> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/shilling> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr88,rl178> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev78>
+            sem:hasActor            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> ;
+            eso:possession-owner_1  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Giving@Donor>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> ;
+            pb:A0                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr89,rl182> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev78>
+            sem:hasActor            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#AquiliniLucioni> ;
+            eso:possession-owner_1  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#AquiliniLucioni> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Giving@Donor>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#AquiliniLucioni> ;
+            pb:A0                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#AquiliniLucioni> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr89,rl183> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev78>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> ;
+            eso:possession-theme  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Giving@Theme>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr89,rl184> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev78>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/good+character.> ;
+            eso:possession-theme  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/good+character.> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Giving@Theme>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/good+character.> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/good+character.> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr24> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev79>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr30,rl51> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev79>
+            sem:hasActor              <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/lady> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Questioning@Addressee>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/lady> ;
+            pb:A2                     <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/lady> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr30,rl52> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev79>
+            sem:hasActor            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+lose+thing> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Questioning@Message>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+lose+thing> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Questioning@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+lose+thing> ;
+            pb:A1                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+lose+thing> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr85,rl172> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev79>
+            sem:hasActor            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrsToole> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Questioning@Speaker>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrsToole> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Request@Speaker>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrsToole> ;
+            pb:A0                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#MrsToole> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr85,rl174> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev79>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Questioning@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Request@Message>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Request@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/come+here> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr25> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev80>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr31,rl54> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev80>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+lose+thing> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Earnings_and_losses@Earnings>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+lose+thing> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+lose+thing> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr26> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev81>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr41,rl73> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev81>
+            sem:hasActor              <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money> ;
+            eso:possession-theme      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Inclusion@Purpose>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Possession@Possession>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money> ;
+            pb:A1                     <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr44,rl78> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev81>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+sixpence> ;
+            eso:possession-owner  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+sixpence> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Possession@Owner>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+sixpence> ;
+            pb:A0                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+sixpence> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr49,rl92> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev81>
+            sem:hasActor              <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            eso:possession-theme      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Inclusion@Purpose>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Possession@Possession>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            pb:A1                     <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr60,rl119> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev81>
+            sem:hasActor              <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have> ;
+            eso:possession-theme      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Inclusion@Purpose>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Possession@Possession>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have> ;
+            pb:A1                     <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr27> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev82>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr28> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev83>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr36,rl61> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev83>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Taking_sides@Side>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/right+hand+side+prosecutrix> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr29> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev84>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr38,rl64> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev84>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/jones> ;
+            pb:A0         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/jones> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr30> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev85>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr39,rl67> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev85>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+mine> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Awareness@Content>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+mine> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Familiarity@Entity>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+mine> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+mine> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr46,rl85> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev85>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Awareness@Content>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Familiarity@Entity>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr48,rl90> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev85>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Awareness@Content>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Familiarity@Entity>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+farthing+do+not+take+notice> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr51,rl99> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev85>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+bent> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Awareness@Content>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+bent> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Familiarity@Entity>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+bent> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/be+bent> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr59,rl118> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev85>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Awareness@Content>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Familiarity@Entity>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/many+half-crowns+have> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr31> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev86>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr40,rl70> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev86>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Evidence@Means>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Reasoning@Content>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+money> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr32> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev87>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr43,rl76> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev87>
+            sem:hasActor        <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> ;
+            eso:inuse-entity_1  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Using@Agent>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> ;
+            pb:A1               <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr68,rl134> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev87>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> ;
+            pb:A0         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr72,rl143> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev87>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/sixpence+mother> ;
+            pb:A0         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/sixpence+mother> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr33> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev88>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr52,rl102> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev88>
+            sem:hasActor              <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/bow+many+farthing> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Reporting@Authorities>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/bow+many+farthing> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Request@Addressee>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/bow+many+farthing> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Telling@Addressee>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/bow+many+farthing> ;
+            pb:A2                     <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/bow+many+farthing> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr52,rl103> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev88>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Reporting@Behavior>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Request@Message>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Request@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Telling@Message>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Telling@Topic>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/have+halfpence+farthing+be+together+see+copper+hand> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr34> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev89>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr53,rl104> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev89>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/bow+many+farthing> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/bow+many+farthing> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr35> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev90>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr36> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev91>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr63,rl127> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev91>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/prisoner> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr37> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev92>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr64,rl129> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev92>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> ;
+            eso:possession-theme   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Commerce_buy@Goods>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr78,rl162> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev92>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/boot+shoe> ;
+            eso:possession-theme   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/boot+shoe> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Commerce_buy@Goods>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/boot+shoe> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/boot+shoe> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr79,rl165> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev92>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe> ;
+            eso:possession-theme   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Commerce_buy@Goods>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr38> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev93>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr65,rl130> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev93>
+            sem:hasActor                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> ;
+            eso:merging-theme_1            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Adorning@Location>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Cause_to_amalgamate@Part_1>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> ;
+            pb:A1                          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr81,rl167> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev93>
+            sem:hasActor                   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe> ;
+            eso:merging-theme_1            <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Adorning@Location>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Cause_to_amalgamate@Part_1>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe> ;
+            pb:A1                          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr39> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev94>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr67,rl132> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev94>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/pair+boot+pair+shoe+mother+2nd+may> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr40> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev95>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx7> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr71,rl141> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev95>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/sixpence+mother> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Agree_or_refuse_to_act@Speaker>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/sixpence+mother> ;
+            pb:A0         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/sixpence+mother> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr41> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev96>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr42> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev97>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr77,rl157> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev97>
+            sem:hasActor           <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/half-crown> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Commitment@Message>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/half-crown> ;
+            pb:A1                  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/half-crown> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr43> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev98>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr44> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev99>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr83,rl169> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev99>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/old+one+mend+again> ;
+            pb:A0         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#/non-entities/old+one+mend+again> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tr45> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev100>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#tmx0> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#pr90,rl185> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#ev100>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> ;
+            pb:A1         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1657#Raystreet> , <http://dbpedia.org/resource/Clerkenwell> .
+}

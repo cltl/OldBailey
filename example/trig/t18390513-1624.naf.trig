@@ -1,0 +1,139 @@
+@prefix nwrdata: <http://www.newsreader-project.eu/data/> .
+@prefix eso:   <http://www.newsreader-project.eu/domain-ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ili:   <http://globalwordnet.org/ili/> .
+@prefix fn:    <http://www.newsreader-project.eu/ontologies/framenet/> .
+@prefix nwr:   <http://www.newsreader-project.eu/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix nwrontology: <http://www.newsreader-project.eu/ontologies/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nwrmagazine: <http://www.newsreader-project.eu/provenance/magazine/> .
+@prefix gaf:   <http://groundedannotationframework.org/gaf#> .
+@prefix nwrpublisher: <http://www.newsreader-project.eu/provenance/publisher/> .
+@prefix pb:    <http://www.newsreader-project.eu/ontologies/propbank/> .
+@prefix nwrauthor: <http://www.newsreader-project.eu/provenance/author/> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wn:    <http://www.newsreader-project.eu/ontologies/pwn3.0/> .
+@prefix graspAttribution: <http://groundedannotationframework.org/grasp/attribution#> .
+@prefix sem:   <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix time:  <http://www.w3.org/TR/owl-time#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix graspSentiment: <http://groundedannotationframework.org/grasp/sentiment#> .
+
+{ 
+}
+
+nwr:instances {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#ev4>
+            a                  sem:Event , nwrontology:sourceEvent , ili:i69761 , fn:Change_of_leadership , fn:Name_conferral , eso:Replacing , eso:IntentionalEvent , ili:i33728 , ili:i26719 , ili:i33730 ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#char=434,438&word=w117&term=t117&sentence=3&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#ev4#0> ;
+            skos:prefLabel     "name" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/3156> , <http://eurovoc.europa.eu/3784> , <http://eurovoc.europa.eu/519> , <http://eurovoc.europa.eu/4291> , <http://eurovoc.europa.eu/5969> , <http://eurovoc.europa.eu/1091> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#ev4#0>
+            rdfs:label  "name" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://dbpedia.org/resource/Joshua_(disambiguation)>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#char=445,451&word=w119&term=t119&sentence=3&paragraph=1> , <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#char=417,438&word=w114,w115,w116,w117&term=t114,t115,t116,t117&sentence=3&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://dbpedia.org/resource/Joshua_(disambiguation)#0> , <http://dbpedia.org/resource/Joshua_(disambiguation)#1> ;
+            skos:prefLabel  "Joshua" .
+    
+    <http://dbpedia.org/resource/Joshua_(disambiguation)#0>
+            rdfs:label  "Joshua" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://dbpedia.org/resource/Joshua_(disambiguation)#1>
+            rdfs:label  "the prosecutor 's name" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://www.newsreader-project.eu/time/183905>
+            a              time:DateTimeDescription ;
+            time:month     "--05"^^<http://www.w3.org/2001/XMLSchema#gMonth> ;
+            time:unitType  time:unitDay ;
+            time:year      "1839"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#tmx2>
+            a                time:Instant ;
+            rdfs:label       "the 14th of May" ;
+            gaf:denotedBy    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#char=70,85> ;
+            time:inDateTime  <http://www.newsreader-project.eu/time/183905> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#ev5>
+            a                  sem:Event , nwrontology:sourceEvent , ili:i26137 , fn:Verdict ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#char=489,498&word=w128&term=t128&sentence=3&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#ev5#0> ;
+            skos:prefLabel     "acquit" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/3156> , <http://eurovoc.europa.eu/3784> , <http://eurovoc.europa.eu/519> , <http://eurovoc.europa.eu/4291> , <http://eurovoc.europa.eu/5969> , <http://eurovoc.europa.eu/1091> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#ev5#0>
+            rdfs:label  "acquit" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#/non-entities/prisoner>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#char=469,482&word=w125,w126&term=t125,t126&sentence=3&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#/non-entities/prisoner#0> ;
+            skos:prefLabel     "the prisoner" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Prison> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#/non-entities/prisoner#0>
+            rdfs:label  "the prisoner" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#tr1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#ev4>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#tmx2> .
+}
+
+nwr:provenance {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#tr1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#char=70,438> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#pr1,rl1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#char=417,438> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#tr2>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#char=70,498> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#pr2,rl4>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#char=469,498> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#pr1,rl1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#ev4>
+            sem:hasActor              <http://dbpedia.org/resource/Joshua_(disambiguation)> ;
+            eso:replacing-entity_2    <http://dbpedia.org/resource/Joshua_(disambiguation)> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Change_of_leadership@New_leader>
+                    <http://dbpedia.org/resource/Joshua_(disambiguation)> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Name_conferral@Entity>
+                    <http://dbpedia.org/resource/Joshua_(disambiguation)> ;
+            pb:A1                     <http://dbpedia.org/resource/Joshua_(disambiguation)> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#tr2> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#ev5>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#tmx2> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#tmx2> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#pr2,rl4> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#ev5>
+            sem:hasActor          <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#/non-entities/prisoner> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Verdict@Defendant>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#/non-entities/prisoner> ;
+            pb:A1                 <http://cltl.nl/old_bailey/sessionpaper/t18390513-1624#/non-entities/prisoner> .
+}

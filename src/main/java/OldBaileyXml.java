@@ -13,10 +13,7 @@ import javax.xml.parsers.FactoryConfigurationError;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -30,43 +27,63 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
     static OldBaileyPerson person = new OldBaileyPerson();
 
     static public void main(String[] args) {
-        String sourceFolder = "/Users/piek/Desktop/CLTL-onderwijs/EnvironmentalAndDigitalHumanities/london/example/trig-global";
-        String ext = ".trig";
-        String trigfile = "";
-        //String file = "/Users/piek/Desktop/CLTL-onderwijs/EnvironmentalAndDigitalHumanities/london/OldBaileyCorpus2/OBC2/OBC2-18741123.xml";
-        String file = "/Users/piek/Desktop/CLTL-onderwijs/EnvironmentalAndDigitalHumanities/london/example/OBC2-18390513.xml";
+        String trigFolder = "";
+        String ext = "";
+        String xmlFolder = "";
+        xmlFolder = "/Code//vu/OldBailey/example/xml";
+        trigFolder = "/Code//vu/OldBailey/example/trig";
+        ext = ".trig";
+        for (int i = 0; i < args.length; i++) {
+            String arg = args[i];
+            if (arg.equals("--xml") && args.length>(i+1)) {
+              xmlFolder = args[i+1];
+            }
+            else if (arg.equals("--trig") && args.length>(i+1)) {
+              trigFolder = args[i+1];
+            }
+            else if (arg.equals("--extension") && args.length>(i+1)) {
+              ext = args[i+1];
+            }
+        }
+        ArrayList<File> xmlFiles = Util.makeFlatFileList(new File(xmlFolder), ".xml");
+        ArrayList<File> trigFiles = Util.makeFlatFileList(new File(trigFolder), ext);
+        for (int i = 0; i < xmlFiles.size(); i++) {
+            File xmlFile = xmlFiles.get(i);
+            processXmlFiles(xmlFile, trigFiles);
+        }
+    }
+
+
+    static void processXmlFiles (File xmlFile, ArrayList<File> trigFiles) {
         OldBaileyXml oldBaileysXml = new OldBaileyXml();
-        oldBaileysXml.parseFile(new File(file));
-        String fileIdentifier = new File(file).getName();
+        oldBaileysXml.parseFile(xmlFile);
+        String fileIdentifier = xmlFile.getName();
         ///OBC2POS-18390513.xml
         int idx_s = fileIdentifier.indexOf("-");
         int idx_e = fileIdentifier.indexOf(".xml");
         if (idx_s>-1 && idx_e>-1)  {
             fileIdentifier = "t"+fileIdentifier.substring(idx_s+1, idx_e);
-            System.out.println("fileIdentifier = " + fileIdentifier);
+            // System.out.println("fileIdentifier = " + fileIdentifier);
         }
-        ArrayList<File> files = Util.makeFlatFileList(new File(sourceFolder), ext);
-        for (int i = 0; i < files.size(); i++) {
-            File trigFile = files.get(i);
-            System.out.println("trigFile.getName() = " + trigFile.getName());
+        for (int i = 0; i < trigFiles.size(); i++) {
+            File trigFile = trigFiles.get(i);
+            //System.out.println("trigFile.getName() = " + trigFile.getName());
             if (trigFile.getName().startsWith(fileIdentifier)) {
                 /// the meta data applies to this trigFile
                 Dataset dataset = TDBFactory.createDataset();
                 try {
+                    OutputStream fos = new FileOutputStream(trigFile.getAbsoluteFile()+".meta");
                     dataset = RDFDataMgr.loadDataset(trigFile.getAbsolutePath());
                     adaptTriples(dataset, OldBaileyXml.fileData);
-                    RDFDataMgr.write(System.out, dataset, RDFFormat.TRIG_PRETTY);
+                    RDFDataMgr.write(fos, dataset, RDFFormat.TRIG_PRETTY);
+                    fos.close();
                 }
                 catch (Exception e)   {
                     e.printStackTrace();
                 }
-
-                break;
             }
         }
-
     }
-
     static void adaptTriples (Dataset dataset, HashMap<String, OldBaileyData> dataHashMap) {
         Model namedModel = dataset.getNamedModel(ResourcesUri.instanceGraph);
         ArrayList<Statement> newStatements = new ArrayList<Statement>();
@@ -77,21 +94,21 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             if (subject.startsWith("ev")) {
                 //// event....
                 String caseId = s.getSubject().getNameSpace(); //http://cltl.nl/old_bailey/sessionpaper/t18390513-1553#
-                caseId = caseId.substring(caseId.lastIndexOf("/")+1, caseId.length()-1);
-
-               // System.out.println("caseId = " + caseId);
-                if (fileData.containsKey(caseId)) {
-                    OldBaileyData data = fileData.get(caseId);
-                    ArrayList<Statement> statements = data.getStatement(namedModel, s.getSubject());
-                    newStatements.addAll(statements);
-                }
-                else {
-                    System.out.println("fileData = " + fileData.size());
-                    System.out.println("no data for caseid:"+caseId);
+                int idx_s =  caseId.lastIndexOf("/");
+                if (idx_s>-1 && idx_s<(caseId.length()-1)) {
+                    caseId = caseId.substring(idx_s+1, caseId.length()-1);
+                    if (fileData.containsKey(caseId)) {
+                        OldBaileyData data = fileData.get(caseId);
+                        ArrayList<Statement> statements = data.getStatement(namedModel, s.getSubject());
+                        newStatements.addAll(statements);
+                    } else {
+                       // System.out.println("fileData = " + fileData.size());
+                       // System.out.println("no data for caseid:" + caseId);
+                    }
                 }
             }
         }
-        System.out.println("newStatements.size() = " + newStatements.size());
+       // System.out.println("newStatements.size() = " + newStatements.size());
         namedModel.add(newStatements);
     }
 

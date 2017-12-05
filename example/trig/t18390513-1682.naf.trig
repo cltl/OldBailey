@@ -1,0 +1,145 @@
+@prefix nwrdata: <http://www.newsreader-project.eu/data/> .
+@prefix eso:   <http://www.newsreader-project.eu/domain-ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ili:   <http://globalwordnet.org/ili/> .
+@prefix fn:    <http://www.newsreader-project.eu/ontologies/framenet/> .
+@prefix nwr:   <http://www.newsreader-project.eu/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix nwrontology: <http://www.newsreader-project.eu/ontologies/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nwrmagazine: <http://www.newsreader-project.eu/provenance/magazine/> .
+@prefix gaf:   <http://groundedannotationframework.org/gaf#> .
+@prefix nwrpublisher: <http://www.newsreader-project.eu/provenance/publisher/> .
+@prefix pb:    <http://www.newsreader-project.eu/ontologies/propbank/> .
+@prefix nwrauthor: <http://www.newsreader-project.eu/provenance/author/> .
+@prefix grasp: <http://groundedannotationframework.org/grasp#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wn:    <http://www.newsreader-project.eu/ontologies/pwn3.0/> .
+@prefix graspAttribution: <http://groundedannotationframework.org/grasp/attribution#> .
+@prefix sem:   <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix time:  <http://www.w3.org/TR/owl-time#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix graspSentiment: <http://groundedannotationframework.org/grasp/sentiment#> .
+
+{ 
+}
+
+nwr:instances {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#ev1>
+            a                  sem:Event , nwrontology:sourceEvent , ili:i34318 , fn:Notification_of_charges ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#char=42,50&word=w9&term=t9&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#ev1#0> ;
+            skos:prefLabel     "indict" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/3559> , <http://eurovoc.europa.eu/6050> , <http://eurovoc.europa.eu/3774> , <http://eurovoc.europa.eu/5283> , <http://eurovoc.europa.eu/161> , <http://eurovoc.europa.eu/1644> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#ev1#0>
+            rdfs:label  "indict" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://dbpedia.org/resource/James_Vincent>
+            gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#char=8,21&word=w3,w4&term=t3,t4&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://dbpedia.org/resource/James_Vincent#0> ;
+            skos:prefLabel  "JAMES VINCENT" .
+    
+    <http://dbpedia.org/resource/James_Vincent#0>
+            rdfs:label  "JAMES VINCENT" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#/non-entities/conspiracy>
+            a                  nwrontology:NONENTITY ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#char=51,67&word=w10,w11,w12&term=t10,t11,t12&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#/non-entities/conspiracy#0> ;
+            skos:prefLabel     "for a conspiracy" ;
+            skos:relatedMatch  <http://dbpedia.org/resource/Conspiracy_(crime)> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#/non-entities/conspiracy#0>
+            rdfs:label  "for a conspiracy" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+    
+    <http://www.newsreader-project.eu/time/1682>
+            a              time:DateTimeDescription ;
+            time:unitType  time:unitDay ;
+            time:year      "1682"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#tmx1>
+            a                time:Instant ;
+            rdfs:label       "1682" ;
+            gaf:denotedBy    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#char=2,6> ;
+            time:inDateTime  <http://www.newsreader-project.eu/time/1682> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#ev2>
+            a                  sem:Event , nwrontology:contextualEvent , ili:i70755 , ili:i67890 , fn:Collaboration , ili:i25241 , ili:i25244 , eso:Collaboration ;
+            gaf:denotedBy      <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#char=57,67&word=w12&term=t12&sentence=2&paragraph=1> ;
+            <http://www.newsreader-project.eu//phrasecount>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#ev2#0> ;
+            skos:prefLabel     "conspiracy" ;
+            skos:relatedMatch  <http://eurovoc.europa.eu/3559> , <http://eurovoc.europa.eu/6050> , <http://eurovoc.europa.eu/3774> , <http://eurovoc.europa.eu/5283> , <http://eurovoc.europa.eu/161> , <http://eurovoc.europa.eu/1644> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#ev2#0>
+            rdfs:label  "conspiracy" ;
+            <http://www.newsreader-project.eu//count>
+                    1 .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#tr1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#ev1>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#tmx1> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#tmx1> .
+}
+
+nwr:provenance {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#tr1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#char=2,50> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#pr1,rl1>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#char=8,50> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#pr1,rl2>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#char=42,67> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#tr2>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#char=2,67> .
+    
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#pr2,rl3>
+            gaf:denotedBy  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#char=8,67> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#pr1,rl1> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#ev1>
+            sem:hasActor  <http://dbpedia.org/resource/James_Vincent> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Notification_of_charges@Accused>
+                    <http://dbpedia.org/resource/James_Vincent> ;
+            pb:A1         <http://dbpedia.org/resource/James_Vincent> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#pr1,rl2> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#ev1>
+            sem:hasActor  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#/non-entities/conspiracy> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Notification_of_charges@Charges>
+                    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#/non-entities/conspiracy> ;
+            pb:A2         <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#/non-entities/conspiracy> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#tr2> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#ev2>
+            sem:hasAtTime  <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#tmx1> ;
+            sem:hasTime    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#tmx1> .
+}
+
+<http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#pr2,rl3> {
+    <http://cltl.nl/old_bailey/sessionpaper/t18390513-1682#ev2>
+            sem:hasActor                 <http://dbpedia.org/resource/James_Vincent> ;
+            eso:collaboration-partner_1  <http://dbpedia.org/resource/James_Vincent> ;
+            eso:collaboration-partners   <http://dbpedia.org/resource/James_Vincent> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Collaboration@Partner_1>
+                    <http://dbpedia.org/resource/James_Vincent> ;
+            <http://www.newsreader-project.eu/ontologies/framenet/Collaboration@Partners>
+                    <http://dbpedia.org/resource/James_Vincent> ;
+            pb:A0                        <http://dbpedia.org/resource/James_Vincent> .
+}
