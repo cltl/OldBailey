@@ -28,27 +28,32 @@ public class OldBaileyPerson {
     public void addToModel (Model namedModel,Resource subject) throws UnsupportedEncodingException {
         if (!gender.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "gender");
-            Statement meta = namedModel.createStatement(subject, metaProperty, gender);
+            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+gender);
+            Statement meta = namedModel.createStatement(subject, metaProperty, objectResource);
             namedModel.add(meta);
         }
         if (!age.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "age");
-            Statement meta = namedModel.createStatement(subject, metaProperty, age);
+            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+age);
+            Statement meta = namedModel.createStatement(subject, metaProperty, objectResource);
             namedModel.add(meta);
         }
         if (!role.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "role");
-            Statement meta = namedModel.createStatement(subject, metaProperty, role);
+            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+role);
+            Statement meta = namedModel.createStatement(subject, metaProperty, objectResource);
             namedModel.add(meta);
         }
         if (!givenname.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "givenname");
-            Statement meta = namedModel.createStatement(subject, metaProperty, givenname);
+            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+givenname);
+            Statement meta = namedModel.createStatement(subject, metaProperty, objectResource);
             namedModel.add(meta);
         }
         if (!surname.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "surname");
-            Statement meta = namedModel.createStatement(subject, metaProperty, surname);
+            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+surname);
+            Statement meta = namedModel.createStatement(subject, metaProperty, objectResource);
             namedModel.add(meta);
         }
 

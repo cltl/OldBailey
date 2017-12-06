@@ -33,8 +33,8 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
         String trigFolder = "";
         String ext = "";
         String xmlFolder = "";
-        xmlFolder = "/Code//vu/example/xml";
-        trigFolder = "/Code//vu/example/trig";
+        xmlFolder = "/Code//vu/OldBailey/example/xml";
+        trigFolder = "/Code//vu/OldBailey/example/trig";
         ext = ".trig";
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
@@ -418,6 +418,10 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                 //// this is a name instance and not a case id
                 //// we ignore it
             }
+            else if (inst.startsWith("def1-")) {
+                //// this is a name instance and not a case id
+                //// we ignore it
+            }
             else {
                 caseId = inst;
             }
@@ -428,7 +432,7 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                     //System.out.println("caseId = " + caseId);
                     String type = attributes.getValue("type");
                     String value = attributes.getValue("value");
-                    if (type.equals("age")) System.out.println("value = " + value);
+                    //if (type.equals("age")) System.out.println("value = " + value);
                     if (type != null && value != null) {
                         if (!PERSON) {
                             if (fileData.containsKey(caseId)) {
@@ -452,6 +456,15 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                 caseId = "";
             }
         }
+        /*
+        <persName id="def1-1621-18390513" type="defendantName">
+         <interp inst="def1-1621-18390513" type="gender" value="male"/>
+         <interp inst="def1-1621-18390513" type="age" value="21"/>
+         <interp inst="def1-1621-18390513" type="surname" value="ATKINSON"/>
+         <interp inst="def1-1621-18390513" type="given" value="EDWARD"/>
+         <hi rend="largeCaps">EDWARD ATKINSON</hi>
+         </persName>
+         */
         else if (qName.equalsIgnoreCase("persName")) {
             PERSON = true;
             person = new OldBaileyPerson();
