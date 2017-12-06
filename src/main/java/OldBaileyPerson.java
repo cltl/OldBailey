@@ -27,27 +27,27 @@ public class OldBaileyPerson {
 
     public void addToModel (Model namedModel,Resource subject) throws UnsupportedEncodingException {
         if (!gender.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "gender");
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "gender");
             Statement meta = namedModel.createStatement(subject, metaProperty, gender);
             namedModel.add(meta);
         }
         if (!age.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "age");
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "age");
             Statement meta = namedModel.createStatement(subject, metaProperty, age);
             namedModel.add(meta);
         }
         if (!role.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "role");
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "role");
             Statement meta = namedModel.createStatement(subject, metaProperty, role);
             namedModel.add(meta);
         }
         if (!givenname.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "givenname");
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "givenname");
             Statement meta = namedModel.createStatement(subject, metaProperty, givenname);
             namedModel.add(meta);
         }
         if (!surname.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "surname");
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "surname");
             Statement meta = namedModel.createStatement(subject, metaProperty, surname);
             namedModel.add(meta);
         }

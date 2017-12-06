@@ -428,6 +428,7 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                     //System.out.println("caseId = " + caseId);
                     String type = attributes.getValue("type");
                     String value = attributes.getValue("value");
+                    if (type.equals("age")) System.out.println("value = " + value);
                     if (type != null && value != null) {
                         if (!PERSON) {
                             if (fileData.containsKey(caseId)) {
