@@ -200,7 +200,7 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             String subject = s.getSubject().getLocalName();
             if (subject.startsWith("ev")) {
                 //// event....
-                if (s.getPredicate().getURI().indexOf("skos")>-1) {
+                if (s.getPredicate().getLocalName().equals("relatedMatch")) {
                     removedStatements.add(s);
                 }
             }
