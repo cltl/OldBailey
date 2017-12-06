@@ -17,3 +17,8 @@ Output example:
             skos:prefLabel          "basket" ;
             skos:relatedMatch       <http://eurovoc.europa.eu/1085> , <http://eurovoc.europa.eu/1602> , <http://eurovoc.europa.eu/2734> , <http://eurovoc.europa.eu/584> , <http://eurovoc.europa.eu/3784> , <http://eurovoc.europa.eu/368> .
 
+
+How to run:
+
+OldBaileyXml --xml <path to XML files> --trig <path to trig files> --extension ".trig"
+
