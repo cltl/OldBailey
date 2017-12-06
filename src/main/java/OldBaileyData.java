@@ -72,9 +72,11 @@ public class OldBaileyData {
         for (int i = 0; i < persons.size(); i++) {
             try {
                 OldBaileyPerson oldBaileyPerson = persons.get(i);
-                oldBaileyPerson.addToModel(namedModel);
+               // System.out.println("caseid = " + caseid);
+                Resource personResource = namedModel.createResource(oldBaileyPerson.getUri(caseid));
+                oldBaileyPerson.addToModel(namedModel, personResource);
                 Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, oldBaileyPerson.getRole());
-                Statement meta = namedModel.createStatement(subject, metaProperty, oldBaileyPerson.getUri());
+                Statement meta = namedModel.createStatement(subject, metaProperty, personResource);
                 statements.add(meta);
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();

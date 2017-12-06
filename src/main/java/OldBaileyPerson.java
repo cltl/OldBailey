@@ -22,11 +22,10 @@ public class OldBaileyPerson {
         this.surname = "";
         this.age = "";
         this.gender = "";
-        this.role = "";
+        this.role = "unknownRole";
     }
 
-    public void addToModel (Model namedModel) throws UnsupportedEncodingException {
-        Resource subject = namedModel.createResource(getUri());
+    public void addToModel (Model namedModel,Resource subject) throws UnsupportedEncodingException {
         if (!gender.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "gender");
             Statement meta = namedModel.createStatement(subject, metaProperty, gender);
@@ -55,8 +54,8 @@ public class OldBaileyPerson {
 
     }
 
-    public String getUri () throws UnsupportedEncodingException {
-        String uri = ResourcesUri.oldbaily + URLEncoder.encode(surname +"_"+givenname, "UTF-8").toLowerCase();
+    public String getUri (String caseId) throws UnsupportedEncodingException {
+        String uri = ResourcesUri.oldbaily+caseId + "/person/"+URLEncoder.encode(surname +"_"+givenname, "UTF-8").toLowerCase();
         return uri;
     }
 

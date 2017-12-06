@@ -1,8 +1,7 @@
 import com.hp.hpl.jena.query.Dataset;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.rdf.model.*;
 import com.hp.hpl.jena.tdb.TDBFactory;
+import com.hp.hpl.jena.vocabulary.RDF;
 import org.apache.jena.riot.RDFDataMgr;
 import org.apache.jena.riot.RDFFormat;
 import org.xml.sax.Attributes;
@@ -14,6 +13,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.*;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -33,8 +33,8 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
         String trigFolder = "";
         String ext = "";
         String xmlFolder = "";
-        xmlFolder = "/Code//vu/OldBailey/example/xml";
-        trigFolder = "/Code//vu/OldBailey/example/trig";
+        xmlFolder = "/Code//vu/example/xml";
+        trigFolder = "/Code//vu/example/trig";
         ext = ".trig";
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
@@ -56,7 +56,7 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             File xmlFile = xmlFiles.get(i);
             System.out.println("xmlFile.getName() = " + xmlFile.getName());
             processXmlFiles(xmlFile, trigFiles);
-            break;
+           // break;
         }
     }
 
@@ -82,7 +82,7 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                     OutputStream fos = new FileOutputStream(trigFile.getAbsoluteFile()+".meta");
                     dataset = RDFDataMgr.loadDataset(trigFile.getAbsolutePath());
                     adaptTriples(dataset, OldBaileyXml.fileData);
-                    removeTriples(dataset);
+                    removeTriples(dataset, fileIdentifier);
                     RDFDataMgr.write(fos, dataset, RDFFormat.TRIG_PRETTY);
                     fos.close();
                     //break;
@@ -95,16 +95,35 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
         }
     }
 
-    static void removeTriples (Dataset dataset) {
+    static void removeTriples (Dataset dataset, String caseId) {
         dataset.getDefaultModel().setNsPrefix("oldbailey", ResourcesUri.oldbaily);
         dataset.removeNamedModel(ResourcesUri.provenanceGraph);
-        Model namedModel = dataset.getNamedModel(ResourcesUri.instanceGraph);
+        Model instanceModel = dataset.getNamedModel(ResourcesUri.instanceGraph);
+        HashMap<String, String> rename = new HashMap<String, String>();
         ArrayList<Statement> removedStatements = new ArrayList<Statement>();
-        StmtIterator siter = namedModel.listStatements();
+        StmtIterator siter = instanceModel.listStatements();
         while (siter.hasNext()) {
             Statement s = siter.nextStatement();
-            if (s.getSubject().getURI().indexOf("dpedia")>-1) {
-                removedStatements.add(s);
+            if (s.getSubject().getURI().indexOf("dbpedia")>-1) {
+                /**
+                 *     <http://dbpedia.org/resource/Henry_Johnson_(Louisiana)>
+                 gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1565#char=8,21&word=w3,w4&term=t3,t4&sentence=2&paragraph=1> ;
+                 <http://www.newsreader-project.eu//phrasecount>
+                 <http://dbpedia.org/resource/Henry_Johnson_(Louisiana)#0> ;
+                 skos:prefLabel  "HENRY JOHNSON" .
+                 */
+                if (s.getPredicate().getLocalName().equals("prefLabel")) {
+                    try {
+                        String uri  = ResourcesUri.oldbaily +caseId+"/entities/"+ URLEncoder.encode(s.getObject().asLiteral().toString(), "UTF-8").toLowerCase();
+
+                        //System.out.println("s.getSubject().getURI() = " + s.getSubject().getURI());
+                        rename.put(s.getSubject().getURI(), uri);
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+                //removedStatements.add(s);
             }
             String subject = s.getSubject().getLocalName();
             if (subject.startsWith("ev")) {
@@ -114,9 +133,40 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                 }
             }
         }
-        namedModel.remove(removedStatements);
+        instanceModel.remove(removedStatements);
+
+        //replace dbpedia URIs
         removedStatements = new ArrayList<Statement>();
+        ArrayList<Statement> newStatements = new ArrayList<Statement>();
+        siter = instanceModel.listStatements();
+        while (siter.hasNext()) {
+            Statement s = siter.nextStatement();
+            if (s.getSubject().getURI().indexOf("dbpedia")>-1) {
+                /**
+                 *     <http://dbpedia.org/resource/Henry_Johnson_(Louisiana)>
+                 gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1565#char=8,21&word=w3,w4&term=t3,t4&sentence=2&paragraph=1> ;
+                 <http://www.newsreader-project.eu//phrasecount>
+                 <http://dbpedia.org/resource/Henry_Johnson_(Louisiana)#0> ;
+                 skos:prefLabel  "HENRY JOHNSON" .
+                 */
+
+                if (rename.containsKey(s.getSubject().getURI())) {
+                    String newUri = rename.get(s.getSubject().getURI());
+                    Resource resource = instanceModel.createResource(newUri);
+                    Statement newS = instanceModel.createStatement(resource, s.getPredicate(), s.getObject());
+                    newStatements.add(newS);
+                    Resource ont = instanceModel.createResource(ResourcesUri.nwrontology+"ENTITY");
+                    Statement typeS = instanceModel.createStatement(resource, RDF.type, ont);
+                    newStatements.add(typeS);
+                    removedStatements.add(s);
+                }
+            }
+        }
+        instanceModel.remove(removedStatements);
+        instanceModel.add(newStatements);
+
         Iterator<String> models = dataset.listNames();
+        ArrayList<String> relModels = new ArrayList<String>();
         while (models.hasNext()) {
             String model = models.next();
            // System.out.println("model = " + model);
@@ -125,30 +175,43 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                     !model.equals(ResourcesUri.instanceGraph) &&
                     !model.equals(ResourcesUri.graspGraph)
                     ) {
-                namedModel = dataset.getNamedModel(model);
-                siter = namedModel.listStatements();
+                Model relationModel = dataset.getNamedModel(model);
+                relModels.add(model);
+                siter = relationModel.listStatements();
                 while (siter.hasNext()) {
                     Statement s = siter.nextStatement();
                    // System.out.println("s.getObject().toString() = " + s.getObject().toString());
                     if (s.getObject().toString().indexOf("dbpedia")>-1) {
-                        removedStatements.add(s);
+                        //removedStatements.add(s);
+                        if (rename.containsKey(s.getObject().toString())) {
+                            String newUri = rename.get(s.getObject().toString());
+                            Resource resource = instanceModel.createResource(newUri);
+                            Statement newS = instanceModel.createStatement(s.getSubject(), s.getPredicate(), resource);
+                            instanceModel.add(newS);
+                        }
                     }
                    // System.out.println("s.getNameSpace() = " + s.getPredicate().getNameSpace());
-                    if (s.getPredicate().getNameSpace().indexOf("domain-ontology")>-1) {
-                        removedStatements.add(s);
+                    else if (s.getPredicate().getNameSpace().indexOf("domain-ontology")>-1) {
+                        //removedStatements.add(s);
                     }
-                    if (s.getPredicate().getNameSpace().indexOf("propbank")>-1) {
-                        removedStatements.add(s);
+                    else if (s.getPredicate().getNameSpace().indexOf("propbank")>-1) {
+                        //removedStatements.add(s);
                     }
-                    if (s.getPredicate().getNameSpace().indexOf("domain-ontology")>-1) {
-                        removedStatements.add(s);
+                    else if (s.getPredicate().getNameSpace().indexOf("domain-ontology")>-1) {
+                        //removedStatements.add(s);
                     }
-                    if (s.getPredicate().getLocalName().indexOf("hasAtTime")>-1) {
-                        removedStatements.add(s);
+                    else if (s.getPredicate().getLocalName().indexOf("hasAtTime")>-1) {
+                        //removedStatements.add(s);
+                    }
+                    else {
+                       instanceModel.add(s);
                     }
                 }
-                namedModel.remove(removedStatements);
             }
+        }
+        for (int i = 0; i < relModels.size(); i++) {
+            String m = relModels.get(i);
+            dataset.removeNamedModel(m);
         }
     }
 
@@ -302,6 +365,7 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                             } else {
                                 OldBaileyData data = new OldBaileyData();
                                 data.setValue(type, value);
+                                data.setCaseid(caseId);
                                 fileData.put(caseId, data);
                             }
                         }
@@ -319,7 +383,7 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             PERSON = true;
             person = new OldBaileyPerson();
             String type = attributes.getValue("type");
-            System.out.println(caseId+": type = " + type);
+            //System.out.println(caseId+": type = " + type);
             if (type!=null) {
                 person.setRole(type);
             }
