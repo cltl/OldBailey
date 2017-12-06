@@ -52,14 +52,85 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
         ArrayList<File> trigFiles = Util.makeFlatFileList(new File(trigFolder), ext);
         System.out.println("xmlFiles.size() = " + xmlFiles.size());
         System.out.println("trigFiles.size() = " + trigFiles.size());
+        HashMap<String, ArrayList<File>> map = makeFileIdentifierMap(xmlFiles, trigFiles);
         for (int i = 0; i < xmlFiles.size(); i++) {
             File xmlFile = xmlFiles.get(i);
             System.out.println("xmlFile.getName() = " + xmlFile.getName());
-            processXmlFiles(xmlFile, trigFiles);
+            processXmlFiles(xmlFile, map);
+           // processXmlFiles(xmlFile, trigFiles);
            // break;
         }
     }
 
+
+    static HashMap<String, ArrayList<File>> makeFileIdentifierMap (ArrayList<File> xmlFiles, ArrayList<File> trigFiles) {
+        HashMap<String, ArrayList<File>> map = new HashMap<String, ArrayList<File>>();
+        for (int x = 0; x < xmlFiles.size(); x++) {
+            File xmlFile = xmlFiles.get(x);
+            String fileIdentifier = xmlFile.getName();
+            ///OBC2POS-18390513.xml
+            int idx_s = fileIdentifier.indexOf("-");
+            int idx_e = fileIdentifier.indexOf(".xml");
+            if (idx_s>-1 && idx_e>-1)  {
+                fileIdentifier = "t"+fileIdentifier.substring(idx_s+1, idx_e);
+                // System.out.println("fileIdentifier = " + fileIdentifier);
+            }
+            OldBaileyXml oldBaileysXml = new OldBaileyXml();
+            for (int i = 0; i < trigFiles.size(); i++) {
+                File trigFile = trigFiles.get(i);
+                //System.out.println("trigFile.getName() = " + trigFile.getName());
+                if (trigFile.getName().startsWith(fileIdentifier)) {
+                    if (map.containsKey(fileIdentifier)) {
+                        ArrayList<File>  files = map.get(fileIdentifier);
+                        files.add(trigFile);
+                        map.put(fileIdentifier, files);
+                    }
+                    else {
+                        ArrayList<File>  files = new ArrayList<File>();
+                        files.add(trigFile);
+                        map.put(fileIdentifier, files);
+                    }
+                }
+            }
+        }
+        return map;
+    }
+
+    static void processXmlFiles (File xmlFile, HashMap<String, ArrayList<File>> trigFileMap) {
+        OldBaileyXml oldBaileysXml = new OldBaileyXml();
+        oldBaileysXml.parseFile(xmlFile);
+        String fileIdentifier = xmlFile.getName();
+        ///OBC2POS-18390513.xml
+        int idx_s = fileIdentifier.indexOf("-");
+        int idx_e = fileIdentifier.indexOf(".xml");
+        if (idx_s>-1 && idx_e>-1)  {
+            fileIdentifier = "t"+fileIdentifier.substring(idx_s+1, idx_e);
+            // System.out.println("fileIdentifier = " + fileIdentifier);
+        }
+        if (trigFileMap.containsKey(fileIdentifier)) {
+            ArrayList<File> trigFiles = trigFileMap.get(fileIdentifier);
+            for (int i = 0; i < trigFiles.size(); i++) {
+                File trigFile = trigFiles.get(i);
+                //System.out.println("trigFile.getName() = " + trigFile.getName());
+                if (trigFile.getName().startsWith(fileIdentifier)) {
+                    /// the meta data applies to this trigFile
+                    Dataset dataset = TDBFactory.createDataset();
+                    try {
+                        OutputStream fos = new FileOutputStream(trigFile.getAbsoluteFile() + ".meta");
+                        dataset = RDFDataMgr.loadDataset(trigFile.getAbsolutePath());
+                        adaptTriples(dataset, OldBaileyXml.fileData);
+                        removeTriples(dataset, fileIdentifier);
+                        RDFDataMgr.write(fos, dataset, RDFFormat.TRIG_PRETTY);
+                        fos.close();
+                        //break;
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+    }
 
     static void processXmlFiles (File xmlFile, ArrayList<File> trigFiles) {
         OldBaileyXml oldBaileysXml = new OldBaileyXml();
@@ -94,6 +165,7 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             }
         }
     }
+
 
     static void removeTriples (Dataset dataset, String caseId) {
         dataset.getDefaultModel().setNsPrefix("oldbailey", ResourcesUri.oldbaily);
