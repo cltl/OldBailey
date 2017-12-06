@@ -16,6 +16,7 @@ import javax.xml.parsers.SAXParserFactory;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  * Created by piek on 05/12/2017.
@@ -49,9 +50,13 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
         }
         ArrayList<File> xmlFiles = Util.makeFlatFileList(new File(xmlFolder), ".xml");
         ArrayList<File> trigFiles = Util.makeFlatFileList(new File(trigFolder), ext);
+        System.out.println("xmlFiles.size() = " + xmlFiles.size());
+        System.out.println("trigFiles.size() = " + trigFiles.size());
         for (int i = 0; i < xmlFiles.size(); i++) {
             File xmlFile = xmlFiles.get(i);
+            System.out.println("xmlFile.getName() = " + xmlFile.getName());
             processXmlFiles(xmlFile, trigFiles);
+            break;
         }
     }
 
@@ -77,8 +82,11 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                     OutputStream fos = new FileOutputStream(trigFile.getAbsoluteFile()+".meta");
                     dataset = RDFDataMgr.loadDataset(trigFile.getAbsolutePath());
                     adaptTriples(dataset, OldBaileyXml.fileData);
+                    removeTriples(dataset);
                     RDFDataMgr.write(fos, dataset, RDFFormat.TRIG_PRETTY);
                     fos.close();
+                    //break;
+
                 }
                 catch (Exception e)   {
                     e.printStackTrace();
@@ -86,6 +94,64 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             }
         }
     }
+
+    static void removeTriples (Dataset dataset) {
+        dataset.getDefaultModel().setNsPrefix("oldbailey", ResourcesUri.oldbaily);
+        dataset.removeNamedModel(ResourcesUri.provenanceGraph);
+        Model namedModel = dataset.getNamedModel(ResourcesUri.instanceGraph);
+        ArrayList<Statement> removedStatements = new ArrayList<Statement>();
+        StmtIterator siter = namedModel.listStatements();
+        while (siter.hasNext()) {
+            Statement s = siter.nextStatement();
+            if (s.getSubject().getURI().indexOf("dpedia")>-1) {
+                removedStatements.add(s);
+            }
+            String subject = s.getSubject().getLocalName();
+            if (subject.startsWith("ev")) {
+                //// event....
+                if (s.getPredicate().getURI().indexOf("skos")>-1) {
+                    removedStatements.add(s);
+                }
+            }
+        }
+        namedModel.remove(removedStatements);
+        removedStatements = new ArrayList<Statement>();
+        Iterator<String> models = dataset.listNames();
+        while (models.hasNext()) {
+            String model = models.next();
+           // System.out.println("model = " + model);
+            if (
+                    !model.equals(ResourcesUri.provenanceGraph) &&
+                    !model.equals(ResourcesUri.instanceGraph) &&
+                    !model.equals(ResourcesUri.graspGraph)
+                    ) {
+                namedModel = dataset.getNamedModel(model);
+                siter = namedModel.listStatements();
+                while (siter.hasNext()) {
+                    Statement s = siter.nextStatement();
+                   // System.out.println("s.getObject().toString() = " + s.getObject().toString());
+                    if (s.getObject().toString().indexOf("dbpedia")>-1) {
+                        removedStatements.add(s);
+                    }
+                   // System.out.println("s.getNameSpace() = " + s.getPredicate().getNameSpace());
+                    if (s.getPredicate().getNameSpace().indexOf("domain-ontology")>-1) {
+                        removedStatements.add(s);
+                    }
+                    if (s.getPredicate().getNameSpace().indexOf("propbank")>-1) {
+                        removedStatements.add(s);
+                    }
+                    if (s.getPredicate().getNameSpace().indexOf("domain-ontology")>-1) {
+                        removedStatements.add(s);
+                    }
+                    if (s.getPredicate().getLocalName().indexOf("hasAtTime")>-1) {
+                        removedStatements.add(s);
+                    }
+                }
+                namedModel.remove(removedStatements);
+            }
+        }
+    }
+
     static void adaptTriples (Dataset dataset, HashMap<String, OldBaileyData> dataHashMap) {
         Model namedModel = dataset.getNamedModel(ResourcesUri.instanceGraph);
         ArrayList<Statement> newStatements = new ArrayList<Statement>();
@@ -104,8 +170,8 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                         ArrayList<Statement> statements = data.getStatement(namedModel, s.getSubject());
                         newStatements.addAll(statements);
                     } else {
-                       // System.out.println("fileData = " + fileData.size());
-                       // System.out.println("no data for caseid:" + caseId);
+                     //   System.out.println("fileData = " + fileData.size());
+                     //   System.out.println("no data for caseid:" + caseId);
                     }
                 }
             }
@@ -212,7 +278,14 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             throws SAXException {
         value = "";
         if (qName.equalsIgnoreCase("interp")) {
-            caseId = attributes.getValue("inst");
+            String inst = attributes.getValue("inst");
+            if (inst.indexOf("-name-")>-1) {
+                //// this is a name instance and not a case id
+                //// we ignore it
+            }
+            else {
+                caseId = inst;
+            }
             if (caseId!=null && caseId.startsWith("t")) {
                 String[] fields = caseId.split("-");
                 if (fields.length >= 2) {
@@ -233,7 +306,7 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                             }
                         }
                         else {
-                             person.setValue(type, value);
+                            if (person!=null) person.setValue(type, value);
                         }
                     }
                 }
@@ -246,6 +319,7 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             PERSON = true;
             person = new OldBaileyPerson();
             String type = attributes.getValue("type");
+            System.out.println(caseId+": type = " + type);
             if (type!=null) {
                 person.setRole(type);
             }
@@ -259,15 +333,21 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             throws SAXException {
         if (qName.equalsIgnoreCase("persName")) {
             PERSON = false;
-            if (fileData.containsKey(caseId)) {
-                OldBaileyData data = fileData.get(caseId);
-                data.addPersons(person);
-                fileData.put(caseId, data);
-            } else {
-                OldBaileyData data = new OldBaileyData();
-                data.addPersons(person);
-                fileData.put(caseId, data);
+            if (!caseId.isEmpty() && person!=null) {
+              //  System.out.println("caseId = " + caseId);
+                if (fileData.containsKey(caseId)) {
+                    OldBaileyData data = fileData.get(caseId);
+                    data.addPersons(person);
+                    fileData.put(caseId, data);
+                } else {
+                    OldBaileyData data = new OldBaileyData();
+                    data.addPersons(person);
+                    fileData.put(caseId, data);
+                }
+               // System.out.println("person.getRole() = " + person.getRole());
+               // System.out.println("ADDED");
             }
+            person = null;
         }
     }
 

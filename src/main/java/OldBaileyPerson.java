@@ -3,6 +3,9 @@ import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 /**
  * Created by piek on 05/12/2017.
  */
@@ -22,7 +25,7 @@ public class OldBaileyPerson {
         this.role = "";
     }
 
-    public void addToModel (Model namedModel) {
+    public void addToModel (Model namedModel) throws UnsupportedEncodingException {
         Resource subject = namedModel.createResource(getUri());
         if (!gender.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "gender");
@@ -52,10 +55,11 @@ public class OldBaileyPerson {
 
     }
 
-    public String getUri () {
-        String uri = ResourcesUri.oldbaily+ surname +"_"+givenname;
+    public String getUri () throws UnsupportedEncodingException {
+        String uri = ResourcesUri.oldbaily + URLEncoder.encode(surname +"_"+givenname, "UTF-8").toLowerCase();
         return uri;
     }
+
     public void setValue (String type, String value) {
         if (type.equals("age")) age=value;
         if (type.equals("gender")) gender=value;

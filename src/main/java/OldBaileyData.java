@@ -3,6 +3,7 @@ import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 /**
@@ -40,40 +41,48 @@ public class OldBaileyData {
         ArrayList<Statement> statements = new ArrayList<Statement>();
         if (!offenceCategory.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "offenceCategory");
-           // Resource object = namedModel.createResource(ResourcesUri.oldbaily, offenceCategory);
-            Statement meta = namedModel.createStatement(subject, metaProperty, offenceCategory);
+            Resource object = namedModel.createResource(ResourcesUri.oldbaily+offenceCategory);
+            Statement meta = namedModel.createStatement(subject, metaProperty, object);
             statements.add(meta);
         }
         if (!offenceSubcategory.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "offenceSubcategory");
-            Statement meta = namedModel.createStatement(subject, metaProperty, offenceSubcategory);
+            Resource object = namedModel.createResource(ResourcesUri.oldbaily+offenceSubcategory);
+            Statement meta = namedModel.createStatement(subject, metaProperty, object);
             statements.add(meta);
         }
         if (!verdictCategory.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "verdictCategory");
-            Statement meta = namedModel.createStatement(subject, metaProperty, verdictCategory);
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "verdictCategory");
+            Resource object = namedModel.createResource(ResourcesUri.oldbaily+verdictCategory);
+            Statement meta = namedModel.createStatement(subject, metaProperty, object);
             statements.add(meta);
         }
         if (!verdictSubcategory.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "verdictSubcategory");
-            Statement meta = namedModel.createStatement(subject, metaProperty, verdictSubcategory);
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "verdictSubcategory");
+            Resource object = namedModel.createResource(ResourcesUri.oldbaily+verdictSubcategory);
+            Statement meta = namedModel.createStatement(subject, metaProperty, object);
             statements.add(meta);
         }
         if (!punishmentCategory.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "punishmentCategory");
-            Statement meta = namedModel.createStatement(subject, metaProperty, punishmentCategory);
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "punishmentCategory");
+            Resource object = namedModel.createResource(ResourcesUri.oldbaily+punishmentCategory);
+            Statement meta = namedModel.createStatement(subject, metaProperty, object);
             statements.add(meta);
         }
         for (int i = 0; i < persons.size(); i++) {
-            OldBaileyPerson oldBaileyPerson = persons.get(i);
-            System.out.println("oldBaileyPerson.getUri() = " + oldBaileyPerson.getUri());
-            oldBaileyPerson.addToModel(namedModel);
-            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, oldBaileyPerson.getRole());
-            Statement meta = namedModel.createStatement(subject, metaProperty, oldBaileyPerson.getUri());
-            statements.add(meta);
+            try {
+                OldBaileyPerson oldBaileyPerson = persons.get(i);
+                oldBaileyPerson.addToModel(namedModel);
+                Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, oldBaileyPerson.getRole());
+                Statement meta = namedModel.createStatement(subject, metaProperty, oldBaileyPerson.getUri());
+                statements.add(meta);
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
         }
         return statements;
     }
+
     public ArrayList<OldBaileyPerson> getPersons() {
         return persons;
     }
