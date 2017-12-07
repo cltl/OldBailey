@@ -46,14 +46,12 @@ public class OldBaileyPerson {
         }
         if (!givenname.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "givenname");
-            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+givenname);
-            Statement meta = namedModel.createStatement(subject, metaProperty, objectResource);
+            Statement meta = namedModel.createStatement(subject, metaProperty, givenname);
             namedModel.add(meta);
         }
         if (!surname.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "surname");
-            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+surname);
-            Statement meta = namedModel.createStatement(subject, metaProperty, objectResource);
+            Statement meta = namedModel.createStatement(subject, metaProperty, surname);
             namedModel.add(meta);
         }
 

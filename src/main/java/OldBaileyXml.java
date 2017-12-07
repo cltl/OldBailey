@@ -176,32 +176,43 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
         StmtIterator siter = instanceModel.listStatements();
         while (siter.hasNext()) {
             Statement s = siter.nextStatement();
-            if (s.getSubject().getURI().indexOf("dbpedia")>-1) {
-                /**
-                 *     <http://dbpedia.org/resource/Henry_Johnson_(Louisiana)>
-                 gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1565#char=8,21&word=w3,w4&term=t3,t4&sentence=2&paragraph=1> ;
-                 <http://www.newsreader-project.eu//phrasecount>
-                 <http://dbpedia.org/resource/Henry_Johnson_(Louisiana)#0> ;
-                 skos:prefLabel  "HENRY JOHNSON" .
-                 */
-                if (s.getPredicate().getLocalName().equals("prefLabel")) {
-                    try {
-                        String uri  = ResourcesUri.oldbaily +caseId+"/entities/"+ URLEncoder.encode(s.getObject().asLiteral().toString(), "UTF-8").toLowerCase();
-
-                        //System.out.println("s.getSubject().getURI() = " + s.getSubject().getURI());
-                        rename.put(s.getSubject().getURI(), uri);
-                    } catch (UnsupportedEncodingException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-                //removedStatements.add(s);
+            if (s.getPredicate().getLocalName().equals("label")) {
+                removedStatements.add(s);
             }
-            String subject = s.getSubject().getLocalName();
-            if (subject.startsWith("ev")) {
-                //// event....
-                if (s.getPredicate().getLocalName().equals("relatedMatch")) {
-                    removedStatements.add(s);
+            else  if (s.getPredicate().getLocalName().equals("count")) {
+                removedStatements.add(s);
+            }
+            else  if (s.getPredicate().getLocalName().equals("phrasecount")) {
+                removedStatements.add(s);
+            }
+            else {
+                if (s.getSubject().getURI().indexOf("dbpedia")>-1) {
+                    /**
+                     *     <http://dbpedia.org/resource/Henry_Johnson_(Louisiana)>
+                     gaf:denotedBy   <http://cltl.nl/old_bailey/sessionpaper/t18390513-1565#char=8,21&word=w3,w4&term=t3,t4&sentence=2&paragraph=1> ;
+                     <http://www.newsreader-project.eu//phrasecount>
+                     <http://dbpedia.org/resource/Henry_Johnson_(Louisiana)#0> ;
+                     skos:prefLabel  "HENRY JOHNSON" .
+                     */
+                    if (s.getPredicate().getLocalName().equals("prefLabel")) {
+                        try {
+                            String uri  = ResourcesUri.oldbaily +caseId+"/entities/"+ URLEncoder.encode(s.getObject().asLiteral().toString(), "UTF-8").toLowerCase();
+
+                            //System.out.println("s.getSubject().getURI() = " + s.getSubject().getURI());
+                            rename.put(s.getSubject().getURI(), uri);
+                        } catch (UnsupportedEncodingException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                    //removedStatements.add(s);
+                }
+                String subject = s.getSubject().getLocalName();
+                if (subject.startsWith("ev")) {
+                    //// event....
+                    if (s.getPredicate().getLocalName().equals("relatedMatch")) {
+                        removedStatements.add(s);
+                    }
                 }
             }
         }

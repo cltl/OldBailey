@@ -1,4 +1,7 @@
+import com.hp.hpl.jena.query.Dataset;
+import com.hp.hpl.jena.tdb.TDBFactory;
 import eu.kyotoproject.kaf.KafSense;
+import org.apache.jena.riot.RDFDataMgr;
 
 import java.io.*;
 import java.util.*;
@@ -11,6 +14,43 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class Util {
+
+
+    static public void main (String[] args) {
+         String folder = "/Code/vu/OldBailey/example/huygen/projecten/oldbailey/temp/wrong_trigs";
+         String filePath = "/Code/vu/OldBailey/example/huygen/projecten/oldbailey/temp/wrong_trigs/t17250224-51.trig";
+         String extension = ".meta";
+         //RDFCheck(folder, extension);
+         RDFCheck(new File (filePath));
+    }
+
+    static public void RDFCheck(String trigFolder, String ext) {
+        ArrayList<File> trigFiles = Util.makeFlatFileList(new File(trigFolder), ext);
+        for (int i = 0; i < trigFiles.size(); i++) {
+            File metaFile = trigFiles.get(i);
+            String rename = metaFile.getAbsoluteFile().getParentFile()+"/"+metaFile.getName().substring(0, metaFile.getName().lastIndexOf("."));
+
+            File trigFile = new File (rename);
+            metaFile.renameTo(trigFile);
+            RDFCheck(trigFile);
+        }
+
+    }
+
+    static public void RDFCheck(File trigFile) {
+            System.out.println("trigFile.getName() = " + trigFile.getName());
+            Dataset dataset = TDBFactory.createDataset();
+            try {
+              dataset = RDFDataMgr.loadDataset(trigFile.getAbsolutePath());
+              Iterator<String> names = dataset.listNames();
+              while (names.hasNext()) {
+                  String name = names.next();
+                  System.out.println("name = " + name);
+              }
+            } catch (Exception e) {
+              e.printStackTrace();
+            }
+    }
 
     static public String alphaNumericUri(String uri) {
         final String alfanum="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
