@@ -3,7 +3,6 @@ import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 /**
@@ -40,13 +39,13 @@ public class OldBaileyData {
     public ArrayList<Statement> getStatement (Model namedModel, Resource subject) {
         ArrayList<Statement> statements = new ArrayList<Statement>();
         if (!offenceCategory.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "offenceCategory");
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "offenceCategory");
             Resource object = namedModel.createResource(ResourcesUri.oldbaily+offenceCategory);
             Statement meta = namedModel.createStatement(subject, metaProperty, object);
             statements.add(meta);
         }
         if (!offenceSubcategory.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.nwr, "offenceSubcategory");
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "offenceSubcategory");
             Resource object = namedModel.createResource(ResourcesUri.oldbaily+offenceSubcategory);
             Statement meta = namedModel.createStatement(subject, metaProperty, object);
             statements.add(meta);
@@ -72,13 +71,17 @@ public class OldBaileyData {
         for (int i = 0; i < persons.size(); i++) {
             try {
                 OldBaileyPerson oldBaileyPerson = persons.get(i);
-               // System.out.println("caseid = " + caseid);
+                //System.out.println("caseid = " + caseid);
+                //System.out.println("oldBaileyPerson.getGender() = " + oldBaileyPerson.getGender());
+                //System.out.println("oldBaileyPerson.getGivenname() = " + oldBaileyPerson.getGivenname());
+                //System.out.println("oldBaileyPerson.getSurname() = " + oldBaileyPerson.getSurname());
                 Resource personResource = namedModel.createResource(oldBaileyPerson.getUri(caseid));
+                //System.out.println("personResource.getURI() = " + personResource.getURI());
                 oldBaileyPerson.addToModel(namedModel, personResource);
                 Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, oldBaileyPerson.getRole());
                 Statement meta = namedModel.createStatement(subject, metaProperty, personResource);
                 statements.add(meta);
-            } catch (UnsupportedEncodingException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }

@@ -78,6 +78,9 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             OldBaileyXml oldBaileysXml = new OldBaileyXml();
             for (int i = 0; i < trigFiles.size(); i++) {
                 File trigFile = trigFiles.get(i);
+/*                if (!trigFile.getName().equals("t18390513-1580.naf.trig")) {
+                    continue;
+                }*/
                 //System.out.println("trigFile.getName() = " + trigFile.getName());
                 if (trigFile.getName().startsWith(fileIdentifier)) {
                     if (map.containsKey(fileIdentifier)) {
