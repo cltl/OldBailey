@@ -3,7 +3,6 @@ import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 
 public class OldBaileyInterp {
 
@@ -55,12 +54,11 @@ public class OldBaileyInterp {
         this.value = value;
     }
 
-    public void toStatement(Model namedModel) throws UnsupportedEncodingException {
+    public void addToModel(Model namedModel) throws UnsupportedEncodingException {
         Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, this.getType());
         Resource subjectResource = namedModel.createResource(this.getInst());
-        String uri  = ResourcesUri.oldbailyvalue + URLEncoder.encode(this.getValue(), "UTF-8").toLowerCase();
-
-        Resource objectResource = namedModel.createResource(uri);
+        //String uri  = ResourcesUri.oldbailyvalue + URLEncoder.encode(this.getValue(), "UTF-8").toLowerCase();
+        //Resource objectResource = namedModel.createResource(uri);
         com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, metaProperty, this.getValue());
         namedModel.add(meta);
     }

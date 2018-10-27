@@ -1,7 +1,7 @@
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.vocabulary.RDF;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -59,12 +59,6 @@ Sessions
                      <interp inst="def2-2-19130107" type="occupation" value="labourer"/>
                      <hi rend="largeCaps">CORNISH</hi>, William (32, labourer)</persName>
  */
-    private String givenname;
-    private String surname;
-    private String occupation;
-    private String place;
-    private String age;
-    private String gender;
     private String type;
     private String id;
     private String mention;
@@ -72,26 +66,34 @@ Sessions
 
 
     public OldBaileyPerson() {
-        this.givenname = "";
-        this.surname = "";
-        this.age = "";
-        this.occupation = "";
-        this.place = "";
         this.id = "";
-        this.gender = "";
         this.type = "unknownRole";
         this.mention = "";
         this.interpArrayList = new ArrayList<>();
     }
 
-    public void addInterpToModel (Model namedModel) throws UnsupportedEncodingException {
+    public void addToModel(Model namedModel) throws UnsupportedEncodingException {
+        Resource subjectResource = namedModel.createResource(id);
+        com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, RDF.type, "Person");
+        namedModel.add(meta);
+
+        if (!type.isEmpty()) {
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "role");
+            meta = namedModel.createStatement(subjectResource, metaProperty, type);
+            namedModel.add(meta);
+        }
+        if (!mention.isEmpty()) {
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "mention");
+            meta = namedModel.createStatement(subjectResource, metaProperty, mention);
+            namedModel.add(meta);
+        }
         for (int i = 0; i < interpArrayList.size(); i++) {
             OldBaileyInterp oldBaileyInterp = interpArrayList.get(i);
-            oldBaileyInterp.toStatement(namedModel);
+            oldBaileyInterp.addToModel(namedModel);
         }
     }
 
-    public void addToModel (Model namedModel,Resource subject) throws UnsupportedEncodingException {
+/*    public void addToModel (Model namedModel,Resource subject) throws UnsupportedEncodingException {
         if (!gender.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "gender");
             Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+gender);
@@ -135,63 +137,11 @@ Sessions
             Statement meta = namedModel.createStatement(subject, metaProperty, place);
             namedModel.add(meta);
         }
-
-    }
+    }*/
 
     public String getUri (String caseId) throws UnsupportedEncodingException {
         String uri = ResourcesUri.oldbaily+caseId + "/person/"+id;
         return uri;
-    }
-
-    public void setValue (String type, String value) {
-        if (type.equals("age")) age=value;
-        if (type.equals("gender")) gender=value;
-        if (type.equals("surname")) surname =value;
-        if (type.equals("given")) givenname=value;
-        if (type.equals("occupation")) occupation=value;
-        if (type.equals("type")) type=value;
-        if (type.equals("id")) id=value;
-        if (type.equals("place")) id=value;
-    }
-
-    public String getGivenname() {
-        return givenname;
-    }
-
-    public void setGivenname(String givenname) {
-        this.givenname = givenname;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getOccupation() {
-        return occupation;
-    }
-
-    public void setOccupation(String occupation) {
-        this.occupation = occupation;
     }
 
     public String getType() {
@@ -216,14 +166,6 @@ Sessions
 
     public void setMention(String mention) {
         this.mention = mention;
-    }
-
-    public String getPlace() {
-        return place;
-    }
-
-    public void setPlace(String place) {
-        this.place = place;
     }
 
     public ArrayList<OldBaileyInterp> getInterpArrayList() {

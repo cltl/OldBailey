@@ -10,14 +10,11 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
 
     static String value = "";
     static String caseId = "";
-    static HashMap<String, OldBaileyData> fileData = new HashMap<String, OldBaileyData>();
-    static OldBaileyData data = new OldBaileyData();
     static public ArrayList<OldBaileyTrial> trialArrayList = new ArrayList<>();
     static public ArrayList<OldBaileyPerson> personArrayList = new ArrayList<>();
     static public ArrayList<OldBaileyPlace> placeArrayList = new ArrayList<>();
@@ -32,8 +29,6 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
 
     public void init () {
         caseId = "";
-        fileData = new HashMap<String, OldBaileyData>();
-        data = new OldBaileyData();
         trialArrayList = new ArrayList<>();
         personArrayList = new ArrayList<>();
         placeArrayList = new ArrayList<>();
@@ -128,8 +123,12 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                 String targOrder = attributes.getValue("targOrder");
                 String targetString = attributes.getValue("targets");
                 String [] fields = targetString.split(" ");
-                OldBaileyJoin join = new OldBaileyJoin(result, targOrder,fields[0], fields[1]);
-                joinArrayList.add(join);
+                String subject = fields[0];
+                for (int i = 1; i < fields.length; i++) {
+                    String field = fields[i];
+                    OldBaileyJoin join = new OldBaileyJoin(result, targOrder, subject, field);
+                    joinArrayList.add(join);
+                }
         }
         else if (qName.equalsIgnoreCase("rs")) {
                 String id = attributes.getValue("id");
@@ -174,12 +173,35 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
     public void endElement(String uri, String localName, String qName)
             throws SAXException {
         if (qName.equalsIgnoreCase("persName")) {
-
+            String mention = cleanValue(value).trim();
+            if (!mention.isEmpty()) {
+                personArrayList.get(personArrayList.size() - 1).setMention(mention);
+            }
         }
         else if (qName.equalsIgnoreCase("placeName")) {
+            String mention = cleanValue(value).trim();
+            if (!mention.isEmpty()) {
+                placeArrayList.get(placeArrayList.size()-1).setMention(mention);
+            }
+        }
+        else if (qName.equalsIgnoreCase("rs")) {
+            String mention = cleanValue(value).trim();
+            if (!mention.isEmpty()) {
+                rsArrayList.get(rsArrayList.size()-1).setMention(mention);
+            }
         }
     }
 
+    String cleanValue (String value) {
+        String clean = "";
+        for (int i = 0; i < value.length(); i++) {
+            char c = value.charAt(i);
+            if (c!='\n') {
+               clean+=c;
+            }
+        }
+        return clean;
+    }
     public void characters(char ch[], int start, int length)
             throws SAXException {
         value += new String(ch, start, length);

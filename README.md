@@ -1,7 +1,7 @@
 # OldBailey
 Processing the OldBailey data to create LOD
 
-The main function OldBaileyXml reads an XML file and extracts the meta data fields from the XML together with
+The main function OldBaileyXmlOrg reads an XML file and extracts the meta data fields from the XML together with
 a caseId. The caseId is used to load the corresponding TRiG-RDF files using the Jena library.
 The meta data fields are added as properties to the events and the result is saved to an output file as TRiG-RDF.
 
@@ -20,5 +20,5 @@ Output example:
 
 How to run:
 
-OldBaileyXml --xml <path to XML files> --trig <path to trig files> --extension ".trig"
+OldBaileyXmlOrg --xml <path to XML files> --trig <path to trig files> --extension ".trig"
 

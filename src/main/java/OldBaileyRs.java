@@ -1,4 +1,8 @@
 import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.vocabulary.RDF;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -67,10 +71,22 @@ public class OldBaileyRs {
         this.interpArrayList.add(oldBaileyInterp);
     }
 
-    public void addInterpToModel (Model namedModel) throws UnsupportedEncodingException {
+    public void addToModel(Model namedModel) throws UnsupportedEncodingException {
+        Resource subjectResource = namedModel.createResource(id);
+        Statement meta = namedModel.createStatement(subjectResource, RDF.type, "Event");
+        namedModel.add(meta);
+        if (!type.isEmpty()) {
+            meta = namedModel.createStatement(subjectResource, RDF.type, type);
+            namedModel.add(meta);
+        }
+        if (!mention.isEmpty()) {
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "mention");
+            meta = namedModel.createStatement(subjectResource, metaProperty, mention);
+            namedModel.add(meta);
+        }
         for (int i = 0; i < interpArrayList.size(); i++) {
             OldBaileyInterp oldBaileyInterp = interpArrayList.get(i);
-            oldBaileyInterp.toStatement(namedModel);
+            oldBaileyInterp.addToModel(namedModel);
         }
     }
 }

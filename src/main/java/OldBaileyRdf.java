@@ -72,15 +72,15 @@ public class OldBaileyRdf {
             OutputStream fos = new FileOutputStream(outputRdf);
             for (Map.Entry<String,OldBaileyPerson> entry : personMap.entrySet()) {
                 OldBaileyPerson person = entry.getValue();
-                person.addInterpToModel(instanceModel);
+                person.addToModel(instanceModel);
             }
             for (Map.Entry<String,OldBaileyPlace> entry : placeMap.entrySet()) {
                 OldBaileyPlace place = entry.getValue();
-                place.addInterpToModel(instanceModel);
+                place.addToModel(instanceModel);
             }
             for (Map.Entry<String,OldBaileyRs> entry : rsMap.entrySet()) {
                 OldBaileyRs rs = entry.getValue();
-                rs.addInterpToModel(instanceModel);
+                rs.addToModel(instanceModel);
             }
             for (Map.Entry<String,OldBaileyTrial> entry : trialMap.entrySet()) {
                 OldBaileyTrial trial = entry.getValue();
@@ -146,14 +146,16 @@ public class OldBaileyRdf {
             if (join.getResult().equalsIgnoreCase("persNamePlace")) {
                 if (personMap.containsKey(join.getSubject())) {
                     OldBaileyPerson oldBaileyPerson = personMap.get(join.getSubject());
-                    oldBaileyPerson.setOccupation(join.getObject());
+                    OldBaileyInterp interp = new OldBaileyInterp(join.getSubject(), "origin", join.getObject());
+                    oldBaileyPerson.addInterpArrayList(interp);
                     personMap.put(join.getSubject(),oldBaileyPerson);
                 }
             }
             else if (join.getResult().equalsIgnoreCase("persNameOccupation")) {
                 if (personMap.containsKey(join.getSubject())) {
                     OldBaileyPerson oldBaileyPerson = personMap.get(join.getSubject());
-                    oldBaileyPerson.setOccupation(join.getObject());
+                    OldBaileyInterp interp = new OldBaileyInterp(join.getSubject(), "occupation", join.getObject());
+                    oldBaileyPerson.addInterpArrayList(interp);
                     personMap.put(join.getSubject(),oldBaileyPerson);
                 }
             }
