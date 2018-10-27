@@ -10,6 +10,51 @@ import java.util.ArrayList;
  */
 public class OldBaileyData {
 
+    /*
+    ordinary
+    <persName id="OA16980309n24-1">
+                      <interp inst="OA16980309n24-1" type="gender" value="male"/>
+                      <interp inst="OA16980309n24-1" type="surname" value="MARSLIN"/>
+                      <interp inst="OA16980309n24-1" type="given" value="WILLIAM"/>WIlliam Marslin</persName>,
+    <persName id="OA16980309n24-3">
+                      <interp inst="OA16980309n24-3" type="gender" value="male"/>
+                      <interp inst="OA16980309n24-3" type="surname" value="Marslin"/>
+                      <interp inst="OA16980309n24-3" type="given" value="Peter"/>alias, Peter</persName>
+                      , Condemned for robbing
+    <persName id="OA16980309n24-2">
+                      <interp inst="OA16980309n24-2" type="gender" value="female"/>
+                      <interp inst="OA16980309n24-2" type="surname" value="JOLLY"/>
+                      <interp inst="OA16980309n24-2" type="given" value="MARY"/>Mary Jolly</persName>
+
+    <placeName id="OA16980309-geo-1">
+                      <interp inst="OA16980309-geo-1" type="type" value="parish"/>
+                      <join result="persNamePlace" targOrder="Y"
+                            targets="OA16980309n24-1 n24-3 OA16980309-geo-1"/>Aldgate Parish</placeName>
+                            . He was
+                            <rs id="OA16980309-occupation-1" type="occupation">Aprentice and Journey Man to a Glass-maker</rs>
+                   <join result="persNameOccupation" targOrder="Y"
+                         targets="OA16980309n24-1 n24-3 OA16980309-occupation-1"/>,
+
+     <persName id="OA16980309n37-1">
+                       <interp inst="OA16980309n37-1" type="gender" value="male"/>
+                       <interp inst="OA16980309n37-1" type="surname" value="Smith"/>
+                       <interp inst="OA16980309n37-1" type="given" value="Sam"/>Sam. Smith</persName>,
+                       <rs id="OA16980309-occupation-4" type="occupation">Ordinary</rs>
+                    <join result="persNameOccupation" targOrder="Y"
+                          targets="OA16980309n37-1 OA16980309-occupation-4"/>.</p>
+     */
+    /*
+    sessions
+    <rs id="t19130107-2-punishment-1" type="punishmentDescription">
+                         <interp inst="t19130107-2-punishment-1" type="punishmentCategory" value="imprison"/>
+                         <interp inst="t19130107-2-punishment-1" type="punishmentSubcategory" value="hardLabour"/>
+                         <join result="defendantPunishment" targOrder="Y"
+                               targets="def1-2-19130107 t19130107-2-punishment-1"/>Fifteen months' hard labour</rs>; Cornish <rs id="t19130107-2-punishment-2" type="punishmentDescription">
+                         <interp inst="t19130107-2-punishment-2" type="punishmentCategory" value="imprison"/>
+                         <interp inst="t19130107-2-punishment-2" type="punishmentSubcategory" value="hardLabour"/>
+                         <join result="defendantPunishment" targOrder="Y"
+                               targets="def2-2-19130107 t19130107-2-punishment-2"/>Twenty months' hard labour</rs>.
+     */
     private String caseid;
     private String offenceCategory;
     private String offenceSubcategory;
@@ -17,6 +62,9 @@ public class OldBaileyData {
     private String verdictSubcategory;
     private String punishmentCategory;
     private ArrayList<OldBaileyPerson> persons;
+    private ArrayList<OldBaileyPlace> places;
+    private ArrayList<OldBaileyJoin> joins;
+
 
     public OldBaileyData() {
         this.caseid = "";
@@ -25,7 +73,9 @@ public class OldBaileyData {
         this.verdictCategory = "";
         this.verdictSubcategory = "";
         this.punishmentCategory = "";
+        this.places = new ArrayList<OldBaileyPlace>();
         this.persons = new ArrayList<OldBaileyPerson>();
+        this.joins = new ArrayList<OldBaileyJoin>();
     }
 
     public void setValue (String type, String value) {
@@ -78,7 +128,7 @@ public class OldBaileyData {
                 Resource personResource = namedModel.createResource(oldBaileyPerson.getUri(caseid));
                 //System.out.println("personResource.getURI() = " + personResource.getURI());
                 oldBaileyPerson.addToModel(namedModel, personResource);
-                Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, oldBaileyPerson.getRole());
+                Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, oldBaileyPerson.getOccupation());
                 Statement meta = namedModel.createStatement(subject, metaProperty, personResource);
                 statements.add(meta);
             } catch (Exception e) {
@@ -86,6 +136,14 @@ public class OldBaileyData {
             }
         }
         return statements;
+    }
+
+    public ArrayList<OldBaileyPlace> getPlaces() {
+        return places;
+    }
+
+    public void addPlaces(OldBaileyPlace place) {
+        this.places.add(place);
     }
 
     public ArrayList<OldBaileyPerson> getPersons() {
@@ -146,7 +204,16 @@ public class OldBaileyData {
     public void setPunishmentCategory(String punishmentCategory) {
         this.punishmentCategory = punishmentCategory;
     }
-/**
+
+    public ArrayList<OldBaileyJoin> getJoins() {
+        return joins;
+    }
+
+    public void addJoins(OldBaileyJoin oldBaileyJoin) {
+        this.joins.add(oldBaileyJoin);
+    }
+
+    /**
      *
      <rs id="t18741123-56-offence-1" type="offenceDescription">
      <interp inst="t18741123-36-offence-1" type="offenceCategory" value="damage"/>

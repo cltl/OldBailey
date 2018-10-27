@@ -13,7 +13,7 @@ import java.util.*;
  * Time: 7:58 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Util {
+public class OBHelper {
 
 
     static public void main (String[] args) {
@@ -25,7 +25,7 @@ public class Util {
     }
 
     static public void RDFCheck(String trigFolder, String ext) {
-        ArrayList<File> trigFiles = Util.makeFlatFileList(new File(trigFolder), ext);
+        ArrayList<File> trigFiles = OBHelper.makeFlatFileList(new File(trigFolder), ext);
         for (int i = 0; i < trigFiles.size(); i++) {
             File metaFile = trigFiles.get(i);
             String rename = metaFile.getAbsoluteFile().getParentFile()+"/"+metaFile.getName().substring(0, metaFile.getName().lastIndexOf("."));
@@ -370,7 +370,7 @@ public class Util {
             idx = id.lastIndexOf("/");
             String s1 = id.substring(0, idx+1);
             String s2 = id.substring(idx+1);
-            String s2new = Util.fixUri(s2);
+            String s2new = OBHelper.fixUri(s2);
             if (!s2.equals(s2new)) {
                 String newId = s1+s2new;
                 /*if (id.indexOf("Frank")>-1) {
