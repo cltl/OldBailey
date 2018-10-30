@@ -54,13 +54,42 @@ public class OldBaileyInterp {
         this.value = value;
     }
 
+    public String getValue_replace_space () {
+        return value.replaceAll(" ","_");
+    }
+
     public void addToModel(Model namedModel) throws UnsupportedEncodingException {
         Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, this.getType());
-        Resource subjectResource = namedModel.createResource(this.getInst());
-        //String uri  = ResourcesUri.oldbailyvalue + URLEncoder.encode(this.getValue(), "UTF-8").toLowerCase();
-        //Resource objectResource = namedModel.createResource(uri);
-        com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, metaProperty, this.getValue());
-        namedModel.add(meta);
+        Resource subjectResource = namedModel.createResource(ResourcesUri.oldbaily+this.getInst());
+        if (type.equalsIgnoreCase("given") || type.equalsIgnoreCase("surname")) {
+            com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, metaProperty, this.value);
+            namedModel.add(meta);
+        }
+        else if (type.equalsIgnoreCase("age")) {
+            com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, metaProperty, this.value);
+            namedModel.add(meta);
+        }
+        else if (type.equalsIgnoreCase("placeName")) {
+            com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, metaProperty, this.value);
+            namedModel.add(meta);
+        }
+        else {
+            String uri  = ResourcesUri.oldbaily + this.getValue_replace_space();
+            Resource objectResource = namedModel.createResource(uri);
+            com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, metaProperty, objectResource);
+            namedModel.add(meta);
+        }
     }
+
+    /*
+
+        if (!this.year.isEmpty()) {
+            Property year = model.createProperty(ResourcesUri.owltime+"year");
+            resource.addProperty(year, this.getYear(),XSDDatatype.XSDgYear);
+            Property unit = model.createProperty(ResourcesUri.owltime+"unitType");
+            Property day = model.createProperty(ResourcesUri.owltime+"unitDay");
+            resource.addProperty(unit, day);
+        }
+     */
 
 }

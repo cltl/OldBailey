@@ -72,11 +72,13 @@ public class OldBaileyRs {
     }
 
     public void addToModel(Model namedModel) throws UnsupportedEncodingException {
-        Resource subjectResource = namedModel.createResource(id);
-        Statement meta = namedModel.createStatement(subjectResource, RDF.type, "Event");
+        Resource subjectResource = namedModel.createResource(ResourcesUri.oldbaily+id);
+        Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+"Event");
+        Statement meta = namedModel.createStatement(subjectResource, RDF.type, objectResource);
         namedModel.add(meta);
         if (!type.isEmpty()) {
-            meta = namedModel.createStatement(subjectResource, RDF.type, type);
+            objectResource = namedModel.createResource(ResourcesUri.oldbaily+type);
+            meta = namedModel.createStatement(subjectResource, RDF.type, objectResource);
             namedModel.add(meta);
         }
         if (!mention.isEmpty()) {

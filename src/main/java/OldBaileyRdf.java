@@ -7,6 +7,7 @@ import org.apache.jena.riot.RDFFormat;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,11 +25,12 @@ public class OldBaileyRdf {
 
     static public void main(String[] args) {
         File rdfFolder = null;
+        boolean singleoutputfile = true;
         String ext = "";
         File xmlFolder = null;
         ext = ".xml";
-        //args = testOrdinary.split(" ");
-        args = testSessions.split(" ");
+        args = testOrdinary.split(" ");
+        //args = testSessions.split(" ");
 
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
@@ -44,32 +46,74 @@ public class OldBaileyRdf {
         }
         if (!rdfFolder.exists()) {
             rdfFolder.mkdir();
+            System.out.println("xmlFolder.getAbsolutePath() = " + xmlFolder.getAbsolutePath());
         }
-
         if (rdfFolder.exists()) {
             OldBaileyXml oldBaileyXml = new OldBaileyXml();
-            ArrayList<File> xmlFiles = OBHelper.makeFlatFileList(xmlFolder, ".xml");
+            ArrayList<File> xmlFiles = OBHelper.makeFlatFileList(xmlFolder, ext);
             System.out.println("xmlFiles.size() = " + xmlFiles.size());
-            for (int i = 0; i < xmlFiles.size(); i++) {
-                File xmlFile = xmlFiles.get(i);
-                System.out.println("xmlFile.getName() = " + xmlFile.getName());
-                oldBaileyXml.parseFile(xmlFile);
-                getMaps(oldBaileyXml);
-                File rdfFile = new File (xmlFile.getAbsolutePath()+".rdf");
-                outputRdf (rdfFile);
-                 break;
+            if (singleoutputfile) {
+                Dataset dataset = TDBFactory.createDataset();
+                Model instanceModel = dataset.getDefaultModel();
+                instanceModel.setNsPrefix("oldbailey", ResourcesUri.oldbaily);
+                for (int i = 0; i < xmlFiles.size(); i++) {
+                    File xmlFile = xmlFiles.get(i);
+                    System.out.println("xmlFile.getName() = " + xmlFile.getName());
+                    init();
+                    oldBaileyXml = new OldBaileyXml();
+                    oldBaileyXml.parseFile(xmlFile);
+                    getMaps(oldBaileyXml);
+                    addToRdf(instanceModel);
+                }
+                try {
+                    File rdfFile = new File(rdfFolder.getAbsolutePath() + "/"  + "all.trig");
+                    OutputStream fos = new FileOutputStream(rdfFile);
+                    RDFDataMgr.write(fos, dataset, RDFFormat.TRIG_PRETTY);
+                    fos.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
+            else {
+                for (int i = 0; i < xmlFiles.size(); i++) {
+                    File xmlFile = xmlFiles.get(i);
+                    System.out.println("xmlFile.getName() = " + xmlFile.getName());
+                    init();
+                    oldBaileyXml = new OldBaileyXml();
+                    oldBaileyXml.parseFile(xmlFile);
+                    getMaps(oldBaileyXml);
+                    File rdfFile = new File(rdfFolder.getAbsolutePath() + "/" + xmlFile.getName() + ".trig");
+                    outputRdf(rdfFile);
+                    // break;
+                }
+            }
+
         }
     }
 
+    static void init() {
+        personMap = new HashMap<>();
+        placeMap = new HashMap<>();
+        rsMap = new HashMap<>();
+        trialMap = new HashMap<>();
+
+    }
     static public void outputRdf (File outputRdf) {
         Dataset dataset = TDBFactory.createDataset();
         Model instanceModel = dataset.getDefaultModel();
-        //Model instanceModel = dataset.getNamedModel(ResourcesUri.instanceGraph);
         instanceModel.setNsPrefix("oldbailey", ResourcesUri.oldbaily);
-
+        addToRdf(instanceModel);
         try {
             OutputStream fos = new FileOutputStream(outputRdf);
+            RDFDataMgr.write(fos, dataset, RDFFormat.TRIG_PRETTY);
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    static public void addToRdf (Model instanceModel) {
+         try {
             for (Map.Entry<String,OldBaileyPerson> entry : personMap.entrySet()) {
                 OldBaileyPerson person = entry.getValue();
                 person.addToModel(instanceModel);
@@ -86,15 +130,11 @@ public class OldBaileyRdf {
                 OldBaileyTrial trial = entry.getValue();
                 trial.addInterpToModel(instanceModel);
             }
-            RDFDataMgr.write(fos, dataset, RDFFormat.TRIG_PRETTY);
-            fos.close();
-            //break;
-
-        } catch (Exception e) {
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-
     }
+
     static public void getMaps (OldBaileyXml oldBaileyXml) {
         for (int i = 0; i < oldBaileyXml.personArrayList.size(); i++) {
             OldBaileyPerson oldBaileyPerson = oldBaileyXml.personArrayList.get(i);
@@ -135,9 +175,11 @@ public class OldBaileyRdf {
                 trialMap.put(oldBaileyInterp.getInst(), oldBaileyTrial);
             }
             else {
+/*
                 System.out.println("oldBaileyInterp.getInst() = " + oldBaileyInterp.getInst());
                 System.out.println("oldBaileyInterp.getType() = " + oldBaileyInterp.getType());
                 System.out.println("oldBaileyInterp.getValue() = " + oldBaileyInterp.getValue());
+*/
             }
         }
 
@@ -222,9 +264,11 @@ join.getObject() = t18070408-1-punish6
                 }
             }
             else {
+/*
                 System.out.println("join.getResult() = " + join.getResult());
                 System.out.println("join.getSubject() = " + join.getSubject());
                 System.out.println("join.getObject() = " + join.getObject());
+*/
             }
         }
     }

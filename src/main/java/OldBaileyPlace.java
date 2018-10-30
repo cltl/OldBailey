@@ -6,8 +6,6 @@ import com.hp.hpl.jena.vocabulary.RDF;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
-import static com.hp.hpl.jena.vocabulary.DCTerms.subject;
-
 public class OldBaileyPlace {
     /*
           <placeName id="OA16980309-geo-1">
@@ -56,8 +54,9 @@ public class OldBaileyPlace {
     }
 
     public void addToModel(Model namedModel) throws UnsupportedEncodingException {
-        Resource subjectResource = namedModel.createResource(id);
-        com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, RDF.type, "Place");
+        Resource subjectResource = namedModel.createResource(ResourcesUri.oldbaily+id);
+        Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+"Place");
+        com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, RDF.type, objectResource);
         namedModel.add(meta);
         if (!mention.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "mention");

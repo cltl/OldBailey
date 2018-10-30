@@ -73,13 +73,15 @@ Sessions
     }
 
     public void addToModel(Model namedModel) throws UnsupportedEncodingException {
-        Resource subjectResource = namedModel.createResource(id);
-        com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, RDF.type, "Person");
+        Resource subjectResource = namedModel.createResource(ResourcesUri.oldbaily+id);
+        Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+"Person");
+        com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, RDF.type, objectResource);
         namedModel.add(meta);
 
         if (!type.isEmpty()) {
+            objectResource = namedModel.createResource(ResourcesUri.oldbaily+type);
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "role");
-            meta = namedModel.createStatement(subjectResource, metaProperty, type);
+            meta = namedModel.createStatement(subjectResource, metaProperty, objectResource);
             namedModel.add(meta);
         }
         if (!mention.isEmpty()) {

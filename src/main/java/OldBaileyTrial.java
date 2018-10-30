@@ -43,8 +43,9 @@ public class OldBaileyTrial {
     }
 
     public void addInterpToModel (Model namedModel) throws UnsupportedEncodingException {
-        Resource subjectResource = namedModel.createResource(id);
-        Statement meta = namedModel.createStatement(subjectResource, RDF.type, "Trial");
+        Resource subjectResource = namedModel.createResource(ResourcesUri.oldbaily+id);
+        Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+"Trial");
+        Statement meta = namedModel.createStatement(subjectResource, RDF.type, objectResource);
         namedModel.add(meta);
         for (int i = 0; i < interpArrayList.size(); i++) {
             OldBaileyInterp oldBaileyInterp = interpArrayList.get(i);

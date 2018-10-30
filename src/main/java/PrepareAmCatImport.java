@@ -20,7 +20,7 @@ public class PrepareAmCatImport extends org.xml.sax.helpers.DefaultHandler {
     static HashMap<String, String> trials = new HashMap<String, String>();
 
     static String testOrdinary = "--xml-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/ordinarysAccounts --extension .xml --text-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/ordinarysAccounts/text --source ordinarysAccounts";
-    static String testSessions = "--xml-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/sessionsPapers --extension .xml --text-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/sessionsPapers/text --source sessionPapers";
+    static String testSessions = "--xml-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/sessionsPapers/186 --extension .xml --text-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/sessionsPapers/text186 --source sessionPapers";
 
 
     static public void main(String[] args) {
@@ -28,8 +28,8 @@ public class PrepareAmCatImport extends org.xml.sax.helpers.DefaultHandler {
         String tsvFile = "";
         String ext = "";
         ext = ".xml";
-        //args = testOrdinary.split(" ");
-        args = testSessions.split(" ");
+        args = testOrdinary.split(" ");
+        //args = testSessions.split(" ");
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
             if (arg.equals("--xml-folder") && args.length > (i + 1)) {
@@ -61,6 +61,7 @@ public class PrepareAmCatImport extends org.xml.sax.helpers.DefaultHandler {
                 String str = "filename\tdate\theadline\tmedium\n";
                 fosTsv.write(str.getBytes());
                 ArrayList<File> xmlFiles = makeRecursiveFileList(xmlFolder, ext);
+                System.out.println("xmlFiles.size() = " + xmlFiles.size());
                 for (int i = 0; i < xmlFiles.size(); i++) {
                     File xmlFile = xmlFiles.get(i);
                     trials = new HashMap<String, String>();
@@ -87,7 +88,7 @@ public class PrepareAmCatImport extends org.xml.sax.helpers.DefaultHandler {
                             fosText.write(text.getBytes());
                             fosText.close();
                             str = textFile.getName() + "\t";
-                            str += adaptDateToIso(date) + "\t" + key + "\t" + medium + "\n";
+                            str += adaptDateTimeToIso(date) + "\t" + key + "\t" + medium + "\n";
                             fosTsv.write(str.getBytes());
                         }
                     }
@@ -122,6 +123,13 @@ public class PrepareAmCatImport extends org.xml.sax.helpers.DefaultHandler {
         String dateISO = dateString;
         if (dateString.length()==8) {
             dateISO = dateString.substring(0,4)+"-"+dateString.substring(4,6)+"-"+dateString.substring(6); //+"T00:00:00";
+        }
+        return dateISO;
+    }
+    static String adaptDateTimeToIso(String dateString) {
+        String dateISO = dateString;
+        if (dateString.length()==8) {
+            dateISO = dateString.substring(0,4)+"-"+dateString.substring(4,6)+"-"+dateString.substring(6)+"T00:00:00";
         }
         return dateISO;
     }
