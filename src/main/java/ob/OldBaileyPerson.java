@@ -1,3 +1,5 @@
+package ob;
+
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
@@ -97,45 +99,45 @@ Sessions
 
 /*    public void addToModel (Model namedModel,Resource subject) throws UnsupportedEncodingException {
         if (!gender.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "gender");
-            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+gender);
+            Property metaProperty = namedModel.createProperty(ob.ResourcesUri.oldbaily, "gender");
+            Resource objectResource = namedModel.createResource(ob.ResourcesUri.oldbaily+gender);
             Statement meta = namedModel.createStatement(subject, metaProperty, objectResource);
             namedModel.add(meta);
         }
         if (!age.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "age");
-            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+age);
+            Property metaProperty = namedModel.createProperty(ob.ResourcesUri.oldbaily, "age");
+            Resource objectResource = namedModel.createResource(ob.ResourcesUri.oldbaily+age);
             Statement meta = namedModel.createStatement(subject, metaProperty, objectResource);
             namedModel.add(meta);
         }
         if (!type.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "type");
-            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+type);
+            Property metaProperty = namedModel.createProperty(ob.ResourcesUri.oldbaily, "type");
+            Resource objectResource = namedModel.createResource(ob.ResourcesUri.oldbaily+type);
             Statement meta = namedModel.createStatement(subject, metaProperty, objectResource);
             namedModel.add(meta);
         }
         if (!givenname.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "givenname");
+            Property metaProperty = namedModel.createProperty(ob.ResourcesUri.oldbaily, "givenname");
             Statement meta = namedModel.createStatement(subject, metaProperty, givenname);
             namedModel.add(meta);
         }
         if (!surname.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "surname");
+            Property metaProperty = namedModel.createProperty(ob.ResourcesUri.oldbaily, "surname");
             Statement meta = namedModel.createStatement(subject, metaProperty, surname);
             namedModel.add(meta);
         }
         if (!occupation.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "occupation");
+            Property metaProperty = namedModel.createProperty(ob.ResourcesUri.oldbaily, "occupation");
             Statement meta = namedModel.createStatement(subject, metaProperty, occupation);
             namedModel.add(meta);
         }
         if (!id.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "id");
+            Property metaProperty = namedModel.createProperty(ob.ResourcesUri.oldbaily, "id");
             Statement meta = namedModel.createStatement(subject, metaProperty, id);
             namedModel.add(meta);
         }
         if (!place.isEmpty()) {
-            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "place");
+            Property metaProperty = namedModel.createProperty(ob.ResourcesUri.oldbaily, "place");
             Statement meta = namedModel.createStatement(subject, metaProperty, place);
             namedModel.add(meta);
         }

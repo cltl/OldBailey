@@ -1,3 +1,5 @@
+package ob;
+
 import com.hp.hpl.jena.rdf.model.Model;
 
 /**
@@ -54,19 +56,19 @@ public class ResourcesUri {
     static public void prefixModel (Model model) {
         model.setNsPrefix("wn", ResourcesUri.wn);
         model.setNsPrefix("ili", ResourcesUri.ili);
-      //  model.setNsPrefix("cornetto", ResourcesUri.cornetto);
+      //  model.setNsPrefix("cornetto", ob.ResourcesUri.cornetto);
         model.setNsPrefix("fn", ResourcesUri.fn);
         model.setNsPrefix("nwrdata", ResourcesUri.nwrdata);
         model.setNsPrefix("nwrontology", ResourcesUri.nwrontology);
         model.setNsPrefix("eso", ResourcesUri.eso);
         /// we need to take out the dbp ns because the URIs from dbp are not valid. They contain e.g. dots "Apple_Inc."
-      //  model.setNsPrefix("dbp", ResourcesUri.dbp);
+      //  model.setNsPrefix("dbp", ob.ResourcesUri.dbp);
         model.setNsPrefix("pb", ResourcesUri.pb);
 
 /*      //REMOVED DUE TO ILLEGAL CHARACTERS
-        model.setNsPrefix("vn", ResourcesUri.vn);
-        model.setNsPrefix("pb", ResourcesUri.pb);
-        model.setNsPrefix("nb", ResourcesUri.nb);
+        model.setNsPrefix("vn", ob.ResourcesUri.vn);
+        model.setNsPrefix("pb", ob.ResourcesUri.pb);
+        model.setNsPrefix("nb", ob.ResourcesUri.nb);
 */
         model.setNsPrefix("gaf", ResourcesUri.gaf);
         model.setNsPrefix("sem", ResourcesUri.sem);
@@ -74,7 +76,7 @@ public class ResourcesUri {
         model.setNsPrefix("time", ResourcesUri.owltime);
         model.setNsPrefix("skos", ResourcesUri.skos);
        /* REMOVED DUE TO PROBLEMS WITH SESAME
-        model.setNsPrefix("eurovoc", ResourcesUri.eurovoc);
+        model.setNsPrefix("eurovoc", ob.ResourcesUri.eurovoc);
         */
         model.setNsPrefix("rdf", ResourcesUri.rdf);
         model.setNsPrefix("rdfs", ResourcesUri.rdfs);
@@ -103,7 +105,7 @@ public class ResourcesUri {
         model.setNsPrefix("nwrauthor", ResourcesUri.nwrauthor);
         model.setNsPrefix("nwrpublisher", ResourcesUri.nwrpublisher);
         model.setNsPrefix("nwrmagazine", ResourcesUri.nwrmagazine);
-       // model.setNsPrefix("nwrsourceowner", ResourcesUri.nwrsourceowner);
+       // model.setNsPrefix("nwrsourceowner", ob.ResourcesUri.nwrsourceowner);
     }
 
     static public void prefixModelGaf (Model model) {

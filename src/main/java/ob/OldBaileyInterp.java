@@ -1,3 +1,5 @@
+package ob;
+
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
@@ -84,10 +86,10 @@ public class OldBaileyInterp {
     /*
 
         if (!this.year.isEmpty()) {
-            Property year = model.createProperty(ResourcesUri.owltime+"year");
+            Property year = model.createProperty(ob.ResourcesUri.owltime+"year");
             resource.addProperty(year, this.getYear(),XSDDatatype.XSDgYear);
-            Property unit = model.createProperty(ResourcesUri.owltime+"unitType");
-            Property day = model.createProperty(ResourcesUri.owltime+"unitDay");
+            Property unit = model.createProperty(ob.ResourcesUri.owltime+"unitType");
+            Property day = model.createProperty(ob.ResourcesUri.owltime+"unitDay");
             resource.addProperty(unit, day);
         }
      */

@@ -1,3 +1,5 @@
+package ob;
+
 import com.hp.hpl.jena.query.Dataset;
 import com.hp.hpl.jena.tdb.TDBFactory;
 import eu.kyotoproject.kaf.KafSense;

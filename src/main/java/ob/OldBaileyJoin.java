@@ -1,3 +1,5 @@
+package ob;
+
 public class OldBaileyJoin {
     /*
     <join result="persNamePlace" targOrder="Y"
