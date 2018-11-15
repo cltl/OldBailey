@@ -27,17 +27,22 @@ public class OldBaileyRdf {
 
     static public void main(String[] args) {
         File rdfFolder = null;
-        boolean singleoutputfile = true;
+        boolean singleoutputfile = false;
         String ext = "";
         File xmlFolder = null;
+        File xmlFile = null;
         ext = ".xml";
-        args = testOrdinary.split(" ");
+        //args = testOrdinary.split(" ");
         //args = testSessions.split(" ");
 
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
             if (arg.equals("--xml-folder") && args.length > (i + 1)) {
                 xmlFolder = new File(args[i + 1]);
+            }
+            else if (arg.equals("--xml-file") && args.length > (i + 1)) {
+                xmlFile = new File(args[i + 1]);
+                singleoutputfile=true;
             }
             else if (arg.equals("--rdf-folder") && args.length > (i + 1)) {
                 rdfFolder = new File(args[i + 1]);
@@ -46,50 +51,62 @@ public class OldBaileyRdf {
                 ext = args[i + 1];
             }
         }
-        if (!rdfFolder.exists()) {
-            rdfFolder.mkdir();
-            System.out.println("xmlFolder.getAbsolutePath() = " + xmlFolder.getAbsolutePath());
-        }
-        if (rdfFolder.exists()) {
-            OldBaileyXml oldBaileyXml = new OldBaileyXml();
-            ArrayList<File> xmlFiles = OBHelper.makeFlatFileList(xmlFolder, ext);
-            System.out.println("xmlFiles.size() = " + xmlFiles.size());
-            if (singleoutputfile) {
-                Dataset dataset = TDBFactory.createDataset();
-                Model instanceModel = dataset.getDefaultModel();
-                instanceModel.setNsPrefix("oldbailey", ResourcesUri.oldbaily);
-                for (int i = 0; i < xmlFiles.size(); i++) {
-                    File xmlFile = xmlFiles.get(i);
-                    System.out.println("xmlFile.getName() = " + xmlFile.getName());
-                    init();
-                    oldBaileyXml = new OldBaileyXml();
-                    oldBaileyXml.parseFile(xmlFile);
-                    getMaps(oldBaileyXml);
-                    addToRdf(instanceModel);
-                }
-                try {
-                    File rdfFile = new File(rdfFolder.getAbsolutePath() + "/"  + "all.trig");
-                    OutputStream fos = new FileOutputStream(rdfFile);
-                    RDFDataMgr.write(fos, dataset, RDFFormat.TRIG_PRETTY);
-                    fos.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-            else {
-                for (int i = 0; i < xmlFiles.size(); i++) {
-                    File xmlFile = xmlFiles.get(i);
-                    System.out.println("xmlFile.getName() = " + xmlFile.getName());
-                    init();
-                    oldBaileyXml = new OldBaileyXml();
-                    oldBaileyXml.parseFile(xmlFile);
-                    getMaps(oldBaileyXml);
-                    File rdfFile = new File(rdfFolder.getAbsolutePath() + "/" + xmlFile.getName() + ".trig");
-                    outputRdf(rdfFile);
-                    // break;
-                }
-            }
 
+        OldBaileyXml oldBaileyXml = new OldBaileyXml();
+        ArrayList<File> xmlFiles = new ArrayList<>();
+        if (singleoutputfile && xmlFile!=null) {
+            xmlFiles.add(xmlFile);
+        }
+        else {
+            if (xmlFolder!=null) {
+                xmlFiles = OBHelper.makeFlatFileList(xmlFolder, ext);
+            }
+        }
+        System.out.println("xmlFiles.size() = " + xmlFiles.size());
+        if (singleoutputfile) {
+            Dataset dataset = TDBFactory.createDataset();
+            Model instanceModel = dataset.getDefaultModel();
+            instanceModel.setNsPrefix("oldbailey", ResourcesUri.oldbaily);
+            for (int i = 0; i < xmlFiles.size(); i++) {
+                File file = xmlFiles.get(i);
+                System.out.println("file.getName() = " + file.getName());
+                init();
+                oldBaileyXml = new OldBaileyXml();
+                oldBaileyXml.parseFile(file);
+                getMaps(oldBaileyXml);
+                addToRdf(instanceModel);
+            }
+            try {
+                File rdfFile = new File(xmlFile.getAbsolutePath()  + ".ob-meta.trig");
+                OutputStream fos = new FileOutputStream(rdfFile);
+                RDFDataMgr.write(fos, dataset, RDFFormat.TRIG_PRETTY);
+                fos.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            if (!rdfFolder.exists()) {
+                        rdfFolder.mkdir();
+                        System.out.println("xmlFolder.getAbsolutePath() = " + xmlFolder.getAbsolutePath());
+                }
+                if (rdfFolder.exists()) {
+                    for (int i = 0; i < xmlFiles.size(); i++) {
+                        File file = xmlFiles.get(i);
+                        System.out.println("file.getName() = " + file.getName());
+                        init();
+                        oldBaileyXml = new OldBaileyXml();
+                        oldBaileyXml.parseFile(file);
+                        getMaps(oldBaileyXml);
+                        File rdfFile = new File(rdfFolder.getAbsolutePath() + "/" + file.getName() + ".trig");
+                        outputRdf(rdfFile);
+                        // break;
+                    }
+                }
+                else {
+                    System.out.println("rdfFolder = " + rdfFolder.exists());
+                    System.out.println("rdfFolder.getAbsolutePath() = " + rdfFolder.getAbsolutePath());
+                }
         }
     }
 

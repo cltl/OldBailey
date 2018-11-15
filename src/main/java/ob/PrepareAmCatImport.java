@@ -30,7 +30,7 @@ public class PrepareAmCatImport extends org.xml.sax.helpers.DefaultHandler {
         String tsvFile = "";
         String ext = "";
         ext = ".xml";
-        args = testOrdinary.split(" ");
+        //args = testOrdinary.split(" ");
         //args = testSessions.split(" ");
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
@@ -96,6 +96,10 @@ public class PrepareAmCatImport extends org.xml.sax.helpers.DefaultHandler {
                     }
                 }
                 fosTsv.close();
+            }
+            else {
+                System.out.println("textFolder = " + textFolder.exists());
+                System.out.println("textFolder.getAbsolutePath() = " + textFolder.getAbsolutePath());
             }
         } catch (IOException e) {
             e.printStackTrace();

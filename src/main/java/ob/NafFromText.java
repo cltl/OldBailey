@@ -20,7 +20,15 @@ public class NafFromText {
 
         String textFolder = "/Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/sessionsPapers/text/18century";
         String nafFolderpath = "/Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/sessionsPapers/naf18/";
-
+        for (int i = 0; i < args.length; i++) {
+            String arg = args[i];
+            if (arg.equalsIgnoreCase("--text-folder") && args.length>(i+1)) {
+                textFolder = args[i+1];
+            }
+            else if (arg.equalsIgnoreCase("--naf-folder") && args.length>(i+1)) {
+                nafFolderpath = args[i+1];
+            }
+        }
         File nafFolder = new File(nafFolderpath);
         if (!nafFolder.exists()) {
             nafFolder.mkdir();
@@ -50,6 +58,11 @@ public class NafFromText {
                 }
 
             }
+        }
+
+        else {
+            System.out.println("nafFolder = " + nafFolder.exists());
+            System.out.println("nafFolder.getAbsolutePath() = " + nafFolder.getAbsolutePath());
         }
     }
 }
