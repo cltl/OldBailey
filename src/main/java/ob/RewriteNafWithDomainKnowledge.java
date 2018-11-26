@@ -25,10 +25,13 @@ public class RewriteNafWithDomainKnowledge {
 
     static public void main (String [] args) {
         String pathToTripleFiles = "";
-        String pathToTripleFile =   "/Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/vu-ob-text-rdf/example/meta-rdf/19070910.xml.trig";
-        String pathToNafFolder =    "/Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/vu-ob-text-rdf/example/naf-out";
-        String pathToNafDomFolder = "/Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/vu-ob-text-rdf/example/naf-dom";
-        statementPrefixFilter = "19";
+        String pathToTripleFile =  "";
+        String pathToNafFolder =   "";
+        String pathToNafDomFolder ="";
+      //  pathToTripleFile =   "/Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/vu-ob-text-rdf/example/meta-rdf/19070910.xml.trig";
+      //  pathToNafFolder =    "/Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/vu-ob-text-rdf/example/naf-out";
+      //  pathToNafDomFolder = "/Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/vu-ob-text-rdf/example/naf-dom";
+     //   statementPrefixFilter = "19";
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
             if (arg.equalsIgnoreCase("--rdf-folder") && args.length>(i+1)) {
@@ -80,7 +83,7 @@ public class RewriteNafWithDomainKnowledge {
            HashMap<String, ArrayList<String>> nameMap = new HashMap<String, ArrayList<String>>();
            nameMap = getNameMap(dataset);
            int count = 0;
-           ArrayList<File> nafFiles = OBHelper.makeRecursiveFileList(new File(pathToNafFolder), ".naf");
+           ArrayList<File> nafFiles = OBHelper.makeRecursiveFileList(new File(pathToNafFolder), statementPrefixFilter, ".naf");
            System.out.println("nafFiles.size() = " + nafFiles.size());
            for (int i = 0; i < nafFiles.size(); i++) {
                File nafFile = nafFiles.get(i);
