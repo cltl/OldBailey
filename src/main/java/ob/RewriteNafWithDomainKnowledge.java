@@ -14,9 +14,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class RewriteNafWithDomainKnowledge {
     static HashMap<String, ArrayList<Statement>> statementMap = new HashMap<String, ArrayList<Statement>>();
@@ -81,7 +79,7 @@ public class RewriteNafWithDomainKnowledge {
            }
            System.out.println("Final statementMap = " + statementMap.size());
            HashMap<String, ArrayList<String>> nameMap = new HashMap<String, ArrayList<String>>();
-           nameMap = getNameMap(dataset);
+           nameMap = getNameMap(statementMap);
            int count = 0;
            ArrayList<File> nafFiles = OBHelper.makeRecursiveFileList(new File(pathToNafFolder), statementPrefixFilter, ".naf");
            System.out.println("nafFiles.size() = " + nafFiles.size());
@@ -98,28 +96,6 @@ public class RewriteNafWithDomainKnowledge {
                    //System.out.print("Nr. naf files processed = " + count);
                }
                //1675-12-08_s16751208-1.txt.naf
-/*                        HashMap<String, ArrayList<String>> nameMap = new HashMap<String, ArrayList<String>>();
-
-               String nafFileName = nafFile.getName();
-               String sessionKey = nafFileName;
-               int idx_e = sessionKey.indexOf(".");
-               if (idx_e > -1) {
-                   sessionKey = sessionKey.substring(0, idx_e);
-               }
-               int idx = sessionKey.indexOf("_");
-               if (idx > -1) {
-                   String[] fields = sessionKey.substring(idx + 1).split("-");
-                   sessionKey = fields[0];
-                   if (fields.length > 1) {
-                       sessionKey += "-" + fields[1];
-                   }
-               }
-               if (DEBUG) System.out.println("naf sessionKey = " + sessionKey);
-               ArrayList<Statement> statements = statementMap.get(sessionKey);
-               if (statements != null) {
-                   if (DEBUG) System.out.println("statements.size() = " + statements.size());
-                   nameMap = getNameMap(statements);
-               }*/
                kafSaxParser.parseFile(nafFile);
                for (int j = 0; j < kafSaxParser.kafEntityArrayList.size(); j++) {
                    KafEntity kafEntity = kafSaxParser.kafEntityArrayList.get(j);
@@ -283,6 +259,44 @@ public class RewriteNafWithDomainKnowledge {
         return nameMap;
     }
 
+    public static HashMap<String, ArrayList<String>> getNameMap (HashMap<String, ArrayList<Statement>> map) {
+        HashMap<String, ArrayList<String>> nameMap = new HashMap<String, ArrayList<String>>();
+        Set keySet = map.keySet();
+        Iterator<String> keys = keySet.iterator();
+        while (keys.hasNext()) {
+            String key = keys.next();
+            ArrayList<Statement> statements = map.get(key);
+            for (int i = 0; i < statements.size(); i++) {
+                Statement statement = statements.get(i);
+                String subjectId = statement.getSubject().getLocalName();
+              // System.out.println("statement.getPredicate() = " + statement.getPredicate());
+                if (statement.getPredicate().getLocalName().equalsIgnoreCase("given") ||
+                       statement.getPredicate().getLocalName().equalsIgnoreCase("surname") ||
+                       statement.getPredicate().getLocalName().equalsIgnoreCase("mention")) {
+                   String name = statement.getObject().asLiteral().getString().toLowerCase();
+                   //System.out.println("name = " + name);
+                   if (nameMap.containsKey(name)) {
+                       ArrayList<String> ids = nameMap.get(name);
+                       if (!ids.contains(subjectId)) {
+                           ids.add(subjectId);
+                         //  System.out.println("subjectId = " + subjectId);
+                           nameMap.put(name, ids);
+                       }
+
+                   }
+                   else {
+                       ArrayList<String> ids = new ArrayList<String>();
+                       ids.add(subjectId);
+                       nameMap.put(name, ids);
+                   }
+                  // System.out.println("nameMap.size() = " + nameMap.size());
+                }
+            }
+        }
+        if (DEBUG) System.out.println("nameMap.size() = " + nameMap.size());
+        return nameMap;
+    }
+
     public static void makeStatementMap (Dataset dataset) {
         Model namedModel = dataset.getDefaultModel();
         StmtIterator siter = namedModel.listStatements();
@@ -317,6 +331,33 @@ public class RewriteNafWithDomainKnowledge {
             }
         }
         System.out.println("statementMap = " + statementMap.size());
+    }
+
+    public static Dataset selectStatements (Dataset dataset) {
+        Dataset selectedDataSet = TDBFactory.createDataset();
+        Model namedModel = dataset.getDefaultModel();
+        StmtIterator siter = namedModel.listStatements();
+        String [] fields = null;
+        int count = 0;
+        while (siter.hasNext()) {
+            Statement s = siter.nextStatement();
+            String sessionKey = s.getSubject().getLocalName();
+            fields = sessionKey.split("-");
+            sessionKey = fields[0];
+            if (fields.length>1) {
+                sessionKey+="-"+fields[1];
+            }
+            if (!sessionKey.substring(1).startsWith(statementPrefixFilter))  {
+                continue;
+            }
+            count++;
+            if (count%10000==0) {
+                System.out.println("Nr. statements processed = " + count+ " out of:"+namedModel.size());
+            }
+            selectedDataSet.getDefaultModel().add(s);
+        }
+        System.out.println("selectedDataSet = " + selectedDataSet.getDefaultModel().size());
+        return selectedDataSet;
     }
 
 
