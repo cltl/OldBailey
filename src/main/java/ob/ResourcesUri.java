@@ -11,12 +11,13 @@ public class ResourcesUri {
     static final public String instanceGraph = "http://www.newsreader-project.eu/instances";
     static final public String graspGraph = "http://www.newsreader-project.eu/grasp";
 
+    final static public String oldbaily = "http://cltl.nl/oldbailey/";
+    final static public String oldbailyvalue = "http://cltl.nl/oldbailey/value#";
+
 
     final static public String eurovoc = "http://eurovoc.europa.eu/";
     final static public String skos = "http://www.w3.org/2004/02/skos/core#";
     final static public String nwr = "http://www.newsreader-project.eu/";
-    final static public String oldbaily = "http://cltl.nl/oldbailey/";
-    final static public String oldbailyvalue = "http://cltl.nl/oldbailey/value#";
     final static public String nwrproject = "http://www.newsreader-project.eu/project/";
     final static public String nwrtime = "http://www.newsreader-project.eu/time/";
     final static public String nwrdata = "http://www.newsreader-project.eu/data/";
@@ -56,19 +57,18 @@ public class ResourcesUri {
     static public void prefixModel (Model model) {
         model.setNsPrefix("wn", ResourcesUri.wn);
         model.setNsPrefix("ili", ResourcesUri.ili);
-      //  model.setNsPrefix("cornetto", ob.ResourcesUri.cornetto);
         model.setNsPrefix("fn", ResourcesUri.fn);
         model.setNsPrefix("nwrdata", ResourcesUri.nwrdata);
         model.setNsPrefix("nwrontology", ResourcesUri.nwrontology);
         model.setNsPrefix("eso", ResourcesUri.eso);
         /// we need to take out the dbp ns because the URIs from dbp are not valid. They contain e.g. dots "Apple_Inc."
-      //  model.setNsPrefix("dbp", ob.ResourcesUri.dbp);
+      //  model.setNsPrefix("dbp", ResourcesUri.dbp);
         model.setNsPrefix("pb", ResourcesUri.pb);
 
 /*      //REMOVED DUE TO ILLEGAL CHARACTERS
-        model.setNsPrefix("vn", ob.ResourcesUri.vn);
-        model.setNsPrefix("pb", ob.ResourcesUri.pb);
-        model.setNsPrefix("nb", ob.ResourcesUri.nb);
+        model.setNsPrefix("vn", ResourcesUri.vn);
+        model.setNsPrefix("pb", ResourcesUri.pb);
+        model.setNsPrefix("nb", ResourcesUri.nb);
 */
         model.setNsPrefix("gaf", ResourcesUri.gaf);
         model.setNsPrefix("sem", ResourcesUri.sem);
@@ -76,7 +76,7 @@ public class ResourcesUri {
         model.setNsPrefix("time", ResourcesUri.owltime);
         model.setNsPrefix("skos", ResourcesUri.skos);
        /* REMOVED DUE TO PROBLEMS WITH SESAME
-        model.setNsPrefix("eurovoc", ob.ResourcesUri.eurovoc);
+        model.setNsPrefix("eurovoc", ResourcesUri.eurovoc);
         */
         model.setNsPrefix("rdf", ResourcesUri.rdf);
         model.setNsPrefix("rdfs", ResourcesUri.rdfs);
@@ -86,12 +86,9 @@ public class ResourcesUri {
         model.setNsPrefix("wn", ResourcesUri.wn);
         model.setNsPrefix("ili", ResourcesUri.ili);
         model.setNsPrefix("fn", ResourcesUri.fn);
-        model.setNsPrefix("nwrdata", ResourcesUri.nwrdata);
-        model.setNsPrefix("nwrontology", ResourcesUri.nwrontology);
-        model.setNsPrefix("oldbaily", ResourcesUri.oldbaily);
         model.setNsPrefix("eso", ResourcesUri.eso);
         model.setNsPrefix("pb", ResourcesUri.pb);
-        model.setNsPrefix("gaf", ResourcesUri.gaf);
+        model.setNsPrefix("dbp", ResourcesUri.dbp);
         model.setNsPrefix("sem", ResourcesUri.sem);
         model.setNsPrefix("owl", ResourcesUri.owl);
         model.setNsPrefix("time", ResourcesUri.owltime);
@@ -101,14 +98,16 @@ public class ResourcesUri {
     }
 
     static public void prefixModelNwr (Model model) {
+        model.setNsPrefix("nwrdata", ResourcesUri.nwrdata);
+        model.setNsPrefix("nwrontology", ResourcesUri.nwrontology);
         model.setNsPrefix("nwr", ResourcesUri.nwr);
         model.setNsPrefix("nwrauthor", ResourcesUri.nwrauthor);
         model.setNsPrefix("nwrpublisher", ResourcesUri.nwrpublisher);
         model.setNsPrefix("nwrmagazine", ResourcesUri.nwrmagazine);
-       // model.setNsPrefix("nwrsourceowner", ob.ResourcesUri.nwrsourceowner);
+       // model.setNsPrefix("nwrsourceowner", ResourcesUri.nwrsourceowner);
     }
 
-    static public void prefixModelGaf (Model model) {
+    static public void prefixModelGrasp (Model model) {
          model.setNsPrefix("grasp", ResourcesUri.grasp);
         model.setNsPrefix("graspAttribution", ResourcesUri.graspAttribution);
         model.setNsPrefix("graspSentiment", ResourcesUri.graspSentiment);
