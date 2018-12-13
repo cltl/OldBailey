@@ -18,6 +18,7 @@ public class OldBaileyPlace {
      */
 
     private String id;
+    private String trial;
     private ArrayList<OldBaileyInterp> interpArrayList;
 
     private String mention;
@@ -25,6 +26,7 @@ public class OldBaileyPlace {
     public OldBaileyPlace() {
         this.id = "";
         this.mention = "";
+        this.trial = "";
         this.interpArrayList = new ArrayList<>();
     }
 
@@ -38,6 +40,13 @@ public class OldBaileyPlace {
     }
 
 
+    public String getTrial() {
+        return trial;
+    }
+
+    public void setTrial(String trial) {
+        this.trial = trial;
+    }
 
     public String getId() {
         return id;
@@ -63,6 +72,13 @@ public class OldBaileyPlace {
         if (!mention.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "mention");
             meta = namedModel.createStatement(subjectResource, metaProperty, mention);
+            namedModel.add(meta);
+        }
+
+        if (!trial.isEmpty()) {
+            objectResource = namedModel.createResource(ResourcesUri.oldbaily+trial);
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "trial");
+            meta = namedModel.createStatement(subjectResource, metaProperty, objectResource);
             namedModel.add(meta);
         }
 

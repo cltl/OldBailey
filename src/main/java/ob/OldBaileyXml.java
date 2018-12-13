@@ -118,6 +118,10 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                 String type = attributes.getValue("type");
                 String avalue = attributes.getValue("value");
                 OldBaileyInterp interp = new OldBaileyInterp(inst, type, avalue);
+                if (trialArrayList.size()>0) {
+                           String trialId = trialArrayList.get(trialArrayList.size()-1).getId();
+                           interp.setTrial(trialId);
+                }
                 interpArrayList.add(interp);
         }
         else if (qName.equalsIgnoreCase("join")) {
@@ -157,6 +161,10 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             if (type!=null) {
                 person.setType(type);
             }
+            if (trialArrayList.size()>0) {
+                String trialId = trialArrayList.get(trialArrayList.size()-1).getId();
+                person.setTrial(trialId);
+            }
             personArrayList.add(person);
         }
         else if (qName.equalsIgnoreCase("placeName")) {
@@ -164,6 +172,11 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
             String id = attributes.getValue("id");
             if (id!=null) {
                 place.setId(id);
+            }
+
+            if (trialArrayList.size()>0) {
+                String trialId = trialArrayList.get(trialArrayList.size()-1).getId();
+                place.setTrial(trialId);
             }
             placeArrayList.add(place);
         }

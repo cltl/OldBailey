@@ -18,18 +18,29 @@ public class OldBaileyInterp {
 
     private String inst;
     private String type;
+    private String trial;
     private String value;
 
     public OldBaileyInterp(String inst, String type, String value) {
         this.inst = inst;
         this.type = type;
+        this.trial = "";
         this.value = value;
     }
 
     public OldBaileyInterp() {
         this.inst = "";
         this.type = "";
+        this.trial = "";
         this.value = "";
+    }
+
+    public String getTrial() {
+        return trial;
+    }
+
+    public void setTrial(String trial) {
+        this.trial = trial;
     }
 
     public String getInst() {
@@ -73,6 +84,13 @@ public class OldBaileyInterp {
         }
         else if (type.equalsIgnoreCase("placeName")) {
             com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, metaProperty, this.value);
+            namedModel.add(meta);
+        }
+
+        else if (!trial.isEmpty()) {
+            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+trial);
+            metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "trial");
+            com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, metaProperty, objectResource);
             namedModel.add(meta);
         }
         else {

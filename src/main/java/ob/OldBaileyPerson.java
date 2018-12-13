@@ -63,6 +63,7 @@ Sessions
  */
     private String type;
     private String id;
+    private String trial;
     private String mention;
     private ArrayList<OldBaileyInterp> interpArrayList;
 
@@ -71,6 +72,7 @@ Sessions
         this.id = "";
         this.type = "unknownRole";
         this.mention = "";
+        this.trial = "";
         this.interpArrayList = new ArrayList<>();
     }
 
@@ -89,6 +91,12 @@ Sessions
         if (!mention.isEmpty()) {
             Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "mention");
             meta = namedModel.createStatement(subjectResource, metaProperty, mention);
+            namedModel.add(meta);
+        }
+        if (!trial.isEmpty()) {
+            objectResource = namedModel.createResource(ResourcesUri.oldbaily+trial);
+            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "trial");
+            meta = namedModel.createStatement(subjectResource, metaProperty, objectResource);
             namedModel.add(meta);
         }
         for (int i = 0; i < interpArrayList.size(); i++) {
@@ -146,6 +154,14 @@ Sessions
     public String getUri (String caseId) throws UnsupportedEncodingException {
         String uri = ResourcesUri.oldbaily+caseId + "/person/"+id;
         return uri;
+    }
+
+    public String getTrial() {
+        return trial;
+    }
+
+    public void setTrial(String trial) {
+        this.trial = trial;
     }
 
     public String getType() {

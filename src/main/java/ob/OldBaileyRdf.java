@@ -23,7 +23,7 @@ public class OldBaileyRdf {
 
 
     static String testOrdinary = "--xml-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/ordinarysAccounts --extension .xml --rdf-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/ordinarysAccounts/rdf";
-    static String testSessions = "--xml-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/sessionsPapers --extension .xml --rdf-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/sessionsPapers/rdf";
+    static String testSessions = "--xml-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/sessions/ob-proceedings-xml --extension .xml --rdf-folder /Users/piek/Desktop/DigHum-2018/4775434/OBO_XML_7-2/sessions/meta-rdf";
 
     static public void main(String[] args) {
         File rdfFolder = null;
@@ -33,7 +33,7 @@ public class OldBaileyRdf {
         File xmlFile = null;
         ext = ".xml";
         //args = testOrdinary.split(" ");
-        //args = testSessions.split(" ");
+        args = testSessions.split(" ");
 
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
