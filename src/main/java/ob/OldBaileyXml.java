@@ -119,8 +119,8 @@ public class OldBaileyXml extends org.xml.sax.helpers.DefaultHandler {
                 String avalue = attributes.getValue("value");
                 OldBaileyInterp interp = new OldBaileyInterp(inst, type, avalue);
                 if (trialArrayList.size()>0) {
-                           String trialId = trialArrayList.get(trialArrayList.size()-1).getId();
-                           interp.setTrial(trialId);
+                    String trialId = trialArrayList.get(trialArrayList.size()-1).getId();
+                    interp.setTrial(trialId);
                 }
                 interpArrayList.add(interp);
         }

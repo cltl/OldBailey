@@ -95,8 +95,8 @@ Sessions
         }
         if (!trial.isEmpty()) {
             objectResource = namedModel.createResource(ResourcesUri.oldbaily+trial);
-            Property metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "trial");
-            meta = namedModel.createStatement(subjectResource, metaProperty, objectResource);
+            Property trialProperty = namedModel.createProperty(ResourcesUri.oldbaily, "trial");
+            meta = namedModel.createStatement(subjectResource, trialProperty, objectResource);
             namedModel.add(meta);
         }
         for (int i = 0; i < interpArrayList.size(); i++) {

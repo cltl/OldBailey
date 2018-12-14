@@ -86,17 +86,17 @@ public class OldBaileyInterp {
             com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, metaProperty, this.value);
             namedModel.add(meta);
         }
-
-        else if (!trial.isEmpty()) {
-            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+trial);
-            metaProperty = namedModel.createProperty(ResourcesUri.oldbaily, "trial");
-            com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, metaProperty, objectResource);
-            namedModel.add(meta);
-        }
         else {
+
             String uri  = ResourcesUri.oldbaily + this.getValue_replace_space();
             Resource objectResource = namedModel.createResource(uri);
             com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, metaProperty, objectResource);
+            namedModel.add(meta);
+        }
+        if (!trial.isEmpty()) {
+            Resource objectResource = namedModel.createResource(ResourcesUri.oldbaily+trial);
+            Property trialProperty = namedModel.createProperty(ResourcesUri.oldbaily, "trial");
+            com.hp.hpl.jena.rdf.model.Statement meta = namedModel.createStatement(subjectResource, trialProperty, objectResource);
             namedModel.add(meta);
         }
     }
